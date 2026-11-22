@@ -68,6 +68,8 @@ class CandidateSynthesizer:
     def mutate(self, parent: SkillIR, generation: int, n_mut: int = 1,
                failures: list[dict[str, Any]] | None = None) -> SkillIR | None:
         hints = self.plugin.suggest_operators(failures) if failures else None
+        if not failures and hasattr(self.plugin, "focus_fields"):
+            self.plugin.focus_fields = {}
         cur = parent
         log: list[str] = []
         applied: list[str] = []

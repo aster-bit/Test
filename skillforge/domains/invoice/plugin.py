@@ -43,6 +43,19 @@ FAILURE_HINTS = {
     "ocr_truncated": {"insert_block": 2, "toggle": 1},
     "very_long": {"llm_config": 2, "add_item_pattern": 1},
 }
+# wrong / missing output field -> operators that can fix it
+FIELD_HINTS = {
+    "vendor": {"add_label": 2, "add_prose": 1},
+    "invoice_number": {"add_label": 2, "add_prose": 1},
+    "date": {"add_label": 2, "add_date_format": 2, "add_prose": 1},
+    "currency": {"toggle": 1, "add_label": 1, "add_prose": 1},
+    "subtotal": {"add_label": 1, "sync_eu": 1, "add_prose": 1},
+    "tax": {"add_label": 1, "sync_eu": 1, "add_prose": 1},
+    "total": {"add_label": 1, "sync_eu": 1, "add_conflict_label": 1, "add_prose": 1},
+    "line_items": {"add_item_pattern": 3, "sync_eu": 1},
+    "document_type": {"toggle": 1},
+    "status": {"insert_block": 1, "toggle": 1, "add_conflict_label": 1, "tune_tolerance": 1},
+}
 
 # ---------------------------------------------------------------- prompts
 SYSTEM = "You are an accounts-payable document processor. You extract invoice data into JSON."
@@ -598,12 +611,16 @@ class InvoicePlugin(DomainPlugin):
         f1 = 1.0 if not got and not want else (2 * tp / (len(got) + len(want)) if (got or want) else 1.0)
         del core
         field_acc = sum(checks.values()) / len(checks)
-        return {
+        out = {
             "pass": float(all(checks.values()) and status_ok),
             "field_accuracy": field_acc,
             "status_accuracy": float(status_ok),
             "issue_f1": f1,
         }
+        # per-field correctness flags: drive field-directed mutation (not used as objectives)
+        out.update({f"ok_{k}": float(v) for k, v in checks.items()})
+        out["ok_status"] = float(status_ok)
+        return out
 
     # ---------------- synthesis
     def seed_candidates(self, spec: SkillSpec) -> list[SkillIR]:
@@ -728,7 +745,11 @@ def step(state, params):
 
         @with_code("extract_fields")
         def add_label(c, rng):
-            field = rng.choice(list(C.LABEL_POOL))
+            focus = {k: v for k, v in getattr(self, "focus_fields", {}).items() if k in C.LABEL_POOL}
+            if focus and rng.random() < 0.7:
+                field = rng.choices(list(focus), weights=list(focus.values()))[0]
+            else:
+                field = rng.choice(list(C.LABEL_POOL))
             cur = c.params.setdefault("labels", {}).setdefault(field, [])
             options = [l for l in C.LABEL_POOL[field] if l not in cur]
             if not options:
@@ -962,10 +983,18 @@ def step(state, params):
 
     def suggest_operators(self, failures: list[dict[str, Any]]) -> dict[str, float]:
         w: dict[str, float] = {}
+        focus: dict[str, float] = {}
         for f in failures:
             for key in [f.get("family", "")] + list(f.get("hard") or []):
                 for op, wt in FAILURE_HINTS.get(key, {}).items():
                     w[op] = w.get(op, 0.0) + wt
+            for k, v in (f.get("scores") or {}).items():
+                if k.startswith("ok_") and v == 0.0:
+                    field = k[3:]
+                    focus[field] = focus.get(field, 0.0) + 1.0
+                    for op, wt in FIELD_HINTS.get(field, {}).items():
+                        w[op] = w.get(op, 0.0) + wt
+        self.focus_fields = focus  # read by field-aware operators (e.g. add_label) during this mutation
         return w
 
     def render_skill_instructions(self, spec: SkillSpec, ir: SkillIR) -> str:
