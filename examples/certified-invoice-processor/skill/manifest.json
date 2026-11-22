@@ -1,0 +1,87 @@
+{
+  "name": "invoice-processor",
+  "version": "1.0.0",
+  "created_at": "2026-11-22T23:38:48Z",
+  "generator": "skillforge 0.1.0",
+  "run_id": "run-20261122-232520-308a40",
+  "candidate_id": "cand-da9f257a49",
+  "parents": [
+    "cand-02e358792b"
+  ],
+  "architecture": "state_machine",
+  "fingerprint": "aeef58d30ee54bb9",
+  "seed": 7,
+  "provider": "mock",
+  "llm_results_simulated": true,
+  "models": [
+    {
+      "component": "fill_missing",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "max_tokens": 2048,
+      "tools": []
+    },
+    {
+      "component": "fill_retry",
+      "model": "claude-sonnet-5-5",
+      "effort": "low",
+      "max_tokens": 2048,
+      "tools": []
+    }
+  ],
+  "runtime": {
+    "python": ">=3.10",
+    "stdlib_only_code": true,
+    "llm_runtime": "Claude Code CLI (claude -p)"
+  },
+  "build_environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+    "pydantic": "2.13.5",
+    "fastapi": "0.165.0",
+    "hypothesis": "6.170.17"
+  },
+  "metrics": {
+    "pass_rate": 0.993333,
+    "field_accuracy": 0.999259,
+    "status_accuracy": 0.996667,
+    "issue_f1": 0.941111,
+    "robustness": 0.991701,
+    "security": 1.0,
+    "error_rate": 0.0,
+    "hard_violation_rate": 0.0,
+    "latency_ms_p50": 0.174414,
+    "latency_ms_p95": 2478.734118,
+    "cost_per_item_usd": 0.00123,
+    "tokens_per_item": 131.9,
+    "llm_calls_per_item": 0.32,
+    "complexity": 34.261,
+    "portability": 0.6,
+    "metamorphic_consistency": 1.0,
+    "metamorphic_checks": 12.0
+  },
+  "files": {
+    "SKILL.md": "da5d8227fd7be9febbcc0ef607ffda8e630f03a60c0a0c467c107f6fce6effd5",
+    "references/evaluation.json": "4660c1616e9d76a8dd82638d1b8dead8738bd153afeaf744fe24bac67d5f927d",
+    "references/report.md": "b3de7cbe6aa245363a36b66bbf905b08f74409974275dcfd3046042a91e9bcf2",
+    "references/spec.json": "b2828dcc8fe53cae7b0925c78eb1a763353df0ebc58984b82a104a7c4ee15427",
+    "scripts/components/check_arithmetic.py": "31f069383b5d2ad24ed7fb05f836f43b4db31f4e1b6bf35b31c3509f292b48d5",
+    "scripts/components/check_duplicate.py": "a25c602ec3010710f7dac9d5c57fdb0394ba571e96f1b48a55dba9f898886830",
+    "scripts/components/confidence_gate.py": "cdaf0310f94d520ac4afeed1fb1ed0267248620454f5c323b2e2d135b9fe9374",
+    "scripts/components/detect_conflicts.py": "cbd83fd0037c13840f7e3d19b84b94f1f63ab64b3dd38e45c1650c3aa76edb33",
+    "scripts/components/extract_fields.py": "27ad4da119fef328d8797c36163d0e15915de9e00ec5ed64274ab2264f590347",
+    "scripts/components/extract_items.py": "2832a71e67445c973008a551d86cd0c6387f369945404e0449e1b14bab776aa3",
+    "scripts/components/finalize.py": "c3cb5c97e6c19f284b085ad771fdea760eae60f886f3ba6a3844dd0b1a1678d7",
+    "scripts/components/ground_check.py": "c262208438927fc06c2442b478f853c1decfe8947a696493d358e26e60308cf8",
+    "scripts/components/injection_guard.py": "92b8ee04e17059453648e15501d2225df8a5076e5fb936df5b56ffbbffb96be6",
+    "scripts/components/normalize.py": "227117f844561c1e80870f1ef8423ac20ddd1ffd23a3829eceef2afbc523c445",
+    "scripts/components/parse_llm_json.py": "cf3f44164dc0c3f9d2ca06d0b5f5ad485413ada7fad07003406a92aeff2d19da",
+    "scripts/components/parse_llm_json_2.py": "cf3f44164dc0c3f9d2ca06d0b5f5ad485413ada7fad07003406a92aeff2d19da",
+    "scripts/components/parse_values.py": "b181d49a7ed841eb6370ff2c5e85c36fb26c6404b48a7e1e83906f829c0dd951",
+    "scripts/sandbox_runner.py": "252fd538b420c86528b7f34de59dad8633339d85e0a1a367fd774179d16d3f2c",
+    "scripts/skill.py": "041e059f33e6e5fdaca5e23ce113a581242a39985e828edc22dea72bf61f411e",
+    "scripts/skill_ir.json": "73e8655cadec949cacb8f1cd5d6b0c5b200fe71c77822bcd343d9b30ce15ace0",
+    "tests/regression_cases.json": "4e50040857bde2238d781ab413789e0c474bd001ddcdf0a978c51e970758fddc",
+    "tests/test_skill.py": "d742187badafd5f90897b485f098a5cca919351213d2c2bbb6e2dae879b9aa30"
+  }
+}

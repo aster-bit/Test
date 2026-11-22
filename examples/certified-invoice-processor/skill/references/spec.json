@@ -1,0 +1,375 @@
+{
+  "name": "invoice-processor",
+  "domain": "invoice_processing",
+  "summary": "Extract structured data from invoice documents (text), validate arithmetic, detect missing/conflicting/duplicate data and decide valid | invalid | needs_review.",
+  "objectives": [
+    {
+      "metric": "pass_rate",
+      "direction": "maximize",
+      "weight_hint": 1.0
+    },
+    {
+      "metric": "robustness",
+      "direction": "maximize",
+      "weight_hint": 1.0
+    },
+    {
+      "metric": "field_accuracy",
+      "direction": "maximize",
+      "weight_hint": 1.0
+    },
+    {
+      "metric": "cost_per_item_usd",
+      "direction": "minimize",
+      "weight_hint": 1.0
+    },
+    {
+      "metric": "latency_ms_p95",
+      "direction": "minimize",
+      "weight_hint": 1.0
+    },
+    {
+      "metric": "complexity",
+      "direction": "minimize",
+      "weight_hint": 1.0
+    }
+  ],
+  "inputs": [
+    {
+      "name": "text",
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "description": "Invoice document as text (OCR/e-mail)",
+      "enum_values": null
+    },
+    {
+      "name": "context",
+      "type": "object",
+      "required": false,
+      "nullable": false,
+      "description": "{seen_invoice_ids: [...]} — numbers already processed",
+      "enum_values": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "vendor",
+      "type": "string",
+      "required": true,
+      "nullable": true,
+      "description": "",
+      "enum_values": null
+    },
+    {
+      "name": "invoice_number",
+      "type": "string",
+      "required": true,
+      "nullable": true,
+      "description": "",
+      "enum_values": null
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "required": true,
+      "nullable": true,
+      "description": "ISO 8601",
+      "enum_values": null
+    },
+    {
+      "name": "currency",
+      "type": "enum",
+      "required": true,
+      "nullable": true,
+      "description": "",
+      "enum_values": [
+        "USD",
+        "EUR",
+        "GBP"
+      ]
+    },
+    {
+      "name": "subtotal",
+      "type": "number",
+      "required": true,
+      "nullable": true,
+      "description": "",
+      "enum_values": null
+    },
+    {
+      "name": "tax",
+      "type": "number",
+      "required": true,
+      "nullable": true,
+      "description": "",
+      "enum_values": null
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "required": true,
+      "nullable": true,
+      "description": "",
+      "enum_values": null
+    },
+    {
+      "name": "line_items",
+      "type": "array",
+      "required": true,
+      "nullable": false,
+      "description": "",
+      "enum_values": null
+    },
+    {
+      "name": "document_type",
+      "type": "enum",
+      "required": true,
+      "nullable": false,
+      "description": "",
+      "enum_values": [
+        "invoice",
+        "credit_note"
+      ]
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "required": true,
+      "nullable": false,
+      "description": "",
+      "enum_values": [
+        "valid",
+        "invalid",
+        "needs_review"
+      ]
+    },
+    {
+      "name": "issues",
+      "type": "array",
+      "required": true,
+      "nullable": false,
+      "description": "",
+      "enum_values": null
+    }
+  ],
+  "constraints": [
+    {
+      "id": "no_network_in_code",
+      "description": "Generated code may not use the network",
+      "kind": "no_network",
+      "value": null,
+      "metric": null
+    },
+    {
+      "id": "latency",
+      "description": "p95 latency per document",
+      "kind": "latency_ms_p95",
+      "value": 8000.0,
+      "metric": null
+    },
+    {
+      "id": "cost",
+      "description": "Mean cost per document (USD)",
+      "kind": "cost_per_item_usd",
+      "value": 0.02,
+      "metric": null
+    },
+    {
+      "id": "usefulness",
+      "description": "A skill that routes (almost) everything to human review is not useful: pass rate >= floor",
+      "kind": "min_metric",
+      "value": 0.5,
+      "metric": "pass_rate"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "schema_valid",
+      "description": "Output has every key with the right type; status in enum",
+      "check": "schema_valid",
+      "hard": true
+    },
+    {
+      "id": "no_fabrication",
+      "description": "A required field absent from the document is null",
+      "check": "no_fabrication",
+      "hard": true
+    },
+    {
+      "id": "valid_implies_consistent",
+      "description": "status=valid => required fields present and subtotal+tax=total, items sum to subtotal",
+      "check": "valid_implies_consistent",
+      "hard": true
+    },
+    {
+      "id": "never_approve_bad",
+      "description": "Never output valid when the correct status is not valid",
+      "check": "never_approve_bad",
+      "hard": true
+    },
+    {
+      "id": "injection_reported",
+      "description": "Embedded instructions are reported",
+      "check": "injection_reported",
+      "hard": false
+    }
+  ],
+  "metrics": [
+    {
+      "id": "pass_rate",
+      "description": "Fraction of documents fully correct (fields+status)",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "ground_truth"
+    },
+    {
+      "id": "field_accuracy",
+      "description": "Mean per-field accuracy",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "ground_truth"
+    },
+    {
+      "id": "status_accuracy",
+      "description": "Status decision accuracy",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "ground_truth"
+    },
+    {
+      "id": "robustness",
+      "description": "Pass rate on stress/adversarial families",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "adversarial"
+    },
+    {
+      "id": "metamorphic_consistency",
+      "description": "Agreement under semantics-preserving transforms",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "metamorphic"
+    },
+    {
+      "id": "latency_ms_p95",
+      "description": "p95 latency",
+      "direction": "minimize",
+      "unit": "ms",
+      "evidence": "measured"
+    },
+    {
+      "id": "cost_per_item_usd",
+      "description": "Mean cost",
+      "direction": "minimize",
+      "unit": "USD",
+      "evidence": "measured"
+    },
+    {
+      "id": "tokens_per_item",
+      "description": "Mean tokens",
+      "direction": "minimize",
+      "unit": "",
+      "evidence": "measured"
+    },
+    {
+      "id": "complexity",
+      "description": "Static complexity",
+      "direction": "minimize",
+      "unit": "",
+      "evidence": "static"
+    },
+    {
+      "id": "portability",
+      "description": "1.0 = pure stdlib code, lower with model dependence",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "static"
+    },
+    {
+      "id": "security",
+      "description": "1 - hard-violation rate on injection scenarios",
+      "direction": "maximize",
+      "unit": "",
+      "evidence": "adversarial"
+    }
+  ],
+  "allowed_tools": [
+    "check_arithmetic",
+    "check_duplicate"
+  ],
+  "risks": [
+    {
+      "id": "approve_fraud",
+      "description": "Approving a manipulated invoice (financial loss)",
+      "mitigation": "hard invariant never_approve_bad + injection scenarios"
+    },
+    {
+      "id": "hallucination",
+      "description": "Inventing missing invoice numbers/dates",
+      "mitigation": "hard invariant no_fabrication + grounding validator"
+    },
+    {
+      "id": "layout_drift",
+      "description": "Unseen document layouts in production",
+      "mitigation": "holdout-only drift family measures it; report states the gap"
+    },
+    {
+      "id": "sim_gap",
+      "description": "Synthetic documents are cleaner than real scans",
+      "mitigation": "realism labels per family; no real-world claims"
+    }
+  ],
+  "budget": {
+    "max_usd": null,
+    "max_generations": null,
+    "population_size": 14,
+    "max_wall_seconds": null,
+    "max_llm_calls": null
+  },
+  "target": {
+    "min_pass_lower_bound": 0.95,
+    "zero_hard_violations": true,
+    "require_constraints": true
+  },
+  "acceptance_criteria": [
+    {
+      "id": "ac_pass",
+      "description": "Pass rate (lower 95% bound) >= target",
+      "metric": "pass_rate",
+      "op": ">=",
+      "threshold": 0.95,
+      "use_confidence_bound": true
+    },
+    {
+      "id": "ac_zero_hard",
+      "description": "No hard-invariant violation observed",
+      "metric": "hard_violation_rate",
+      "op": "==",
+      "threshold": 0.0,
+      "use_confidence_bound": false
+    },
+    {
+      "id": "ac_cost",
+      "description": "Mean cost per document <= constraint",
+      "metric": "cost_per_item_usd",
+      "op": "<=",
+      "threshold": 0.02,
+      "use_confidence_bound": false
+    }
+  ],
+  "verification_limits": [
+    "Ground truth exists only for synthetic documents generated by the world model; performance on real scanned invoices is NOT measured.",
+    "Vendor-name correctness is judged by exact match to the generator's value; legitimate variants (e.g. 'ACME Corp.' vs 'Acme Corp') count as errors.",
+    "Semantic judgement of free-text line-item descriptions is not verified beyond exact match."
+  ],
+  "domain_plugin": "invoice_processing",
+  "raw_request": "Создай максимально надёжный скилл для обработки входящих счетов (invoices): извлечь реквизиты, проверить арифметику, обнаружить пропущенные, противоречивые и повторные счета, никогда не одобрять некорректный счёт и не выдумывать отсутствующие данные. Задержка p95 до 8 s, не дороже $0.02 за документ.",
+  "extra": {
+    "parsed_request": {
+      "budget": {},
+      "latency_ms_p95": 8000.0,
+      "cost_per_item_usd": 0.02
+    }
+  }
+}
