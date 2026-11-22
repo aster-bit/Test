@@ -275,6 +275,12 @@ class EvolutionEngine:
         return chosen
 
     # ------------------------------------------------------------------
+    @staticmethod
+    def _failures(ind: "Individual") -> list[dict]:
+        """Failure signal for directed mutation: scenario failures plus violated constraints."""
+        return list(ind.result.failure_examples) + [{"constraint": k, "amount": v}
+                                                    for k, v in ind.result.constraint_violations.items()]
+
     def _progress_key(self, pop: list[Individual]) -> tuple[float, float]:
         feas = [p.result.metrics["pass_rate"] for p in pop if p.result.feasible]
         least_viol = min((p.result.metrics["hard_violation_rate"] + p.result.constraint_magnitude for p in pop),
@@ -283,8 +289,8 @@ class EvolutionEngine:
 
     def _restart(self, pop: list[Individual], gen: int) -> list[Individual]:
         """Diversity restart: keep the elite, refill with heavily mutated seeds and elites."""
-        elites = sorted(pop, key=lambda p: (not p.result.feasible, p.result.metrics["hard_violation_rate"],
-                                            -p.result.metrics["pass_rate"]))[: self.cfg.elite]
+        # same violation measure as selection (hard invariants AND constraints), then quality
+        elites = sorted(pop, key=lambda p: (p.record(self.ev, 0.0)[1], -p.result.metrics["pass_rate"]))[: self.cfg.elite]
         fresh: list[SkillIR] = []
         seen = {p.ir.fingerprint() for p in elites}
         seeds = self.syn.plugin.seed_candidates(self.syn.spec)
@@ -293,7 +299,7 @@ class EvolutionEngine:
             tries += 1
             src = self.rng.choice(elites).ir if (elites and self.rng.random() < 0.5) else self.rng.choice(seeds)
             child = self.syn.mutate(src, gen + 1, self.rng.randint(2, 6),
-                                    failures=(elites[0].result.failure_examples if elites else None))
+                                    failures=(self._failures(elites[0]) if elites else None))
             if child and child.fingerprint() not in seen:
                 child.origin = "restart"
                 seen.add(child.fingerprint())
@@ -428,7 +434,7 @@ class EvolutionEngine:
                 if child is None:
                     parent = self._tournament(pop)
                     child = self.syn.mutate(parent.ir, gen + 1, self.rng.randint(1, self.cfg.max_mutations),
-                                            failures=parent.result.failure_examples)
+                                            failures=self._failures(parent))
                 if child is None:
                     continue
                 fp = child.fingerprint()

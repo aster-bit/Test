@@ -43,6 +43,13 @@ FAILURE_HINTS = {
     "ocr_truncated": {"insert_block": 2, "toggle": 1},
     "very_long": {"llm_config": 2, "add_item_pattern": 1},
 }
+# violated constraint -> operators that can fix it (fewer / cheaper / faster LLM calls)
+CONSTRAINT_HINTS = {
+    "latency": {"remove_llm_fallback": 3, "llm_config": 3, "add_label": 1, "add_prose": 1, "add_item_pattern": 1,
+                "add_date_format": 1},
+    "cost": {"remove_llm_fallback": 3, "llm_config": 3, "few_shot": 1, "add_label": 1},
+    "usefulness": {"add_label": 1, "add_item_pattern": 1, "add_prose": 1, "toggle": 1},
+}
 # wrong / missing output field -> operators that can fix it
 FIELD_HINTS = {
     "vendor": {"add_label": 2, "add_prose": 1},
@@ -196,6 +203,8 @@ def reference_read(text: str, context: dict | None) -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------- simulated LLM
+# simulated decode time per output token (ms) — smaller models are faster
+MODEL_MS_PER_TOKEN = {"claude-haiku-5-5": 4.0, "claude-sonnet-5-5": 8.0, "claude-opus-5-5": 12.0, "claude-fable-5-2": 15.0}
 MODEL_MULT = {"claude-haiku-5-5": 1.7, "claude-sonnet-5-5": 1.0, "claude-opus-5-5": 0.75, "claude-fable-5-2": 0.6}
 EFFORT_MULT = {"low": 1.0, "medium": 0.85, "high": 0.7}
 
@@ -304,7 +313,9 @@ def simulated_invoice_model(req: LLMRequest, prov: MockProvider) -> LLMResponse:
     stop = "end_turn"
     if estimate_tokens(text) > req.max_tokens:
         text, stop = text[: req.max_tokens * 4], "max_tokens"
-    return prov.finalize(req, text, stop_reason=stop)
+    resp = prov.finalize(req, text, stop_reason=stop)
+    resp.latency_ms = 350.0 + resp.output_tokens * MODEL_MS_PER_TOKEN.get(req.model, 12.0) + resp.input_tokens * 0.05
+    return resp
 
 
 # ---------------------------------------------------------------- plugin
@@ -987,6 +998,10 @@ def step(state, params):
         w: dict[str, float] = {}
         focus: dict[str, float] = {}
         for f in failures:
+            if "constraint" in f:
+                for op, wt in CONSTRAINT_HINTS.get(f["constraint"], {}).items():
+                    w[op] = w.get(op, 0.0) + wt * 5  # one constraint outweighs several item failures
+                continue
             for key in [f.get("family", "")] + list(f.get("hard") or []):
                 for op, wt in FAILURE_HINTS.get(key, {}).items():
                     w[op] = w.get(op, 0.0) + wt
