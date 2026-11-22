@@ -260,5 +260,8 @@ class EvaluationEngine:
         vec = []
         for o in self.spec.objectives:
             v = r.metrics.get(o.metric, 0.0)
+            if o.metric.startswith("latency"):
+                # wall-clock measurements jitter between runs; quantise so selection is reproducible per seed
+                v = round(v / 50.0) * 50.0
             vec.append(v if o.direction == Direction.MAXIMIZE else -v)
         return vec
