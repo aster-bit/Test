@@ -156,6 +156,7 @@ class EvolutionConfig:
     epsilon0: float = 0.06              # initial tolerated hard-violation rate (epsilon-constraint method)
     epsilon_generations: int = 5        # epsilon decays to 0 over this many generations after each (re)start
     max_adversarial: int = 240          # cap on adversarial cases kept in the train pool
+    niche_size: int = 2                 # historical bests per architecture re-considered at each restart
 
 
 class EvolutionEngine:
@@ -289,8 +290,32 @@ class EvolutionEngine:
 
     def _restart(self, pop: list[Individual], gen: int) -> list[Individual]:
         """Diversity restart: keep the elite, refill with heavily mutated seeds and elites."""
+        # Architecture niches: the best historical candidates of every architecture class are re-evaluated
+        # on the *current* pool and compete for elite slots, so a class pushed out earlier (e.g. pure code
+        # once LLM hybrids looked better) can return when the pool changes (e.g. new latency-heavy cases).
+        niche: dict[str, list[Individual]] = {}
+        for ind in self.all_individuals.values():
+            niche.setdefault(ind.ir.architecture().value, []).append(ind)
+        candidates = {p.ir.fingerprint(): p for p in pop}
+        for arch, members in niche.items():
+            members.sort(key=lambda p: (p.record(self.ev, 0.0)[1], -p.result.metrics["pass_rate"]))
+            for m in members[: self.cfg.niche_size]:
+                if m.ir.fingerprint() in candidates:
+                    continue
+                re_ev = self._evaluate(m.ir, self.pool, self.ref_ids, gen + 1)
+                if re_ev:
+                    candidates[m.ir.fingerprint()] = re_ev
         # same violation measure as selection (hard invariants AND constraints), then quality
-        elites = sorted(pop, key=lambda p: (p.record(self.ev, 0.0)[1], -p.result.metrics["pass_rate"]))[: self.cfg.elite]
+        ranked = sorted(candidates.values(), key=lambda p: (p.record(self.ev, 0.0)[1], -p.result.metrics["pass_rate"]))
+        elites = []
+        seen_arch: dict[str, int] = {}
+        for p in ranked:  # at most 2 elites per architecture class
+            a = p.ir.architecture().value
+            if seen_arch.get(a, 0) < 2:
+                elites.append(p)
+                seen_arch[a] = seen_arch.get(a, 0) + 1
+            if len(elites) >= self.cfg.elite + 2:
+                break
         fresh: list[SkillIR] = []
         seen = {p.ir.fingerprint() for p in elites}
         seeds = self.syn.plugin.seed_candidates(self.syn.spec)
