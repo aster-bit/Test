@@ -48,6 +48,8 @@ def main(argv: list[str] | None = None) -> int:
                        help="required lower 95%% bound of the holdout pass rate (default from request or 0.95)")
         p.add_argument("--max-generations", type=int, default=None, help="safety limit; default unlimited")
         p.add_argument("--max-holdout-attempts", type=int, default=None, help="default unlimited")
+        p.add_argument("--population", type=int, default=None, help="population size (default 14)")
+        p.add_argument("--adversary-probes", type=int, default=24, help="adversarial probes per generation")
     s = sub.add_parser("serve")
     s.add_argument("--host", default="127.0.0.1")
     s.add_argument("--port", type=int, default=8000)
@@ -69,7 +71,8 @@ def main(argv: list[str] | None = None) -> int:
     cfg = RunConfig(seed=args.seed, provider=args.provider, sandbox_backend=args.sandbox, output_dir=args.out,
                     db_path=args.db, world=world, concurrency=args.concurrency,
                     target_pass_lower_bound=args.target, max_generations=args.max_generations,
-                    max_holdout_attempts=args.max_holdout_attempts)
+                    max_holdout_attempts=args.max_holdout_attempts, population_size=args.population,
+                    adversary_probes=args.adversary_probes)
     forge = SkillForge(cfg)
     hits = {"n": 0}
 

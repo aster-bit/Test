@@ -59,6 +59,7 @@ class RunConfig:
     target_pass_lower_bound: float | None = None  # overrides spec.target if set
     max_generations: int | None = None            # None = unlimited (overrides spec)
     max_holdout_attempts: int | None = None       # None = unlimited
+    population_size: int | None = None            # overrides spec
 
 
 def _deps() -> dict[str, str]:
@@ -128,6 +129,8 @@ class SkillForge:
             spec.target.min_pass_lower_bound = cfg.target_pass_lower_bound
         if cfg.max_generations is not None:
             spec.budget.max_generations = cfg.max_generations
+        if cfg.population_size is not None:
+            spec.budget.population_size = cfg.population_size
         meter.max_usd, meter.max_calls = spec.budget.max_usd, spec.budget.max_llm_calls
         self.store.update_run(run_id, spec=spec.model_dump())
         log("spec", f"compiled spec for domain {spec.domain}; target: {spec.target.model_dump()}",
