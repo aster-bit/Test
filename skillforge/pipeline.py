@@ -36,6 +36,7 @@ from .llm import CostMeter, MockProvider, make_provider
 from .report import render_markdown
 from .sandbox import ExecutionSandbox, validate_source
 from .spec import SkillSpec
+from .stats import min_n_for_lower_bound
 from .store import ExperimentStore
 from .synthesis import CandidateSynthesizer
 from .world import WorldConfig, WorldGenerator, derive_seed
@@ -132,6 +133,17 @@ class SkillForge:
         if cfg.population_size is not None:
             spec.budget.population_size = cfg.population_size
         meter.max_usd, meter.max_calls = spec.budget.max_usd, spec.budget.max_llm_calls
+        # statistical pre-flight: the target must be provable with the chosen sample sizes.
+        # n_min = size at which even a perfect score reaches the target lower bound; we require 1.5x that
+        # so a certified skill may still make a few mistakes.
+        n_min = min_n_for_lower_bound(spec.target.min_pass_lower_bound)
+        need = int(n_min * 1.5) + 1
+        for split in ("validation_size", "holdout_size"):
+            if getattr(cfg.world, split) < need:
+                log("warning", f"{split}={getattr(cfg.world, split)} cannot prove a pass-rate lower bound of "
+                               f"{spec.target.min_pass_lower_bound} (a perfect score needs n>={n_min}); "
+                               f"raised to {need}")
+                setattr(cfg.world, split, need)
         self.store.update_run(run_id, spec=spec.model_dump())
         log("spec", f"compiled spec for domain {spec.domain}; target: {spec.target.model_dump()}",
             {"budget": spec.budget.model_dump()})

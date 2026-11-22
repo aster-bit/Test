@@ -24,6 +24,21 @@ def wilson(successes: int, n: int, confidence: float = 0.95) -> tuple[float, flo
     return (lo, hi)
 
 
+def min_n_for_lower_bound(target: float, confidence: float = 0.95, max_n: int = 100_000) -> int:
+    """Smallest n for which a perfect score n/n has a Wilson lower bound >= target."""
+    n = 1
+    while n < max_n and wilson(n, n, confidence)[0] < target:
+        n = int(n * 1.2) + 1
+    lo, hi = max(1, int(n / 1.2) - 1), n
+    while lo < hi:  # binary search for the exact minimum
+        mid = (lo + hi) // 2
+        if wilson(mid, mid, confidence)[0] >= target:
+            hi = mid
+        else:
+            lo = mid + 1
+    return lo
+
+
 def zero_failure_upper_bound(n: int, confidence: float = 0.95) -> float:
     """Exact one-sided upper bound on a failure rate after 0 failures in n trials."""
     if n == 0:

@@ -151,3 +151,13 @@ def test_mutations_produce_valid_ir(seed):
         SkillIR.model_validate_json(child.model_dump_json())
         names = [c.name for c in child.components]
         assert names[-1] == "finalize"
+
+
+@given(st.floats(0.5, 0.99))
+@settings(max_examples=30)
+def test_min_n_for_lower_bound_is_minimal(t):
+    from skillforge.stats import min_n_for_lower_bound
+
+    n = min_n_for_lower_bound(t)
+    assert wilson(n, n)[0] >= t
+    assert n == 1 or wilson(n - 1, n - 1)[0] < t
