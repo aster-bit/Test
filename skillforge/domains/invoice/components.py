@@ -442,7 +442,7 @@ ITEM_PATTERN_POOL = [
 PROSE_PATTERN_POOL = [
     r"(?:invoice|credit note)\s+(?P<invoice_number>[A-Z0-9][A-Z0-9-]*\d)\b",
     r"\bfrom\s+(?P<vendor>[A-Z][\w&.\- ]+?)(?=\s+issued|\.|,)",
-    r"issued on\s+(?P<date>[A-Za-z0-9 ,./]+?)\.",
+    r"issued on\s+(?P<date>[A-Za-z0-9 ,./-]+?)\.(?=\s|$)",
     r"Subtotal\s+(?P<subtotal>-?[^\s,]+(?:,\d{3})*(?:\.\d+)?)",
     r",\s*tax\s+(?P<tax>-?[^\s,]+(?:,\d{3})*(?:\.\d+)?)",
     r"total due\s+(?P<total>-?[^\s,(]+(?:,\d{3})*(?:\.\d+)?)",
