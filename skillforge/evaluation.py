@@ -190,7 +190,8 @@ class EvaluationEngine:
         constraints = self._constraint_violations(ir, metrics)
         failures = [
             {"scenario_id": o.scenario_id, "family": o.family, "hard": o.hard_violations, "error": o.error,
-             "scores": o.scores, "input_excerpt": str((s.input or {}).get("text", ""))[:600],
+             "scores": o.scores, "input_excerpt": (lambda t: t if len(t) <= 1400 else t[:500] + "\n…\n" + t[-900:])(
+                 str((s.input or {}).get("text", ""))),
              "expected_status": (s.expected or {}).get("status"), "got_status": (o.output or {}).get("status")}
             for s, o in zip(scenarios, outcomes) if not o.passed
         ]

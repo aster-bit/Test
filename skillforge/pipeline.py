@@ -248,6 +248,7 @@ class SkillForge:
                                   generations=spec.budget.max_generations,
                                   max_wall_seconds=spec.budget.max_wall_seconds)
         engine = EvolutionEngine(evaluator, synth, evo_cfg, rng, adversary, on_eval, on_gen, on_reject, cancel.is_set)
+        engine.on_pool_added = lambda scen: self.store.save_scenarios(run_id, "train", scen)
         engine.run(initial, splits["train"], gate, budget_check)
         log("search", f"search stopped: {engine.stop_reason}")
 

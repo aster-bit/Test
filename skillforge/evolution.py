@@ -174,6 +174,7 @@ class EvolutionEngine:
         self.on_generation = on_generation or (lambda st, pop: None)
         self.on_rejected = on_rejected or (lambda ir, why, g: None)
         self.should_stop = should_stop or (lambda: False)
+        self.on_pool_added: Callable[[list], None] = lambda scen: None
         self.novelty_archive: list[tuple[int, ...]] = []
         self.history: list[GenerationStats] = []
         self.rejections: dict[str, int] = {}
@@ -398,6 +399,7 @@ class EvolutionEngine:
                     self.stop_reason = f"budget: {e}"
                     break
                 self.pool.extend(found)
+                self.on_pool_added(found)
                 adv_added = len(found)
                 if found:
                     self.pool_dirty = True

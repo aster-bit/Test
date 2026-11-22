@@ -754,7 +754,8 @@ def step(state, params):
             options = [l for l in C.LABEL_POOL[field] if l not in cur]
             if not options:
                 return None
-            lab = rng.choice(options)
+            evidence = self._evidence_labels(options, cur)
+            lab = rng.choice(evidence) if evidence and rng.random() < 0.8 else rng.choice(options)
             cur.append(lab)
             return f"add label {field}:{lab!r}"
 
@@ -812,7 +813,8 @@ def step(state, params):
             options = [l for l in C.LABEL_POOL["total"] if l not in cur]
             if not options:
                 return None
-            lab = rng.choice(options)
+            evidence = self._evidence_labels(options, cur)
+            lab = rng.choice(evidence) if evidence and rng.random() < 0.8 else rng.choice(options)
             cur.append(lab)
             return f"conflict label {lab!r}"
 
@@ -995,7 +997,20 @@ def step(state, params):
                     for op, wt in FIELD_HINTS.get(field, {}).items():
                         w[op] = w.get(op, 0.0) + wt
         self.focus_fields = focus  # read by field-aware operators (e.g. add_label) during this mutation
+        self.failure_texts = [f.get("input_excerpt") or "" for f in failures]
         return w
+
+    def _evidence_labels(self, pool: list[str], have: list[str]) -> list[str]:
+        """Pool labels that literally occur as 'Label:' lines in documents the parent failed on."""
+        texts = getattr(self, "failure_texts", [])
+        found = []
+        for lab in pool:
+            if lab in have:
+                continue
+            pat = re.compile(r"^\s*" + re.escape(lab) + r"\s*[:：]", re.I | re.M)
+            if any(pat.search(t) for t in texts):
+                found.append(lab)
+        return found
 
     def render_skill_instructions(self, spec: SkillSpec, ir: SkillIR) -> str:
         return (
