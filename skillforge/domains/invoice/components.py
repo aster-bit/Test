@@ -366,6 +366,9 @@ REQUIRED = ("vendor", "invoice_number", "date", "total")
 def step(state, params):
     f = state.get("fields") or {}
     issues = list(state.get("issues") or [])
+    # a value recovered later in the pipeline (e.g. by the LLM fallback) clears its parse-failure flag
+    if f.get("date") is not None:
+        issues = [i for i in issues if i != "unparseable_date"]
     for k in REQUIRED:
         if f.get(k) is None and ("missing_field:" + k) not in issues:
             if params.get("report_missing", True):
