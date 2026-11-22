@@ -26,7 +26,9 @@ def step(state, params):
         t = re.sub("[​‌‍⁠﻿\x0c]", "", t)
     t = t.replace("\r\n", "\n").replace("\r", "\n")
     if params.get("split_pipes", False):
-        t = re.sub(r"\s+\|\s+", "\n", t)
+        # split "Label: value | Label: value" header lines only; never table rows ("a | 2 | 1.00 | 2.00")
+        t = "\n".join(re.sub(r"\s+\|\s+", "\n", l) if re.search(r"[A-Za-z#][^|:]{0,25}:\s*\S", l) and " | " in l
+                      else l for l in t.split("\n"))
     if params.get("split_semicolon_pairs", False):
         t = re.sub(r";\s+(?=[A-Za-z][A-Za-z ]{1,20}:)", "\n", t)
     t = "\n".join(l.rstrip() for l in t.split("\n"))
@@ -438,6 +440,8 @@ ITEM_PATTERN_POOL = [
     r"^\s*(?P<desc>[^|]+?)\s*\|\s*(?P<qty>\d+)\s*\|\s*(?P<price>[^|]+?)\s*\|\s*(?P<amount>[^|]+?)\s*$",
     r"^\s*(?P<qty>\d+)\s+x\s+(?P<desc>.+?)\s+at\s+(?P<price>\S+)\s+each:\s+(?P<amount>\S+)\s*$",
     r"^\s*(?P<desc>[^;]+);(?P<qty>\d+);(?P<price>[^;]+);(?P<amount>[^;]+)$",
+    # bullet lines whose amounts carry a currency code/symbol separated by a space ("3613.00 EUR")
+    r"^\s*-\s*(?P<desc>.+?)\s+x(?P<qty>\d+)\s+@\s+(?P<price>[^=]+?)\s+=\s+(?P<amount>.+?)\s*$",
 ]
 PROSE_PATTERN_POOL = [
     r"(?:invoice|credit note)\s+(?P<invoice_number>[A-Z0-9][A-Z0-9-]*\d)\b",

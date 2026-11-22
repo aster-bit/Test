@@ -161,3 +161,20 @@ def test_min_n_for_lower_bound_is_minimal(t):
     n = min_n_for_lower_bound(t)
     assert wilson(n, n)[0] >= t
     assert n == 1 or wilson(n - 1, n - 1)[0] < t
+
+
+@given(st.integers(0, 2**32), st.sampled_from(["clean_labeled", "clean_table", "email_prose", "format_variants",
+                                                "credit_note", "very_long", "arithmetic_error"]))
+@settings(max_examples=60, deadline=None)
+def test_domain_library_can_read_every_generated_layout(seed, family):
+    """Coverage check of the building-block pools: with every pool entry enabled, the deterministic
+    library must recover the ground truth of generated documents (otherwise the search space has a
+    blind spot that no amount of optimisation can fix)."""
+    from skillforge.domains.invoice.plugin import reference_read
+
+    s = PLUGIN.generate(family, random.Random(seed), "t", seed)
+    out = reference_read(s.input["text"], s.input["context"])
+    exp = s.expected
+    assert len(out["line_items"]) == len(exp["line_items"])
+    for k in ("invoice_number", "date", "total"):
+        assert out[k] == exp[k], (k, out[k], exp[k])
