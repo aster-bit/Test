@@ -83,6 +83,6 @@
     "scripts/skill_ir.json": "73e8655cadec949cacb8f1cd5d6b0c5b200fe71c77822bcd343d9b30ce15ace0",
     "tests/__pycache__/test_skill.cpython-313-pytest-9.1.1.pyc": "257ae1fae09d2d2aabb88b54426c708c0fc142b743b35e7f201e0b7ac24e92b0",
     "tests/regression_cases.json": "4e50040857bde2238d781ab413789e0c474bd001ddcdf0a978c51e970758fddc",
-    "tests/test_skill.py": "ec2329c8c6be94bcef1e78f66e6cf95e10eaf607129f52c838ac93a869b717ed"
+    "tests/test_skill.py": "cd591070e6c6ad7b7586c2d20d5569a5e926a7543eafec319f5021e8ba183c2c"
   }
 }
