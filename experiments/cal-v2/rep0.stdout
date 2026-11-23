@@ -1,2 +1,51 @@
 03:16:36 pre-registration verified; sandbox=namespace+rlimits+audit-hook
 03:16:36 === arm B (+A = first program of B) ===
+03:19:36 [A] A-00-79a13c generate usable=True sel=0.214 dev=0.302
+03:19:36 [B] B-00-79a13c generate usable=True sel=0.214 dev=0.302
+03:19:38 [B] B-01-663bdf generate usable=True sel=0.186 dev=0.240
+03:20:09 [B] B-02-dcc5df generate usable=True sel=0.213 dev=0.296
+03:20:09 [B] repairing B-03-b297b4: runtime errors on most instances, e.g.: [solve] TypeError: can only concatenate tuple (not "int") to tuple | [solve] TypeError: can only con
+03:20:45 [B] B-03-b297b4 generate UNUSABLE: runtime errors on most instances, e.g.: [solve] TypeError: can only concatenate tuple (not "int") to tuple | [solve] TypeError: can only concatenate tuple (not 
+03:21:19 [B] B-03-da940d generate usable=True sel=0.215 dev=0.304
+03:34:15 [B] B-04-3029fe generate usable=True sel=0.213 dev=0.302
+03:34:48 [B] B-05-08f93d generate usable=True sel=0.212 dev=0.298
+03:35:17 [B] B-06-651008 generate usable=True sel=0.214 dev=0.308
+03:35:47 [B] B-07-787581 generate usable=True sel=0.214 dev=0.307
+03:38:46 [B] B-08-6a6ea3 generate usable=True sel=0.213 dev=0.297
+03:39:18 [B] B-09-01baaf generate usable=True sel=0.214 dev=0.307
+03:39:50 [B] B-10-14adbb generate usable=True sel=0.213 dev=0.294
+03:39:50 arm B done in 1394s, calls=12, cost=$3.459
+03:39:50 === arm C ===
+03:42:33 [C] C-00-6e30da generate usable=True sel=0.214 dev=0.298
+03:43:03 [C] C-01-b8615c generate usable=True sel=0.215 dev=0.308
+03:43:35 [C] C-02-011438 generate usable=True sel=0.215 dev=0.305
+03:43:35 [C] self-diagnosed intervention on C-02-011438
+03:46:32 [C] C-03-8feefe intervene:dynamic_atc_construction_with_targeted_search usable=True sel=0.218 dev=0.313
+03:46:32 [C] step 1: intervene:dynamic_atc_construction_with_targeted_search -> usable=True delta=0.0021954232812757364 structural=True best=0.2176
+03:46:32 [C] recombine C-03-8feefe + C-02-011438
+03:48:52 [C] C-04-9b4c08 recombine usable=True sel=0.216 dev=0.315
+03:48:52 [C] step 2: recombine -> usable=True delta=-0.0012851029597835278 structural=True best=0.2176
+03:48:52 [C] self-diagnosed intervention on C-02-011438
+03:51:04 [C] C-05-8133d6 intervene:targeted_block_moves_with_checkpointed_decoding usable=True sel=0.217 dev=0.314
+03:51:04 [C] step 3: intervene:targeted_block_moves_with_checkpointed_decoding -> usable=True delta=0.001986422164799991 structural=True best=0.2176
+03:51:04 [C] stagnation (2) -> space expansion
+03:55:11 [C] C-06-71acba expand usable=True sel=0.213 dev=0.302
+03:55:11 [C] step 4: expand -> usable=True delta=-0.004378500637942014 structural=True best=0.2176
+03:55:11 [C] recombine C-02-011438 + C-03-8feefe
+03:57:41 [C] C-07-d20c9b recombine usable=True sel=0.217 dev=0.314
+03:57:41 [C] step 5: recombine -> usable=True delta=-0.0005033619513343612 structural=True best=0.2176
+03:57:41 [C] stagnation (2) -> space expansion
+04:00:18 [C] C-08-57bc9c expand usable=True sel=0.213 dev=0.296
+04:00:18 [C] step 6: expand -> usable=True delta=-0.004989042658763083 structural=True best=0.2176
+04:00:18 [C] self-diagnosed intervention on C-05-8133d6
+04:03:04 [C] C-09-1fcd46 intervene:add_time_aware_dispatch_construction usable=True sel=0.217 dev=0.312
+04:03:04 [C] step 7: intervene:add_time_aware_dispatch_construction -> usable=True delta=-0.0006555924843779922 structural=True best=0.2176
+04:03:04 [C] stagnation (2) -> space expansion
+04:12:50 [C] C-10-f1e31a expand usable=True sel=0.209 dev=0.300
+04:12:50 [C] step 8: expand -> usable=True delta=-0.008215085808357437 structural=True best=0.2176
+04:12:50 [C] recombine C-07-d20c9b + C-03-8feefe
+04:15:09 [C] C-11-924f30 recombine usable=True sel=0.217 dev=0.313
+04:15:09 [C] step 9: recombine -> usable=True delta=-0.0008210524919448575 structural=True best=0.2176
+04:15:09 arm C done in 2119s, calls=12, cost=$4.736
+04:15:09 champions (chosen on SELECTION, before audit): {'A': 'A-00-79a13c', 'B_best': 'B-03-da940d', 'C_initial': 'C-02-011438', 'C_final': 'C-03-8feefe'}
+04:17:33 direct Claude baseline on audit ...

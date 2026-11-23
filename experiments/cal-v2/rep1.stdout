@@ -1,2 +1,151 @@
 03:16:36 pre-registration verified; sandbox=namespace+rlimits+audit-hook
 03:16:36 === arm B (+A = first program of B) ===
+03:19:15 [A] A-00-870771 generate usable=True sel=0.213 dev=0.303
+03:19:15 [B] B-00-870771 generate usable=True sel=0.213 dev=0.303
+03:19:47 [B] B-01-252bbb generate usable=True sel=0.210 dev=0.297
+03:20:17 [B] B-02-7ffc07 generate usable=True sel=0.215 dev=0.310
+03:20:50 [B] B-03-38ac17 generate usable=True sel=0.213 dev=0.289
+03:23:57 [B] B-04-73a25e generate usable=True sel=0.214 dev=0.302
+03:24:27 [B] B-05-08f638 generate usable=True sel=0.217 dev=0.311
+03:24:56 [B] B-06-f5795c generate usable=True sel=0.216 dev=0.297
+03:25:28 [B] B-07-c02620 generate usable=True sel=0.214 dev=0.304
+03:28:24 [B] B-08-5e8288 generate usable=True sel=0.215 dev=0.306
+03:28:56 [B] B-09-94cd75 generate usable=True sel=0.214 dev=0.300
+03:29:27 [B] B-10-02ba2e generate usable=True sel=0.217 dev=0.306
+03:30:00 [B] B-11-5f6d0a generate usable=True sel=0.215 dev=0.310
+03:30:00 arm B done in 804s, calls=12, cost=$3.830
+03:30:00 === arm C ===
+03:33:21 [C] C-00-f5319b generate usable=True sel=0.211 dev=0.297
+03:33:51 [C] C-01-fe7794 generate usable=True sel=0.214 dev=0.301
+03:33:51 [C] repairing C-02-9b273c: format error: reply must contain a ```pipeline block and a ```python block
+03:34:47 [C] C-02-9b273c generate UNUSABLE: format error: reply must contain a ```pipeline block and a ```python block
+03:35:18 [C] C-02-5b50c5 generate usable=True sel=0.209 dev=0.293
+03:35:18 [C] recombine C-00-f5319b + C-01-fe7794
+03:38:04 [C] C-03-99ad5f recombine usable=True sel=0.216 dev=0.307
+03:38:04 [C] step 1: recombine -> usable=True delta=0.002408730288291086 structural=True best=0.2164
+03:38:04 [C] recombine C-00-f5319b + C-03-99ad5f
+03:40:10 [C] C-04-c7a49f recombine usable=True sel=0.214 dev=0.312
+03:40:10 [C] step 2: recombine -> usable=True delta=-0.002047387165389682 structural=True best=0.2164
+03:40:10 [C] self-diagnosed intervention on C-03-99ad5f
+03:43:06 [C] C-05-38e5d1 intervene:compound_chain_moves_and_energy_aware_decoding usable=True sel=0.217 dev=0.315
+03:43:06 [C] step 3: intervene:compound_chain_moves_and_energy_aware_decoding -> usable=True delta=0.000194143727405686 structural=True best=0.2166
+03:43:06 [C] self-diagnosed intervention on C-05-38e5d1
+03:45:49 [C] C-06-260a46 intervene:add_dynamic_dispatch_constructor usable=True sel=0.218 dev=0.314
+03:45:49 [C] step 4: intervene:add_dynamic_dispatch_constructor -> usable=True delta=0.0013619927044936917 structural=True best=0.2180
+03:45:49 [C] self-diagnosed intervention on C-06-260a46
+03:48:28 [C] C-07-c2364d intervene:add_squeaky_wheel_learning_phase usable=True sel=0.218 dev=0.315
+03:48:28 [C] step 5: intervene:add_squeaky_wheel_learning_phase -> usable=True delta=-0.000369075620407072 structural=False best=0.2180
+03:48:28 [C] self-diagnosed intervention on C-03-99ad5f
+03:51:31 [C] C-08-cc34c8 intervene:add_dynamic_dispatch_construction usable=True sel=0.215 dev=0.312
+03:51:31 [C] step 6: intervene:add_dynamic_dispatch_construction -> usable=True delta=-0.0015680073768213738 structural=True best=0.2180
+03:51:31 [C] stagnation (2) -> space expansion
+03:58:55 [C] C-09-2d9ba1 expand usable=True sel=0.203 dev=0.260
+03:58:55 [C] step 7: expand -> usable=True delta=-0.014470286777342724 structural=True best=0.2180
+03:58:55 [C] self-diagnosed intervention on C-08-cc34c8
+04:01:36 [C] C-10-6f0fb8 intervene:add_blame_driven_squeaky_wheel_and_chain_moves usable=True sel=0.216 dev=0.312
+04:01:36 [C] step 8: intervene:add_blame_driven_squeaky_wheel_and_chain_moves -> usable=True delta=0.0011953297715979673 structural=True best=0.2180
+04:01:36 arm C done in 1896s, calls=12, cost=$4.541
+04:01:36 champions (chosen on SELECTION, before audit): {'A': 'A-00-870771', 'B_best': 'B-10-02ba2e', 'C_initial': 'C-01-fe7794', 'C_final': 'C-06-260a46'}
+04:03:54 direct Claude baseline on audit ...
+04:23:26 audit done
+04:23:28 results written to /home/user/Test/experiments/cal-v2/rep1
+{
+ "champions": {
+  "A": "A-00-870771",
+  "B_best": "B-10-02ba2e",
+  "C_initial": "C-01-fe7794",
+  "C_final": "C-06-260a46"
+ },
+ "hypotheses": {
+  "H1_primary": {
+   "comparison": "C_final - C_initial",
+   "mean_diff": 0.005791784372146747,
+   "ci99_bonferroni": [
+    0.0021350202975680935,
+    0.010777368660038162
+   ],
+   "holds": true
+  },
+  "H2": {
+   "comparison": "C_final - B_best",
+   "mean_diff": 0.0047960980755968885,
+   "ci99_bonferroni": [
+    0.0007955964934445261,
+    0.011286477171376163
+   ],
+   "holds": true
+  },
+  "H3": {
+   "comparison": "C_final - A",
+   "mean_diff": 0.010177046383843626,
+   "ci99_bonferroni": [
+    0.0036789198222186865,
+    0.020056029381184975
+   ],
+   "holds": true
+  },
+  "H4": {
+   "comparison": "C_final - H_manual",
+   "mean_diff": 0.06863506743326427,
+   "ci99_bonferroni": [
+    0.03560784455513065,
+    0.11205806581678751
+   ],
+   "holds": true
+  },
+  "H5": {
+   "comparison": "C_final - D_direct",
+   "mean_diff": 0.06329809335539958,
+   "ci99_bonferroni": [
+    0.03272326896352574,
+    0.10147610635149876
+   ],
+   "holds": true
+  }
+ },
+ "audit": {
+  "A": [
+   0.1934,
+   [
+    0.13312079300908544,
+    0.2604304168526294
+   ]
+  ],
+  "B_best": [
+   0.1988,
+   [
+    0.1378547135630601,
+    0.2656902415239098
+   ]
+  ],
+  "C_initial": [
+   0.1978,
+   [
+    0.13618960456375281,
+    0.2650360692098916
+   ]
+  ],
+  "C_final": [
+   0.2036,
+   [
+    0.14206595366365812,
+    0.27084028204634153
+   ]
+  ],
+  "H_manual": [
+   0.135,
+   [
+    0.0793856598397698,
+    0.19892666702659592
+   ]
+  ],
+  "D_direct": [
+   0.1403,
+   [
+    0.083366890276545,
+    0.2046277973506939
+   ]
+  ]
+ }
+}
+exit 0

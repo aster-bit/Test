@@ -37,8 +37,9 @@ def main(argv=None) -> int:
          f"Pre-registered {pre['created']} (environment sha256 `{pre['environment']['source_sha256'][:12]}`, audit split "
          f"sha256 `{pre['splits']['audit']['sha256'][:12]}`). Replicates completed: {len(reps)}/{pre['replicates']}. "
          f"Provider: {reps[0][1]['provider'] if reps else 'n/a'}.", "",
-         "Score = hidden lower bound / makespan for valid schedules (1.0 is generally unattainable), 0 for invalid "
-         "answers; audit set: 120 instances incl. an audit-only `large` family.", "",
+         f"Score = hidden lower bound / achieved objective for valid answers (1.0 is generally unattainable; the bound is "
+         f"loose, so absolute values are low and only differences are meaningful), 0 for invalid answers; audit set: "
+         f"{pre['splits']['audit']['n']} instances incl. audit-only families.", "",
          "## Audit results (sealed set, each candidate evaluated once)", ""]
     for r, res, _ in reps:
         L += [f"### Replicate {r}", "", "| role | what | mean score | 95% CI | valid | cost/item $ | p95 ms |", "|---|---|---|---|---|---|---|"]
