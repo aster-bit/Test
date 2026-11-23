@@ -1,0 +1,106 @@
+{
+  "config": {
+    "name": "hds-stream",
+    "env": "streamrec",
+    "seed": 2026,
+    "dev": 30,
+    "selection": 60,
+    "audit": 100,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 2.0,
+    "recombine_rate": 0.25,
+    "timer": "cpu",
+    "chunks": 2,
+    "replicate": 0,
+    "k_hyp": 4,
+    "explore_share": 0.4
+  },
+  "created": "2026-11-23T14:39:15Z",
+  "environment": {
+    "name": "session_log_reconstruction",
+    "version": "1",
+    "source_sha256": "905bebe3d4de6bb3ce7f332fa88bdf97a7831179530f54b01c830c844ab2bd98"
+  },
+  "frozen_files": {
+    "skillforge/envs/base.py": "8b65b3ae29f15746b88042116f89be233016c9132934cac3e2c54fe66a7e7993",
+    "skillforge/llm.py": "c296b51bc45555a644c64056c528ed4ac05bc0259cb4abc632a4698421d167ee",
+    "skillforge/ir.py": "a242b005914a5649751842141be289a36af1fd230a69090878cbdb97418ba7f9",
+    "skillforge/open_synth.py": "02cd7df66606834fe210c722d4530e36b816a31377015f418cb91d120ec5000f",
+    "skillforge/experiment.py": "fc6e6cd5d4d0e467a80c8ca2f109f35849d07fd09f3edd695ef90a85e455a0ab",
+    "skillforge/env_eval.py": "53c821c4193a188f9b0d178f738b5a8c0093db23661c6f1dc6e9b69aa8b841a9",
+    "skillforge/novelty.py": "f08f9d16960f243534dd81c35375499c719578b0f04847db88dc6d69c0e5eccb",
+    "skillforge/executor.py": "ee437a1845013b425924feb11304c616a934a775219a0ad177e58bfb92e15d42",
+    "skillforge/sandbox.py": "496d607bb7f18009e23b7f0cac65849f9100bb57c9767600c929071a6e1f3bc3",
+    "skillforge/sandbox_runner.py": "b4a5c460488ccbbe3673c8a2ed193db2e8e4c28fc684593f89d613866ba82fce",
+    "skillforge/hypothesis.py": "aa1e5735dbcfbde68782d019dd94a623e7a206743e2e8883881a607afda6d598",
+    "skillforge/hexperiment.py": "3d128d9874968fc50c678d9f605281f51fa8956daaa84fc826741a38b3a9c5b9"
+  },
+  "splits": {
+    "dev": {
+      "n": 30,
+      "sha256": "f278d6132b5e59f4e5efd78a8abaf9a975bfc30ab7dd43b445c3c7d4eaf506b8",
+      "families": [
+        "anonymous",
+        "crashy",
+        "crowded",
+        "jittery",
+        "lossy",
+        "mostly_labelled"
+      ]
+    },
+    "selection": {
+      "n": 60,
+      "sha256": "9173b9f33d29b7ac20ab2cd6552578786d2b3dc502bcc0e71a6c4f375e100cd9",
+      "families": [
+        "anonymous",
+        "crashy",
+        "crowded",
+        "jittery",
+        "lossy",
+        "mostly_labelled"
+      ]
+    },
+    "audit": {
+      "n": 100,
+      "sha256": "d511cfa3b93b36d2367d018fd883b6cef30df1ca1fecdd3c7f82b78840536d9d",
+      "families": [
+        "anonymous",
+        "crashy",
+        "crowded",
+        "jittery",
+        "large_mixed",
+        "lossy",
+        "mostly_labelled"
+      ]
+    }
+  },
+  "hypotheses": {
+    "G1": "H_final beats P_final (program evolution, equal budget) on the AUDIT mean score: paired bootstrap CI of the difference (Bonferroni over 3 comparisons) has lower bound > 0.",
+    "G2": "H_final beats A (one-shot synthesis) on AUDIT (same test).",
+    "G3_paradigm_transition": "H_final beats H_initial (the best program after the initial round of the H arm) on AUDIT (same test) AND H_final implements a different hypothesis than H_initial AND the AST similarity of the two programs is < 0.6. This is the operational definition of a paradigm transition without human intervention.",
+    "descriptive": "P_final - P_initial on AUDIT; best implementation of every hypothesis on AUDIT; per arm: number of code clusters (single linkage, AST similarity >= 0.6), mean pairwise AST similarity, mean pairwise behavioural distance on SELECTION; improvements of the best SELECTION score that happened after >= 2 consecutive non-improving steps (escapes from stagnation); synthesis cost.",
+    "attribution": "Failure attribution labels are derived from measurements only: a hypothesis with no executable implementation is 'untested' (never 'refuted'); 'mechanism inferior' requires >= 2 independent implementations each significantly below the leader; with one implementation the label is 'idea and implementation not separated'. Causes named by the model are stored as conjectures.",
+    "statistics": "paired bootstrap over audit instances; a claim is SUPPORTED only if it holds in every replicate, MIXED if in some, NOT SUPPORTED if in none.",
+    "leakage_controls": "generator sees the public spec, format examples, public family descriptions, programs, and for DEV instances the input, its own output, score and checker message. SELECTION: aggregate use only (leader / champion choice). AUDIT: one evaluation at the end.",
+    "success_criterion": "The method is said to beat the previous one in a domain iff G1 is SUPPORTED there; a paradigm transition is said to be demonstrated iff G3 is SUPPORTED there. Anything else is reported as negative or mixed."
+  },
+  "replicates": 2,
+  "diagnostic": {
+    "a_hypotheses_with_working_implementation": 4,
+    "a_ok": true,
+    "b_ast_within": 0.5474260000604664,
+    "b_ast_between": 0.4070786183929371,
+    "b_perm_p": 0.010197960407918417,
+    "b_ok": true,
+    "c_control_mean_pairwise_ast": 0.4098109311726162,
+    "c_ok": true,
+    "d_discrimination": 0.8888888888888888,
+    "d_ok": true
+  }
+}
