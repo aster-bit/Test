@@ -49,7 +49,7 @@ def _get(state: dict[str, Any], dotted: str) -> Any:
 class _SafeFormatter(string.Formatter):
     """Only whitelisted placeholders; no attribute/index access into objects."""
 
-    ALLOWED = {"input_text", "context_json", "state_json"}
+    ALLOWED = {"input_text", "context_json", "state_json", "input_json"}
 
     def get_field(self, field_name, args, kwargs):
         if field_name not in self.ALLOWED:
@@ -61,14 +61,17 @@ _FMT = _SafeFormatter()
 
 
 def render_prompt(template: str, state: dict[str, Any]) -> str:
+    inp = state.get("input") if isinstance(state.get("input"), dict) else {}
     text = state.get("text")
     if text is None:
-        text = (state.get("input") or {}).get("text") or ""
-    ctx = (state.get("input") or {}).get("context") or {}
+        text = inp.get("text") or ""
+    ctx = inp.get("context") or {}
     fields = state.get("fields") or {}
     try:
+        work = {k: v for k, v in state.items() if k not in ("input", "output") and not k.startswith("_")}
         return _FMT.format(template, input_text=text, context_json=json.dumps(ctx),
-                           state_json=json.dumps(fields, default=str))
+                           state_json=json.dumps(fields or work, default=str)[:20000],
+                           input_json=json.dumps(state.get("input"), default=str))
     except (KeyError, ValueError, IndexError):
         # malformed templates (e.g. from mutation) degrade to the raw document
         return template + "\n\n" + text

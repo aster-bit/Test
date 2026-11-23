@@ -24,6 +24,7 @@ import time
 ALLOWED_MODULES = (
     "re", "json", "math", "datetime", "decimal", "unicodedata", "itertools",
     "collections", "string", "functools", "statistics", "fractions", "operator", "_strptime",
+    "heapq", "bisect", "random", "copy", "time", "typing", "dataclasses", "enum",
 )
 
 

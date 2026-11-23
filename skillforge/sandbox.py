@@ -34,6 +34,7 @@ RUNNER_PATH = Path(__file__).with_name("sandbox_runner.py")
 ALLOWED_IMPORTS = {
     "re", "json", "math", "datetime", "decimal", "unicodedata", "itertools",
     "collections", "string", "functools", "statistics", "fractions", "operator",
+    "heapq", "bisect", "random", "copy", "time", "typing", "dataclasses", "enum",
 }
 FORBIDDEN_NAMES = {
     "eval", "exec", "compile", "open", "__import__", "globals", "locals", "vars", "input",
@@ -71,8 +72,8 @@ def validate_source(source: str) -> list[str]:
         elif isinstance(node, ast.Constant) and isinstance(node.value, str) and node.value.startswith("__") \
                 and node.value.endswith("__") and len(node.value) > 4:
             problems.append(f"dunder string literal: {node.value}")
-        elif isinstance(node, (ast.Global, ast.Nonlocal)):
-            problems.append("global/nonlocal not allowed")
+        elif isinstance(node, ast.Global):
+            problems.append("global not allowed")
         elif isinstance(node, ast.FunctionDef) and node.name == "step":
             if [a.arg for a in node.args.args][:2] == ["state", "params"]:
                 has_step = True
@@ -161,10 +162,12 @@ class ExecutionSandbox:
         payload = json.dumps({"segments": segments, "states": states, "item_timeout_s": self.limits.item_timeout_s})
         import time
         t0 = time.perf_counter()
+        # process-level limits scale with the batch; the per-item limit stays fixed
+        wall = max(self.limits.wall_timeout_s, self.limits.item_timeout_s * len(states) + 10)
         if self.backend == "docker":
-            out, err_text, code = self._run_docker(payload)
+            out, err_text, code = self._run_docker(payload, wall)
         else:
-            out, err_text, code = self._run_subprocess(payload)
+            out, err_text, code = self._run_subprocess(payload, wall)
         wall = (time.perf_counter() - t0) * 1000
         self.stats["batches"] += 1
         self.stats["items"] += len(states)
@@ -181,7 +184,21 @@ class ExecutionSandbox:
             return BatchResult([ItemResult(s, msg, 0.0) for s in states], setup_error=msg,
                                backend=self.backend, wall_ms=wall)
 
-    def _preexec(self):  # runs in the child before exec
+    def _preexec_for(self, wall: float):
+        lim = self.limits
+        cpu = max(lim.cpu_seconds, int(wall) + 5)
+
+        def fn():  # runs in the child before exec
+            import resource
+            resource.setrlimit(resource.RLIMIT_AS, (lim.memory_mb * 1024 * 1024,) * 2)
+            resource.setrlimit(resource.RLIMIT_CPU, (cpu, cpu + 1))
+            resource.setrlimit(resource.RLIMIT_FSIZE, (lim.file_size_bytes,) * 2)
+            resource.setrlimit(resource.RLIMIT_NOFILE, (lim.open_files,) * 2)
+            resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+            os.setsid()
+        return fn
+
+    def _preexec(self):  # legacy single-batch limits
         import resource
         lim = self.limits
         resource.setrlimit(resource.RLIMIT_AS, (lim.memory_mb * 1024 * 1024,) * 2)
@@ -191,7 +208,8 @@ class ExecutionSandbox:
         resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
         os.setsid()
 
-    def _run_subprocess(self, payload: str) -> tuple[str, str, int]:
+    def _run_subprocess(self, payload: str, wall: float | None = None) -> tuple[str, str, int]:
+        wall = wall or self.limits.wall_timeout_s
         with tempfile.TemporaryDirectory(prefix="sf-sbx-") as work:
             runner = Path(work) / "runner.py"
             shutil.copyfile(RUNNER_PATH, runner)
@@ -201,23 +219,24 @@ class ExecutionSandbox:
             try:
                 p = subprocess.run(cmd, input=payload, capture_output=True, text=True, cwd=work,
                                    env={"PATH": "/usr/bin:/bin", "LANG": "C.UTF-8"},
-                                   timeout=self.limits.wall_timeout_s, preexec_fn=self._preexec)
+                                   timeout=wall, preexec_fn=self._preexec_for(wall))
                 return p.stdout[: self.limits.max_output_bytes], p.stderr, p.returncode
             except subprocess.TimeoutExpired:
                 return "", "wall-clock timeout", -9
 
-    def _run_docker(self, payload: str) -> tuple[str, str, int]:
+    def _run_docker(self, payload: str, wall: float | None = None) -> tuple[str, str, int]:
         lim = self.limits
+        wall = wall or lim.wall_timeout_s
         cmd = [
             "docker", "run", "--rm", "-i", "--network", "none", "--read-only",
             "--tmpfs", "/tmp:rw,size=16m", "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
             "--memory", f"{lim.memory_mb}m", "--cpus", "1", "--pids-limit", "64", "--user", "65534:65534",
-            "--ulimit", f"cpu={lim.cpu_seconds}", "-v", f"{RUNNER_PATH}:/sandbox/runner.py:ro",
+            "--ulimit", f"cpu={max(lim.cpu_seconds, int(wall) + 5)}", "-v", f"{RUNNER_PATH}:/sandbox/runner.py:ro",
             "--env-file", "/dev/null", self.docker_image, "python", "-I", "-S", "/sandbox/runner.py",
         ]
         try:
             p = subprocess.run(cmd, input=payload, capture_output=True, text=True,
-                               timeout=lim.wall_timeout_s + 15, env={"PATH": os.environ.get("PATH", "")})
+                               timeout=wall + 15, env={"PATH": os.environ.get("PATH", "")})
             return p.stdout[: lim.max_output_bytes], p.stderr, p.returncode
         except subprocess.TimeoutExpired:
             return "", "wall-clock timeout", -9
