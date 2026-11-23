@@ -1,0 +1,5064 @@
+{
+ "A": [
+  {
+   "id": "audit-0000",
+   "family": "medium",
+   "score": 0.7741935483870968,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "large",
+   "score": 0.8709677419354839,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "release_times",
+   "score": 0.8695652173913043,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "medium",
+   "score": 0.8333333333333334,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "large",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "zero_durations",
+   "score": 0.8095238095238095,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "large",
+   "score": 0.8309859154929577,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "medium",
+   "score": 0.9565217391304348,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "release_times",
+   "score": 0.5789473684210527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "medium",
+   "score": 0.9,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "small",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "medium",
+   "score": 0.7555555555555555,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "long_chains",
+   "score": 0.8275862068965517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "medium",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "tight_resources",
+   "score": 0.9696969696969697,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "medium",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "medium",
+   "score": 0.7804878048780488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "long_chains",
+   "score": 0.9375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "large",
+   "score": 0.9120879120879121,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "tight_resources",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "small",
+   "score": 0.8461538461538461,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "large",
+   "score": 0.8255813953488372,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "release_times",
+   "score": 0.9333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "long_chains",
+   "score": 0.7142857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "tight_resources",
+   "score": 0.86,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "medium",
+   "score": 0.925,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "large",
+   "score": 0.8791208791208791,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "medium",
+   "score": 0.9629629629629629,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "release_times",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "medium",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "release_times",
+   "score": 0.8787878787878788,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "long_chains",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "large",
+   "score": 0.8311688311688312,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "medium",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "long_chains",
+   "score": 0.8666666666666667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "small",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "wide_parallel",
+   "score": 0.921875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "small",
+   "score": 0.7857142857142857,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "medium",
+   "score": 0.9032258064516129,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "wide_parallel",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "tight_resources",
+   "score": 0.9555555555555556,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "large",
+   "score": 0.8181818181818182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "release_times",
+   "score": 0.9736842105263158,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "zero_durations",
+   "score": 0.8947368421052632,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "small",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "small",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "medium",
+   "score": 0.8,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "medium",
+   "score": 0.6764705882352942,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "large",
+   "score": 0.9405940594059405,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "long_chains",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "medium",
+   "score": 0.9310344827586207,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "tight_resources",
+   "score": 0.8518518518518519,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "large",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "release_times",
+   "score": 0.775,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "long_chains",
+   "score": 0.9473684210526315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "long_chains",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "release_times",
+   "score": 0.9487179487179487,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "tight_resources",
+   "score": 0.9038461538461539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "release_times",
+   "score": 0.8297872340425532,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "medium",
+   "score": 0.9642857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0100",
+   "family": "small",
+   "score": 0.9047619047619048,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0101",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0102",
+   "family": "medium",
+   "score": 0.7608695652173914,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0103",
+   "family": "tight_resources",
+   "score": 0.8245614035087719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0104",
+   "family": "large",
+   "score": 0.9285714285714286,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0105",
+   "family": "medium",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0106",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0107",
+   "family": "long_chains",
+   "score": 0.7307692307692307,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0108",
+   "family": "wide_parallel",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0109",
+   "family": "medium",
+   "score": 0.90625,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0110",
+   "family": "small",
+   "score": 0.96,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0111",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0112",
+   "family": "wide_parallel",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0113",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0114",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0115",
+   "family": "medium",
+   "score": 0.9534883720930233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0116",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0117",
+   "family": "release_times",
+   "score": 0.6326530612244898,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0118",
+   "family": "wide_parallel",
+   "score": 0.9444444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0119",
+   "family": "zero_durations",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "B_best": [
+  {
+   "id": "audit-0000",
+   "family": "medium",
+   "score": 0.7741935483870968,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "large",
+   "score": 0.8709677419354839,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "release_times",
+   "score": 0.8695652173913043,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "medium",
+   "score": 0.8333333333333334,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "large",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "zero_durations",
+   "score": 0.8095238095238095,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "large",
+   "score": 0.8309859154929577,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "medium",
+   "score": 0.9565217391304348,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "release_times",
+   "score": 0.5789473684210527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "medium",
+   "score": 0.9,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "small",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "medium",
+   "score": 0.7555555555555555,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "long_chains",
+   "score": 0.8275862068965517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "medium",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "tight_resources",
+   "score": 0.9696969696969697,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "medium",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "medium",
+   "score": 0.7804878048780488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "long_chains",
+   "score": 0.9375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "large",
+   "score": 0.9120879120879121,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "tight_resources",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "small",
+   "score": 0.8461538461538461,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "large",
+   "score": 0.8255813953488372,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "release_times",
+   "score": 0.9333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "long_chains",
+   "score": 0.7142857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "tight_resources",
+   "score": 0.86,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "medium",
+   "score": 0.925,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "large",
+   "score": 0.8791208791208791,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "medium",
+   "score": 0.9629629629629629,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "release_times",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "medium",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "release_times",
+   "score": 0.8787878787878788,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "long_chains",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "large",
+   "score": 0.8311688311688312,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "medium",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "long_chains",
+   "score": 0.8666666666666667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "small",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "wide_parallel",
+   "score": 0.921875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "small",
+   "score": 0.7857142857142857,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "medium",
+   "score": 0.9032258064516129,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "wide_parallel",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "tight_resources",
+   "score": 0.9555555555555556,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "large",
+   "score": 0.8181818181818182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "release_times",
+   "score": 0.9736842105263158,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "zero_durations",
+   "score": 0.8947368421052632,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "small",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "small",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "medium",
+   "score": 0.8,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "medium",
+   "score": 0.6764705882352942,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "large",
+   "score": 0.9595959595959596,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "long_chains",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "medium",
+   "score": 0.9310344827586207,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "tight_resources",
+   "score": 0.8518518518518519,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "large",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "release_times",
+   "score": 0.775,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "long_chains",
+   "score": 0.9473684210526315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "long_chains",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "release_times",
+   "score": 0.9487179487179487,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "tight_resources",
+   "score": 0.9038461538461539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "release_times",
+   "score": 0.8297872340425532,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "medium",
+   "score": 0.9642857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0100",
+   "family": "small",
+   "score": 0.9047619047619048,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0101",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0102",
+   "family": "medium",
+   "score": 0.7608695652173914,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0103",
+   "family": "tight_resources",
+   "score": 0.8245614035087719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0104",
+   "family": "large",
+   "score": 0.9285714285714286,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0105",
+   "family": "medium",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0106",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0107",
+   "family": "long_chains",
+   "score": 0.7307692307692307,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0108",
+   "family": "wide_parallel",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0109",
+   "family": "medium",
+   "score": 0.90625,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0110",
+   "family": "small",
+   "score": 0.96,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0111",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0112",
+   "family": "wide_parallel",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0113",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0114",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0115",
+   "family": "medium",
+   "score": 0.9534883720930233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0116",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0117",
+   "family": "release_times",
+   "score": 0.6326530612244898,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0118",
+   "family": "wide_parallel",
+   "score": 0.9444444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0119",
+   "family": "zero_durations",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "C_initial": [
+  {
+   "id": "audit-0000",
+   "family": "medium",
+   "score": 0.7741935483870968,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "large",
+   "score": 0.8709677419354839,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "release_times",
+   "score": 0.8695652173913043,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "medium",
+   "score": 0.8333333333333334,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "large",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "zero_durations",
+   "score": 0.8095238095238095,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "large",
+   "score": 0.8194444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "medium",
+   "score": 0.9565217391304348,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "release_times",
+   "score": 0.5789473684210527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "medium",
+   "score": 0.9,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "small",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "medium",
+   "score": 0.7555555555555555,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "long_chains",
+   "score": 0.8275862068965517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "medium",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "tight_resources",
+   "score": 0.9696969696969697,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "medium",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "medium",
+   "score": 0.7804878048780488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "long_chains",
+   "score": 0.9375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "large",
+   "score": 0.9120879120879121,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "tight_resources",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "small",
+   "score": 0.8461538461538461,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "large",
+   "score": 0.8255813953488372,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "release_times",
+   "score": 0.9333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "long_chains",
+   "score": 0.7142857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "tight_resources",
+   "score": 0.86,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "medium",
+   "score": 0.925,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "large",
+   "score": 0.8791208791208791,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "medium",
+   "score": 0.9629629629629629,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "release_times",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "medium",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "release_times",
+   "score": 0.8787878787878788,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "long_chains",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "large",
+   "score": 0.8311688311688312,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "medium",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "long_chains",
+   "score": 0.8666666666666667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "small",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "wide_parallel",
+   "score": 0.921875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "small",
+   "score": 0.7857142857142857,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "medium",
+   "score": 0.9032258064516129,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "wide_parallel",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "tight_resources",
+   "score": 0.9555555555555556,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "large",
+   "score": 0.8181818181818182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "release_times",
+   "score": 0.9736842105263158,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "zero_durations",
+   "score": 0.8947368421052632,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "small",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "small",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "medium",
+   "score": 0.8,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "medium",
+   "score": 0.6764705882352942,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "large",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "long_chains",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "medium",
+   "score": 0.9310344827586207,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "tight_resources",
+   "score": 0.8518518518518519,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "large",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "release_times",
+   "score": 0.775,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "long_chains",
+   "score": 0.9473684210526315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "long_chains",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "release_times",
+   "score": 0.9487179487179487,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "tight_resources",
+   "score": 0.9038461538461539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "release_times",
+   "score": 0.8297872340425532,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "medium",
+   "score": 0.9642857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0100",
+   "family": "small",
+   "score": 0.9047619047619048,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0101",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0102",
+   "family": "medium",
+   "score": 0.7608695652173914,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0103",
+   "family": "tight_resources",
+   "score": 0.8245614035087719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0104",
+   "family": "large",
+   "score": 0.9154929577464789,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0105",
+   "family": "medium",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0106",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0107",
+   "family": "long_chains",
+   "score": 0.7307692307692307,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0108",
+   "family": "wide_parallel",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0109",
+   "family": "medium",
+   "score": 0.90625,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0110",
+   "family": "small",
+   "score": 0.96,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0111",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0112",
+   "family": "wide_parallel",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0113",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0114",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0115",
+   "family": "medium",
+   "score": 0.9534883720930233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0116",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0117",
+   "family": "release_times",
+   "score": 0.6326530612244898,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0118",
+   "family": "wide_parallel",
+   "score": 0.9444444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0119",
+   "family": "zero_durations",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "C_final": [
+  {
+   "id": "audit-0000",
+   "family": "medium",
+   "score": 0.7741935483870968,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "large",
+   "score": 0.8709677419354839,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "release_times",
+   "score": 0.8695652173913043,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "medium",
+   "score": 0.8333333333333334,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "large",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "zero_durations",
+   "score": 0.8095238095238095,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "large",
+   "score": 0.8194444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "medium",
+   "score": 0.9565217391304348,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "release_times",
+   "score": 0.5789473684210527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "medium",
+   "score": 0.9,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "small",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "medium",
+   "score": 0.7555555555555555,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "long_chains",
+   "score": 0.8275862068965517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "medium",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "tight_resources",
+   "score": 0.9696969696969697,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "medium",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "medium",
+   "score": 0.7804878048780488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "long_chains",
+   "score": 0.9375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "large",
+   "score": 0.9120879120879121,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "tight_resources",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "medium",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "small",
+   "score": 0.8461538461538461,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "large",
+   "score": 0.8255813953488372,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "release_times",
+   "score": 0.9333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "long_chains",
+   "score": 0.7142857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "tight_resources",
+   "score": 0.86,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "medium",
+   "score": 0.925,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "large",
+   "score": 0.8791208791208791,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "medium",
+   "score": 0.9629629629629629,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "release_times",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "medium",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "release_times",
+   "score": 0.8787878787878788,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "long_chains",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "large",
+   "score": 0.8311688311688312,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "medium",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "long_chains",
+   "score": 0.8666666666666667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "small",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "wide_parallel",
+   "score": 0.921875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "small",
+   "score": 0.7857142857142857,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "medium",
+   "score": 0.9032258064516129,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "wide_parallel",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "tight_resources",
+   "score": 0.9555555555555556,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "large",
+   "score": 0.8181818181818182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "release_times",
+   "score": 0.9736842105263158,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "zero_durations",
+   "score": 0.8947368421052632,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "small",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "small",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "medium",
+   "score": 0.8,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "medium",
+   "score": 0.6764705882352942,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "large",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "long_chains",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "medium",
+   "score": 0.9310344827586207,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "tight_resources",
+   "score": 0.8518518518518519,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "large",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "release_times",
+   "score": 0.775,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "long_chains",
+   "score": 0.9473684210526315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "long_chains",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "release_times",
+   "score": 0.9487179487179487,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "tight_resources",
+   "score": 0.9038461538461539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "release_times",
+   "score": 0.8297872340425532,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "medium",
+   "score": 0.9642857142857143,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0100",
+   "family": "small",
+   "score": 0.9047619047619048,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0101",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0102",
+   "family": "medium",
+   "score": 0.7608695652173914,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0103",
+   "family": "tight_resources",
+   "score": 0.8245614035087719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0104",
+   "family": "large",
+   "score": 0.9154929577464789,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0105",
+   "family": "medium",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0106",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0107",
+   "family": "long_chains",
+   "score": 0.7307692307692307,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0108",
+   "family": "wide_parallel",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0109",
+   "family": "medium",
+   "score": 0.90625,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0110",
+   "family": "small",
+   "score": 0.96,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0111",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0112",
+   "family": "wide_parallel",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0113",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0114",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0115",
+   "family": "medium",
+   "score": 0.9534883720930233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0116",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0117",
+   "family": "release_times",
+   "score": 0.6326530612244898,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0118",
+   "family": "wide_parallel",
+   "score": 0.9444444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0119",
+   "family": "zero_durations",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "H_manual": [
+  {
+   "id": "audit-0000",
+   "family": "medium",
+   "score": 0.7741935483870968,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "large",
+   "score": 0.72,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "release_times",
+   "score": 0.8695652173913043,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "medium",
+   "score": 0.8108108108108109,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "large",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "zero_durations",
+   "score": 0.8095238095238095,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "large",
+   "score": 0.7375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "release_times",
+   "score": 0.5789473684210527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "medium",
+   "score": 0.84375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "small",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "medium",
+   "score": 0.7555555555555555,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "long_chains",
+   "score": 0.8275862068965517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "medium",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "tight_resources",
+   "score": 0.9696969696969697,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "medium",
+   "score": 0.8484848484848485,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "medium",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "tight_resources",
+   "score": 0.9523809523809523,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "medium",
+   "score": 0.7804878048780488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "long_chains",
+   "score": 0.9375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "large",
+   "score": 0.8645833333333334,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "tight_resources",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "medium",
+   "score": 0.7924528301886793,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "small",
+   "score": 0.8461538461538461,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "large",
+   "score": 0.7634408602150538,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "release_times",
+   "score": 0.9333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "long_chains",
+   "score": 0.6666666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "tight_resources",
+   "score": 0.86,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "medium",
+   "score": 0.8809523809523809,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "large",
+   "score": 0.8247422680412371,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "medium",
+   "score": 0.8387096774193549,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "release_times",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "medium",
+   "score": 0.6341463414634146,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "release_times",
+   "score": 0.8529411764705882,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "long_chains",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "large",
+   "score": 0.810126582278481,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "medium",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "long_chains",
+   "score": 0.8666666666666667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "small",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "wide_parallel",
+   "score": 0.8939393939393939,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "small",
+   "score": 0.6470588235294118,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "medium",
+   "score": 0.9032258064516129,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "wide_parallel",
+   "score": 0.8846153846153846,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "tight_resources",
+   "score": 0.9148936170212766,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "large",
+   "score": 0.7864077669902912,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "release_times",
+   "score": 0.9736842105263158,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "zero_durations",
+   "score": 0.8947368421052632,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "small",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "small",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "medium",
+   "score": 0.8,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "medium",
+   "score": 0.6666666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "large",
+   "score": 0.76,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "long_chains",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "medium",
+   "score": 0.8181818181818182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "tight_resources",
+   "score": 0.7931034482758621,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "large",
+   "score": 0.944954128440367,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "release_times",
+   "score": 0.7560975609756098,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "long_chains",
+   "score": 0.9473684210526315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "long_chains",
+   "score": 0.7222222222222222,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "release_times",
+   "score": 0.8409090909090909,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "tight_resources",
+   "score": 0.9038461538461539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "release_times",
+   "score": 0.8125,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "medium",
+   "score": 0.9310344827586207,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0100",
+   "family": "small",
+   "score": 0.9047619047619048,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0101",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0102",
+   "family": "medium",
+   "score": 0.7291666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0103",
+   "family": "tight_resources",
+   "score": 0.8245614035087719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0104",
+   "family": "large",
+   "score": 0.7831325301204819,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0105",
+   "family": "medium",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0106",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0107",
+   "family": "long_chains",
+   "score": 0.7307692307692307,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0108",
+   "family": "wide_parallel",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0109",
+   "family": "medium",
+   "score": 0.725,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0110",
+   "family": "small",
+   "score": 0.96,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0111",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0112",
+   "family": "wide_parallel",
+   "score": 0.8636363636363636,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0113",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0114",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0115",
+   "family": "medium",
+   "score": 0.9534883720930233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0116",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0117",
+   "family": "release_times",
+   "score": 0.543859649122807,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0118",
+   "family": "wide_parallel",
+   "score": 0.8717948717948718,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0119",
+   "family": "zero_durations",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "D_direct": [
+  {
+   "id": "audit-0000",
+   "family": "medium",
+   "score": 0.7741935483870968,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "large",
+   "score": 0.7605633802816901,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "release_times",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "precedence_violated"
+   ]
+  },
+  {
+   "id": "audit-0004",
+   "family": "medium",
+   "score": 0.8333333333333334,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "large",
+   "score": 0.9,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "zero_durations",
+   "score": 0.8095238095238095,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "large",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "incomplete_schedule"
+   ]
+  },
+  {
+   "id": "audit-0011",
+   "family": "medium",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "precedence_violated"
+   ]
+  },
+  {
+   "id": "audit-0012",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "release_times",
+   "score": 0.5789473684210527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "medium",
+   "score": 0.9,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "small",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "medium",
+   "score": 0.7555555555555555,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "long_chains",
+   "score": 0.8275862068965517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "medium",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "tight_resources",
+   "score": 0.9696969696969697,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "medium",
+   "score": 0.8484848484848485,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "medium",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "medium",
+   "score": 0.7804878048780488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "long_chains",
+   "score": 0.9375,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "large",
+   "score": 0.8556701030927835,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "tight_resources",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "medium",
+   "score": 0.84,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "small",
+   "score": 0.8461538461538461,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "large",
+   "score": 0.7802197802197802,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "release_times",
+   "score": 0.9333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "long_chains",
+   "score": 0.6666666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "tight_resources",
+   "score": 0.86,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "medium",
+   "score": 0.925,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "large",
+   "score": 0.8791208791208791,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "medium",
+   "score": 0.9285714285714286,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "release_times",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "release_violated"
+   ]
+  },
+  {
+   "id": "audit-0051",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "medium",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "release_times",
+   "score": 0.8787878787878788,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "long_chains",
+   "score": 0.8888888888888888,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "large",
+   "score": 0.8205128205128205,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "medium",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "long_chains",
+   "score": 0.8666666666666667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "small",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "wide_parallel",
+   "score": 0.921875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "small",
+   "score": 0.7857142857142857,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "medium",
+   "score": 0.9032258064516129,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "wide_parallel",
+   "score": 0.92,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "tight_resources",
+   "score": 0.9555555555555556,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "large",
+   "score": 0.8181818181818182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "release_times",
+   "score": 0.9487179487179487,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "zero_durations",
+   "score": 0.8947368421052632,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "small",
+   "score": 0.8214285714285714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "small",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "medium",
+   "score": 0.8,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "medium",
+   "score": 0.6764705882352942,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "large",
+   "score": 0.8407079646017699,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "long_chains",
+   "score": 0.8421052631578947,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "medium",
+   "score": 0.7714285714285715,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "tight_resources",
+   "score": 0.8518518518518519,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "large",
+   "score": 0.9279279279279279,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "release_times",
+   "score": 0.775,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "long_chains",
+   "score": 0.9473684210526315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "long_chains",
+   "score": 0.7878787878787878,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "release_times",
+   "score": 0.9487179487179487,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "medium",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "tight_resources",
+   "score": 0.9038461538461539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "release_times",
+   "score": 0.8125,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "medium",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "capacity_violated"
+   ]
+  },
+  {
+   "id": "audit-0100",
+   "family": "small",
+   "score": 0.9047619047619048,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0101",
+   "family": "infeasible_capacity",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0102",
+   "family": "medium",
+   "score": 0.7608695652173914,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0103",
+   "family": "tight_resources",
+   "score": 0.8245614035087719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0104",
+   "family": "large",
+   "score": 0.7558139534883721,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0105",
+   "family": "medium",
+   "score": 0.9230769230769231,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0106",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0107",
+   "family": "long_chains",
+   "score": 0.7307692307692307,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0108",
+   "family": "wide_parallel",
+   "score": 0.9166666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0109",
+   "family": "medium",
+   "score": 0.8787878787878788,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0110",
+   "family": "small",
+   "score": 0.96,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0111",
+   "family": "small",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0112",
+   "family": "wide_parallel",
+   "score": 0.95,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0113",
+   "family": "long_chains",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0114",
+   "family": "zero_durations",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0115",
+   "family": "medium",
+   "score": 0.9534883720930233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0116",
+   "family": "tight_resources",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0117",
+   "family": "release_times",
+   "score": 0.62,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0118",
+   "family": "wide_parallel",
+   "score": 0.918918918918919,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0119",
+   "family": "zero_durations",
+   "score": 0.875,
+   "valid": true,
+   "violations": []
+  }
+ ]
+}

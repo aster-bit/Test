@@ -1,2 +1,52 @@
 02:00:08 pre-registration verified; sandbox=namespace+rlimits+audit-hook
 02:00:08 === arm B (+A = first program of B) ===
+02:02:52 [A] A-00-8db8d2 generate usable=True sel=0.920 dev=0.927
+02:02:52 [B] B-00-8db8d2 generate usable=True sel=0.920 dev=0.927
+02:03:15 [B] B-01-a7a8d2 generate usable=True sel=0.920 dev=0.927
+02:03:37 [B] B-02-690543 generate usable=True sel=0.920 dev=0.927
+02:03:56 [B] B-03-f3b181 generate usable=True sel=0.920 dev=0.927
+02:06:11 [B] B-04-5c1af2 generate usable=True sel=0.920 dev=0.927
+02:06:31 [B] B-05-a23958 generate usable=True sel=0.919 dev=0.927
+02:06:49 [B] B-06-e073ec generate usable=True sel=0.920 dev=0.927
+02:07:09 [B] B-07-d73305 generate usable=True sel=0.875 dev=0.886
+02:14:51 [B] B-08-285b0a generate usable=True sel=0.920 dev=0.927
+02:15:13 [B] B-09-ad8ddb generate usable=True sel=0.920 dev=0.927
+02:15:37 [B] B-10-043e82 generate usable=True sel=0.919 dev=0.927
+02:15:57 [B] B-11-6853bb generate usable=True sel=0.920 dev=0.927
+02:15:57 arm B done in 949s, calls=12, cost=$2.971
+02:15:57 === arm C ===
+02:18:00 [C] C-00-5eede9 generate usable=True sel=0.920 dev=0.927
+02:18:17 [C] C-01-337189 generate usable=True sel=0.920 dev=0.927
+02:18:38 [C] C-02-67961a generate usable=True sel=0.919 dev=0.927
+02:18:38 [C] self-diagnosed intervention on C-00-5eede9
+02:20:48 [C] C-03-c3de14 intervene:add_exact_branch_and_bound_phase usable=True sel=0.920 dev=0.927
+02:20:48 [C] step 1: intervene:add_exact_branch_and_bound_phase -> usable=True delta=0.0 structural=True best=0.9195
+02:20:48 [C] recombine C-03-c3de14 + C-00-5eede9
+02:22:37 [C] C-04-acd063 recombine usable=True sel=0.920 dev=0.927
+02:22:37 [C] step 2: recombine -> usable=True delta=0.0 structural=True best=0.9195
+02:22:37 [C] stagnation (2) -> space expansion
+02:25:10 [C] C-05-38305d expand usable=True sel=0.919 dev=0.927
+02:25:10 [C] step 3: expand -> usable=True delta=-0.0005480113210376378 structural=True best=0.9195
+02:25:10 [C] self-diagnosed intervention on C-01-337189
+02:27:01 [C] C-06-672544 intervene:change_algorithm_to_lamarckian_ga usable=True sel=0.920 dev=0.927
+02:27:01 [C] step 4: intervene:change_algorithm_to_lamarckian_ga -> usable=True delta=0.0 structural=True best=0.9195
+02:27:01 [C] stagnation (2) -> space expansion
+02:28:45 [C] C-07-74b4e2 expand usable=True sel=0.918 dev=0.927
+02:28:46 [C] step 5: expand -> usable=True delta=-0.0015379583204395864 structural=True best=0.9195
+02:28:46 [C] self-diagnosed intervention on C-03-c3de14
+02:38:44 [C] C-08-4b585e intervene:split_and_specialise_with_window_lns usable=True sel=0.920 dev=0.927
+02:38:44 [C] step 6: intervene:split_and_specialise_with_window_lns -> usable=True delta=0.0 structural=True best=0.9195
+02:38:44 [C] stagnation (2) -> space expansion
+02:40:16 [C] C-09-73b721 expand usable=True sel=0.920 dev=0.927
+02:40:16 [C] step 7: expand -> usable=True delta=0.0 structural=True best=0.9195
+02:40:16 [C] self-diagnosed intervention on C-04-acd063
+02:43:30 [C] C-10-70aa3f intervene:add_improvement_phase usable=True sel=0.920 dev=0.927
+02:43:30 [C] step 8: intervene:add_improvement_phase -> usable=True delta=0.0 structural=True best=0.9195
+02:43:30 [C] stagnation (2) -> space expansion
+02:45:37 [C] C-11-d61de1 expand usable=True sel=0.920 dev=0.927
+02:45:37 [C] step 9: expand -> usable=True delta=0.0 structural=True best=0.9195
+02:45:37 arm C done in 1780s, calls=12, cost=$3.956
+02:45:37 champions (chosen on SELECTION, before audit): {'A': 'A-00-8db8d2', 'B_best': 'B-00-8db8d2', 'C_initial': 'C-00-5eede9', 'C_final': 'C-00-5eede9'}
+02:46:15 direct Claude baseline on audit ...
+02:52:25 audit done
+02:52:28 results written to /home/user/Test/experiments/sched-v1/rep0
