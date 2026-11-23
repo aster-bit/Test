@@ -1,0 +1,99 @@
+{
+  "config": {
+    "name": "sched-v1",
+    "env": "scheduling",
+    "seed": 2026,
+    "dev": 40,
+    "selection": 80,
+    "audit": 120,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 3.0,
+    "recombine_rate": 0.25,
+    "replicate": 0
+  },
+  "created": "2026-11-23T01:59:38Z",
+  "environment": {
+    "name": "rcpsp_scheduling",
+    "version": "1",
+    "source_sha256": "539d2ef9c2acbc550383eb3b0575fbdd3f84ad0fe3e563341a03ea051786608d"
+  },
+  "frozen_files": {
+    "skillforge/envs/base.py": "8b65b3ae29f15746b88042116f89be233016c9132934cac3e2c54fe66a7e7993",
+    "skillforge/llm.py": "67f46eb36803f9f9491e4a42610ebf30f0790ba327fe4af985a758af4652dd61",
+    "skillforge/ir.py": "a242b005914a5649751842141be289a36af1fd230a69090878cbdb97418ba7f9",
+    "skillforge/open_synth.py": "02cd7df66606834fe210c722d4530e36b816a31377015f418cb91d120ec5000f",
+    "skillforge/experiment.py": "33fdee6c7180b5b780ff1e17d71d16b450297b954001b36042d946d87ffc2ff6",
+    "skillforge/env_eval.py": "53c821c4193a188f9b0d178f738b5a8c0093db23661c6f1dc6e9b69aa8b841a9",
+    "skillforge/novelty.py": "f08f9d16960f243534dd81c35375499c719578b0f04847db88dc6d69c0e5eccb",
+    "skillforge/executor.py": "ee437a1845013b425924feb11304c616a934a775219a0ad177e58bfb92e15d42",
+    "skillforge/sandbox.py": "ae57a270ee4d57d18a578410310469a364ff1403abfd038889b08c4c573177c1",
+    "skillforge/sandbox_runner.py": "69f0a71e2d437cfede3e761fe55a90948776ffcb5a9bbdb267b713c01afcdef2",
+    "experiments/baselines/scheduling_manual.md": "7591df4e9f4bae53b8be9ff130f292313ce666f61c1caddfda1b001b6f5211fe"
+  },
+  "splits": {
+    "dev": {
+      "n": 40,
+      "sha256": "988d033478abd3c5c1cac3887172510a0825d756e7c95ec39b15d11fe631e21b",
+      "families": [
+        "infeasible_capacity",
+        "infeasible_cycle",
+        "long_chains",
+        "medium",
+        "release_times",
+        "small",
+        "tight_resources",
+        "wide_parallel",
+        "zero_durations"
+      ]
+    },
+    "selection": {
+      "n": 80,
+      "sha256": "6a3c65cf1b85e01e1095ac259c49b97a98a773348278775c9728a72a1c936122",
+      "families": [
+        "infeasible_capacity",
+        "infeasible_cycle",
+        "long_chains",
+        "medium",
+        "release_times",
+        "small",
+        "tight_resources",
+        "wide_parallel",
+        "zero_durations"
+      ]
+    },
+    "audit": {
+      "n": 120,
+      "sha256": "ac1241291a54335070449c8376d3df752c0f09c83346e722efae2672db43b784",
+      "families": [
+        "infeasible_capacity",
+        "infeasible_cycle",
+        "large",
+        "long_chains",
+        "medium",
+        "release_times",
+        "small",
+        "tight_resources",
+        "wide_parallel",
+        "zero_durations"
+      ]
+    }
+  },
+  "hypotheses": {
+    "H1_primary": "C_final beats C_initial (the best program the generator wrote from scratch inside arm C) on the AUDIT mean score: paired bootstrap Bonferroni-corrected CI of the difference has lower bound > 0, AND C_final differs structurally from C_initial (graph/function-set change or AST similarity < 0.6).",
+    "H2": "C_final beats B_best (independent sampling, equal budget) on AUDIT (same test).",
+    "H3": "C_final beats A (one-shot) on AUDIT (same test).",
+    "H4": "C_final beats H (hand-written baseline) on AUDIT (same test).",
+    "H5": "C_final beats D (direct Claude call per instance) on AUDIT (same test).",
+    "novelty_metric": "new algorithm = executable candidate whose AST similarity to every earlier candidate of the same arm is < 0.6; structural mutation per novelty.classify_change; significant improvement = child beats parent on SELECTION with paired bootstrap 95% CI > 0.",
+    "statistics": "per replicate: mean score with bootstrap 95% CI; 5 paired comparisons, Bonferroni => 99% paired bootstrap CIs over audit instances. Replicates are independent repetitions of the whole search (generator stochasticity); a hypothesis is called SUPPORTED only if it holds in every replicate, MIXED if in some, NOT SUPPORTED if in none.",
+    "leakage_controls": "generator sees: public spec, format examples, parent programs, and for DEV instances the input, its own output, score and the checker's violation text (no reference, no bound). SELECTION: aggregate scores only, used for parent/champion choice. AUDIT: never used before the final single evaluation.",
+    "success_criterion": "Stage succeeds iff H1_primary holds. Otherwise the result is reported as negative."
+  },
+  "replicates": 2
+}
