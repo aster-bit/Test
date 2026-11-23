@@ -1,0 +1,67 @@
+20:28:17 === arm A ===
+20:34:39 [A] A-00-bf62de generate usable=True sel=0.923 dev=0.914
+20:34:39 === arm P (program evolution) ===
+20:39:19 [C] C-00-8ae8f8 generate usable=True sel=0.929 dev=0.921
+20:39:20 [C] C-01-11080f generate usable=True sel=0.950 dev=0.915
+20:39:20 [C] C-02-4a67c0 generate usable=True sel=0.895 dev=0.891
+20:39:20 [C] self-diagnosed intervention on C-00-8ae8f8
+20:43:36 [C] C-03-8dba55 intervene:add_improvement_phase usable=True sel=0.928 dev=0.921
+20:43:36 [C] step 1: intervene:add_improvement_phase -> usable=True delta=-0.001962568172023386 structural=True best=0.9505
+20:43:36 [C] recombine C-01-11080f + C-00-8ae8f8
+20:45:35 [C] C-04-fb7850 recombine usable=True sel=0.934 dev=0.915
+20:45:35 [C] step 2: recombine -> usable=True delta=-0.01695067685994753 structural=True best=0.9505
+20:45:35 [C] stagnation (2) -> space expansion
+20:51:41 [C] C-05-193222 expand usable=True sel=0.944 dev=0.927
+20:51:41 [C] step 3: expand -> usable=True delta=-0.006534390483967591 structural=True best=0.9505
+20:51:41 [C] self-diagnosed intervention on C-01-11080f
+20:53:34 [C] C-06-b25a36 intervene:deferred_event_reorder_buffer usable=True sel=0.962 dev=0.956
+20:53:34 [C] step 4: intervene:deferred_event_reorder_buffer -> usable=True delta=0.012031242456623169 structural=True best=0.9625
+20:53:34 [C] self-diagnosed intervention on C-01-11080f
+20:55:08 [C] C-07-ae2965 intervene:add_lookahead_reordering usable=True sel=0.959 dev=0.944
+20:55:08 [C] step 5: intervene:add_lookahead_reordering -> usable=True delta=0.008909418214150443 structural=True best=0.9625
+20:55:08 [C] self-diagnosed intervention on C-04-fb7850
+20:57:06 [C] C-08-7187a2 intervene:add_future_anchor_heuristic usable=True sel=0.941 dev=0.936
+20:57:06 [C] step 6: intervene:add_future_anchor_heuristic -> usable=True delta=0.007607019230174743 structural=True best=0.9625
+20:57:06 [C] stagnation (2) -> space expansion
+21:01:48 [C] C-09-0b12c3 expand usable=True sel=0.936 dev=0.911
+21:01:48 [C] step 7: expand -> usable=True delta=-0.02624726946617007 structural=True best=0.9625
+21:01:48 [C] self-diagnosed intervention on C-06-b25a36
+21:03:30 [C] C-10-1fcc71 intervene:add_improvement_phase usable=True sel=0.960 dev=0.957
+21:03:30 [C] step 8: intervene:add_improvement_phase -> usable=True delta=-0.0022526617643743104 structural=True best=0.9625
+21:03:30 [C] stagnation (2) -> space expansion
+21:21:58 [C] C-11-0f3498 expand usable=True sel=0.924 dev=0.876
+21:21:58 [C] step 9: expand -> usable=True delta=-0.03807821837589649 structural=True best=0.9625
+21:21:58 arm P done: calls=12 cost=$9.63
+21:21:58 === arm H (hypothesis evolution) ===
+21:22:50 [H] hypothesis H0: Greedy online offset tracker - A single pass over the events in timestamp order keeps one live state record per session (node, stream offset, durable offset, status) and a
+21:22:50 [H] hypothesis H1: Multi-hypothesis beam tracking - A beam of the K best complete joint world-states (all session states, the assignments so far, and accumulated penalty) is expanded event by 
+21:22:50 [H] hypothesis H2: Offset-chain path cover via min-cost assignment - A directed graph is built whose edges link event a to event b when b can directly follow a in one session (same node or recover-linked, with
+21:22:50 [H] hypothesis H3: Anchor-seeded global local search - One complete assignment of all anonymous events (with duplicate flags) is iteratively improved by a stochastic local search (reassign one ev
+21:38:26 [H] H-00-29ebb6 implement:H0 usable=True sel=0.836 dev=0.856
+21:38:27 [H] H-01-7c8066 implement:H1 usable=True sel=0.969 dev=0.942
+21:38:28 [H] H-02-c9ea71 implement:H2 usable=True sel=0.853 dev=0.799
+21:38:58 [H] H-03-c1992a implement:H3 usable=True sel=0.969 dev=0.946
+21:42:29 [H] move recombine on H4
+21:43:03 [H] H-04-b10734 recombine:H4 usable=True sel=0.980 dev=0.950
+21:43:03 [H] step 1: recombine/H4 usable=True delta=0.010434327323685794 best=0.9796
+21:45:07 [H] move refine on H4
+21:45:46 [H] H-05-f37d59 refine:H4 usable=True sel=0.978 dev=0.952
+21:45:46 [H] step 2: refine/H4 usable=True delta=-0.0018195155932750524 best=0.9796
+21:51:32 [H] move second_impl on H3
+21:52:04 [H] H-06-b27a2c implement:H3 usable=True sel=0.951 dev=0.927
+21:52:04 [H] step 3: second_impl/H3 usable=True delta=-0.02869191105007217 best=0.9796
+22:00:02 [H] move pivot on H5
+22:00:32 [H] H-07-eae7b4 pivot:H5 usable=True sel=0.963 dev=0.939
+22:00:32 [H] step 4: pivot/H5 usable=True delta=-0.01693368020936952 best=0.9796
+22:02:59 [H] move refine on H4
+22:03:36 [H] H-08-cc42de refine:H4 usable=True sel=0.977 dev=0.951
+22:03:37 [H] step 5: refine/H4 usable=True delta=-0.0023560882160545767 best=0.9796
+22:12:20 [H] move pivot on H6
+22:12:24 [H] H-09-9ab0d7 pivot:H6 usable=True sel=0.955 dev=0.934
+22:12:24 [H] step 6: pivot/H6 usable=True delta=-0.02455403520849923 best=0.9796
+22:14:25 [H] move refine on H4
+22:14:59 [H] H-10-a924e8 refine:H4 usable=True sel=0.977 dev=0.948
+22:14:59 [H] step 7: refine/H4 usable=True delta=-0.002988175153615606 best=0.9796
+22:14:59 arm H done: calls=12 cost=$14.00
+22:14:59 champions (chosen on SELECTION, before audit): {'A': 'A-00-bf62de', 'P_initial': 'C-01-11080f', 'P_final': 'C-06-b25a36', 'H_initial': 'H-03-c1992a', 'H_final': 'H-04-b10734', 'hyp:H0': 'H-00-29ebb6', 'hyp:H1': 'H-01-7c8066', 'hyp:H2': 'H-02-c9ea71', 'hyp:H3': 'H-03-c1992a', 'hyp:H4': 'H-04-b10734', 'hyp:H5': 'H-07-eae7b4', 'hyp:H6': 'H-09-9ab0d7'}
+22:17:14 results written to /home/user/Test/experiments/hds-stream/rep0

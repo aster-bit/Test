@@ -1,0 +1,5524 @@
+{
+ "A": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.9222222222222223
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9074074074074074
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.875
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.4126984126984127
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.746031746031746
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 0.9824561403508771
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8717948717948718
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9743589743589743
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.71875
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8602150537634409
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8484848484848485
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.6666666666666666
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.7547169811320755
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.14367816091954022
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.9111111111111111
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9032258064516129
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.3869047619047619
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.29411764705882354
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8390804597701149
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.6095238095238096
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.5694444444444444
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9215686274509803
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.5428571428571428
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.2261904761904762
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.7962962962962963
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8536585365853658
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7916666666666666
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9770114942528736
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.875
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8288288288288288
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.2857142857142857
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.07936507936507936
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.8947368421052632
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.03333333333333333
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9354838709677419
+  }
+ ],
+ "P_initial": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.8444444444444444
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.8095238095238095
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.8095238095238095
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.8095238095238095
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 0.9824561403508771
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8974358974358975
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9743589743589743
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.9270833333333334
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8709677419354839
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8106060606060606
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.7816091954022989
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9305555555555556
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.6981132075471698
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.13793103448275862
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.8833333333333333
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9032258064516129
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.36904761904761907
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.8611111111111112
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9733333333333334
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9285714285714286
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8160919540229885
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9565217391304348
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.8285714285714286
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.8055555555555556
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.803921568627451
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.5047619047619047
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.19047619047619047
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.7592592592592593
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8699186991869918
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7638888888888888
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.9032258064516129
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.7837837837837838
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.07936507936507936
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.8771929824561403
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.03333333333333333
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9354838709677419
+  }
+ ],
+ "P_final": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.9222222222222223
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.8511904761904762
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.873015873015873
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.8412698412698413
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9487179487179487
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.9479166666666666
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9733333333333334
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8494623655913979
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8409090909090909
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.8563218390804598
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.7861635220125787
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.8563218390804598
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8444444444444444
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.8833333333333333
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.8511904761904762
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9855072463768116
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9074074074074074
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.9313725490196079
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9404761904761905
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8390804597701149
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9130434782608695
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.8952380952380953
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.9027777777777778
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.967741935483871
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.8
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.8148148148148148
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8861788617886179
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9479166666666666
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7916666666666666
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9655172413793104
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8558558558558559
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.8947368421052632
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9247311827956989
+  }
+ ],
+ "H_initial": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.9222222222222223
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.27976190476190477
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.4603174603174603
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.8412698412698413
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8974358974358975
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9487179487179487
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.7604166666666666
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8494623655913979
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8484848484848485
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.6666666666666666
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9722222222222222
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.779874213836478
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.15517241379310345
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8222222222222222
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.8833333333333333
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.4166666666666667
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9855072463768116
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.30392156862745096
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9404761904761905
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8045977011494253
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.6666666666666666
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.5694444444444444
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.8823529411764706
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.5142857142857142
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.2261904761904762
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9382716049382716
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.8148148148148148
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8861788617886179
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9479166666666666
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9655172413793104
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8288288288288288
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.2857142857142857
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.1111111111111111
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9122807017543859
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.03333333333333333
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9247311827956989
+  }
+ ],
+ "H_final": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.8273809523809523
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.8571428571428571
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9487179487179487
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.96875
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8602150537634409
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9777777777777777
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8787878787878788
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.8448275862068966
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.8050314465408805
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.8735632183908046
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9139784946236559
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.8571428571428571
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9130434782608695
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.9313725490196079
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9642857142857143
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8620689655172413
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9565217391304348
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.8476190476190476
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.8819444444444444
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.7904761904761904
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9753086419753086
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8780487804878049
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.8194444444444444
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9770114942528736
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9242424242424242
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8648648648648649
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.9365079365079365
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9298245614035088
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9354838709677419
+  }
+ ],
+ "hyp:H0": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.9111111111111111
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9074074074074074
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.873015873015873
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.8412698412698413
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8974358974358975
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9615384615384616
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8494623655913979
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8484848484848485
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.8563218390804598
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.7987421383647799
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.8563218390804598
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8222222222222222
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.8833333333333333
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.8452380952380952
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9855072463768116
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9074074074074074
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9733333333333334
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9404761904761905
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8275862068965517
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.8476190476190476
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.8819444444444444
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.967741935483871
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.8095238095238095
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.8928571428571429
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.7962962962962963
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8699186991869918
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9479166666666666
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9770114942528736
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9655172413793104
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8108108108108109
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.873015873015873
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9298245614035088
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.9222222222222223
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9247311827956989
+  }
+ ],
+ "hyp:H1": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.2
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.2619047619047619
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.4444444444444444
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.8253968253968254
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8717948717948718
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9615384615384616
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.7291666666666666
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.21505376344086022
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.7333333333333333
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.803030303030303
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.09195402298850575
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9722222222222222
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.0440251572327044
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.16666666666666666
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.6
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.6666666666666666
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9032258064516129
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.3869047619047619
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9855072463768116
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9074074074074074
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.4927536231884058
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.28431372549019607
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9404761904761905
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8045977011494253
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.17391304347826086
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.02857142857142857
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.2986111111111111
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.29411764705882354
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.4666666666666667
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9506172839506173
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.34959349593495936
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9479166666666666
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7222222222222222
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9770114942528736
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9425287356321839
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.55
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.875
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9090909090909091
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.7477477477477478
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.2857142857142857
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.07936507936507936
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.8947368421052632
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.03333333333333333
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.8924731182795699
+  }
+ ],
+ "hyp:H2": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.9222222222222223
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.25595238095238093
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.4126984126984127
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.7936507936507936
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 0.9824561403508771
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8974358974358975
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9743589743589743
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.71875
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8924731182795699
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8560606060606061
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.6666666666666666
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.7672955974842768
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.14942528735632185
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.9111111111111111
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9139784946236559
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.40476190476190477
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.29411764705882354
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9404761904761905
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8505747126436781
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.6285714285714286
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.5694444444444444
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9215686274509803
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.5428571428571428
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.23809523809523808
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9382716049382716
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8536585365853658
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.8055555555555556
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8378378378378378
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.2857142857142857
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.07936507936507936
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9122807017543859
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.03333333333333333
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9354838709677419
+  }
+ ],
+ "hyp:H3": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.2619047619047619
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.8095238095238095
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 0.9824561403508771
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.8717948717948718
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.7291666666666666
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9733333333333334
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8494623655913979
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9111111111111111
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8257575757575758
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.6551724137931034
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9722222222222222
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.7610062893081762
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.14942528735632185
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8444444444444444
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.8833333333333333
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9032258064516129
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.39285714285714285
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9074074074074074
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.8840579710144928
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.30392156862745096
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9285714285714286
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8505747126436781
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.6666666666666666
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.5902777777777778
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.967741935483871
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.49523809523809526
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.8571428571428571
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.7962962962962963
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8617886178861789
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9425287356321839
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 0.08333333333333333
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9242424242424242
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8018018018018018
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.2857142857142857
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.6031746031746031
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9298245614035088
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.03333333333333333
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9247311827956989
+  }
+ ],
+ "hyp:H4": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.8273809523809523
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.8571428571428571
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9888888888888889
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9487179487179487
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.96875
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8602150537634409
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9777777777777777
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8787878787878788
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.8448275862068966
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.8050314465408805
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.8735632183908046
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8666666666666667
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9139784946236559
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.8571428571428571
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9866666666666667
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.9130434782608695
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.9313725490196079
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9642857142857143
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8620689655172413
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9565217391304348
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.9466666666666667
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.8476190476190476
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.8819444444444444
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9019607843137255
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.7904761904761904
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.9047619047619048
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9753086419753086
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.8333333333333334
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8780487804878049
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.8194444444444444
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9770114942528736
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.946236559139785
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9242424242424242
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8648648648648649
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.9365079365079365
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9298245614035088
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9696969696969697
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.9555555555555556
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9354838709677419
+  }
+ ],
+ "hyp:H5": [
+  {
+   "id": "audit-0000",
+   "family": "lost_chars",
+   "score": 0.8555555555555555
+  },
+  {
+   "id": "audit-0001",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0002",
+   "family": "lookalike",
+   "score": 0.9682539682539683
+  },
+  {
+   "id": "audit-0003",
+   "family": "long_heavy",
+   "score": 0.8273809523809523
+  },
+  {
+   "id": "audit-0004",
+   "family": "heavy",
+   "score": 0.6984126984126984
+  },
+  {
+   "id": "audit-0005",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0006",
+   "family": "lookalike",
+   "score": 0.9824561403508771
+  },
+  {
+   "id": "audit-0007",
+   "family": "heavy",
+   "score": 0.9230769230769231
+  },
+  {
+   "id": "audit-0008",
+   "family": "broken_layout",
+   "score": 0.9777777777777777
+  },
+  {
+   "id": "audit-0009",
+   "family": "misread",
+   "score": 0.9487179487179487
+  },
+  {
+   "id": "audit-0010",
+   "family": "lost_chars",
+   "score": 0.8958333333333334
+  },
+  {
+   "id": "audit-0011",
+   "family": "misread",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0012",
+   "family": "misread",
+   "score": 0.9733333333333334
+  },
+  {
+   "id": "audit-0013",
+   "family": "broken_layout",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0014",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0015",
+   "family": "long_heavy",
+   "score": 0.8494623655913979
+  },
+  {
+   "id": "audit-0016",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0017",
+   "family": "lost_chars",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0018",
+   "family": "misread",
+   "score": 0.9777777777777777
+  },
+  {
+   "id": "audit-0019",
+   "family": "long_heavy",
+   "score": 0.8560606060606061
+  },
+  {
+   "id": "audit-0020",
+   "family": "long_heavy",
+   "score": 0.6149425287356322
+  },
+  {
+   "id": "audit-0021",
+   "family": "lookalike",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0022",
+   "family": "broken_layout",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0023",
+   "family": "lost_chars",
+   "score": 0.95
+  },
+  {
+   "id": "audit-0024",
+   "family": "heavy",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0025",
+   "family": "long_heavy",
+   "score": 0.7358490566037735
+  },
+  {
+   "id": "audit-0026",
+   "family": "lost_chars",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0027",
+   "family": "long_heavy",
+   "score": 0.8505747126436781
+  },
+  {
+   "id": "audit-0028",
+   "family": "heavy",
+   "score": 0.8444444444444444
+  },
+  {
+   "id": "audit-0029",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0030",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0031",
+   "family": "misread",
+   "score": 0.9666666666666667
+  },
+  {
+   "id": "audit-0032",
+   "family": "heavy",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0033",
+   "family": "misread",
+   "score": 0.9247311827956989
+  },
+  {
+   "id": "audit-0034",
+   "family": "long_heavy",
+   "score": 0.8630952380952381
+  },
+  {
+   "id": "audit-0035",
+   "family": "broken_layout",
+   "score": 0.9710144927536232
+  },
+  {
+   "id": "audit-0036",
+   "family": "heavy",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0037",
+   "family": "lookalike",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0038",
+   "family": "clean",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0039",
+   "family": "lookalike",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0040",
+   "family": "broken_layout",
+   "score": 0.9733333333333334
+  },
+  {
+   "id": "audit-0041",
+   "family": "misread",
+   "score": 0.9814814814814815
+  },
+  {
+   "id": "audit-0042",
+   "family": "lost_chars",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0043",
+   "family": "lost_chars",
+   "score": 0.8840579710144928
+  },
+  {
+   "id": "audit-0044",
+   "family": "lost_chars",
+   "score": 0.9117647058823529
+  },
+  {
+   "id": "audit-0045",
+   "family": "lookalike",
+   "score": 0.9404761904761905
+  },
+  {
+   "id": "audit-0046",
+   "family": "heavy",
+   "score": 0.8850574712643678
+  },
+  {
+   "id": "audit-0047",
+   "family": "misread",
+   "score": 0.8518518518518519
+  },
+  {
+   "id": "audit-0048",
+   "family": "lost_chars",
+   "score": 0.9420289855072463
+  },
+  {
+   "id": "audit-0049",
+   "family": "heavy",
+   "score": 0.8
+  },
+  {
+   "id": "audit-0050",
+   "family": "lookalike",
+   "score": 0.96
+  },
+  {
+   "id": "audit-0051",
+   "family": "broken_layout",
+   "score": 0.9629629629629629
+  },
+  {
+   "id": "audit-0052",
+   "family": "lookalike",
+   "score": 0.9803921568627451
+  },
+  {
+   "id": "audit-0053",
+   "family": "long_heavy",
+   "score": 0.7142857142857143
+  },
+  {
+   "id": "audit-0054",
+   "family": "long_heavy",
+   "score": 0.5833333333333334
+  },
+  {
+   "id": "audit-0055",
+   "family": "lookalike",
+   "score": 0.9487179487179487
+  },
+  {
+   "id": "audit-0056",
+   "family": "broken_layout",
+   "score": 0.9139784946236559
+  },
+  {
+   "id": "audit-0057",
+   "family": "heavy",
+   "score": 0.9215686274509803
+  },
+  {
+   "id": "audit-0058",
+   "family": "long_heavy",
+   "score": 0.7714285714285715
+  },
+  {
+   "id": "audit-0059",
+   "family": "heavy",
+   "score": 0.8452380952380952
+  },
+  {
+   "id": "audit-0060",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0061",
+   "family": "misread",
+   "score": 0.9382716049382716
+  },
+  {
+   "id": "audit-0062",
+   "family": "heavy",
+   "score": 0.7777777777777778
+  },
+  {
+   "id": "audit-0063",
+   "family": "long_heavy",
+   "score": 0.8943089430894309
+  },
+  {
+   "id": "audit-0064",
+   "family": "lookalike",
+   "score": 0.9479166666666666
+  },
+  {
+   "id": "audit-0065",
+   "family": "heavy",
+   "score": 0.8055555555555556
+  },
+  {
+   "id": "audit-0066",
+   "family": "lost_chars",
+   "score": 0.875
+  },
+  {
+   "id": "audit-0067",
+   "family": "misread",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0068",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0069",
+   "family": "misread",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0070",
+   "family": "misread",
+   "score": 0.927536231884058
+  },
+  {
+   "id": "audit-0071",
+   "family": "broken_layout",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0072",
+   "family": "broken_layout",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0073",
+   "family": "heavy",
+   "score": 0.8888888888888888
+  },
+  {
+   "id": "audit-0074",
+   "family": "lookalike",
+   "score": 0.9885057471264368
+  },
+  {
+   "id": "audit-0075",
+   "family": "broken_layout",
+   "score": 0.9540229885057471
+  },
+  {
+   "id": "audit-0076",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0077",
+   "family": "lost_chars",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0078",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0079",
+   "family": "misread",
+   "score": 0.9444444444444444
+  },
+  {
+   "id": "audit-0080",
+   "family": "broken_layout",
+   "score": 0.9259259259259259
+  },
+  {
+   "id": "audit-0081",
+   "family": "lookalike",
+   "score": 0.956989247311828
+  },
+  {
+   "id": "audit-0082",
+   "family": "lost_chars",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0083",
+   "family": "misread",
+   "score": 0.9333333333333333
+  },
+  {
+   "id": "audit-0084",
+   "family": "misread",
+   "score": 0.9166666666666666
+  },
+  {
+   "id": "audit-0085",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0086",
+   "family": "heavy",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0087",
+   "family": "long_heavy",
+   "score": 0.8108108108108109
+  },
+  {
+   "id": "audit-0088",
+   "family": "heavy",
+   "score": 0.3333333333333333
+  },
+  {
+   "id": "audit-0089",
+   "family": "lost_chars",
+   "score": 0.978494623655914
+  },
+  {
+   "id": "audit-0090",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0091",
+   "family": "lookalike",
+   "score": 0.9375
+  },
+  {
+   "id": "audit-0092",
+   "family": "heavy",
+   "score": 0.9365079365079365
+  },
+  {
+   "id": "audit-0093",
+   "family": "heavy",
+   "score": 0.9298245614035088
+  },
+  {
+   "id": "audit-0094",
+   "family": "lost_chars",
+   "score": 0.9583333333333334
+  },
+  {
+   "id": "audit-0095",
+   "family": "broken_layout",
+   "score": 0.9393939393939394
+  },
+  {
+   "id": "audit-0096",
+   "family": "broken_layout",
+   "score": 0.9222222222222223
+  },
+  {
+   "id": "audit-0097",
+   "family": "clean",
+   "score": 1.0
+  },
+  {
+   "id": "audit-0098",
+   "family": "lost_chars",
+   "score": 0.9523809523809523
+  },
+  {
+   "id": "audit-0099",
+   "family": "lost_chars",
+   "score": 0.9139784946236559
+  }
+ ]
+}

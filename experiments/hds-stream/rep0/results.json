@@ -1,0 +1,1347 @@
+{
+  "config": {
+    "name": "hds-stream",
+    "env": "streamrec",
+    "seed": 2026,
+    "dev": 30,
+    "selection": 60,
+    "audit": 100,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 2.0,
+    "recombine_rate": 0.25,
+    "timer": "cpu",
+    "chunks": 2,
+    "replicate": 0,
+    "k_hyp": 4,
+    "explore_share": 0.4
+  },
+  "elapsed_s": 6533.5,
+  "champions": {
+    "A": "A-00-bf62de",
+    "P_initial": "C-01-11080f",
+    "P_final": "C-06-b25a36",
+    "H_initial": "H-03-c1992a",
+    "H_final": "H-04-b10734",
+    "hyp:H0": "H-00-29ebb6",
+    "hyp:H1": "H-01-7c8066",
+    "hyp:H2": "H-02-c9ea71",
+    "hyp:H3": "H-03-c1992a",
+    "hyp:H4": "H-04-b10734",
+    "hyp:H5": "H-07-eae7b4",
+    "hyp:H6": "H-09-9ab0d7"
+  },
+  "audit": {
+    "A": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8917062122099793,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9231,
+        "crashy": 0.9441,
+        "crowded": 0.8807,
+        "jittery": 0.8366,
+        "large_mixed": 0.7956,
+        "lossy": 0.9215,
+        "mostly_labelled": 0.9852
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 6.024821999744745,
+      "mean_ci95": [
+        0.8660577896481948,
+        0.9157339715823888
+      ]
+    },
+    "P_initial": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9214177799815586,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9408,
+        "crashy": 0.9737,
+        "crowded": 0.8933,
+        "jittery": 0.8997,
+        "large_mixed": 0.8415,
+        "lossy": 0.9397,
+        "mostly_labelled": 0.9893
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 228.88625900031911,
+      "mean_ci95": [
+        0.9021265206787339,
+        0.9391338483432387
+      ]
+    },
+    "P_final": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9342663030425684,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9606,
+        "crashy": 0.9837,
+        "crowded": 0.8835,
+        "jittery": 0.9532,
+        "large_mixed": 0.8422,
+        "lossy": 0.9546,
+        "mostly_labelled": 0.9963
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 591.3021979995392,
+      "mean_ci95": [
+        0.9136430193101791,
+        0.9520228540855293
+      ]
+    },
+    "H_initial": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9339986775879017,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9524,
+        "crashy": 0.9824,
+        "crowded": 0.9307,
+        "jittery": 0.956,
+        "large_mixed": 0.8011,
+        "lossy": 0.9649,
+        "mostly_labelled": 0.9959
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 664.4301870001073,
+      "mean_ci95": [
+        0.9151650142962875,
+        0.9510768400983237
+      ]
+    },
+    "H_final": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.954068741998483,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9623,
+        "crashy": 0.9853,
+        "crowded": 0.9471,
+        "jittery": 0.9588,
+        "large_mixed": 0.8814,
+        "lossy": 0.971,
+        "mostly_labelled": 1.0
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 756.5197979993172,
+      "mean_ci95": [
+        0.9399703610556996,
+        0.9670296749151626
+      ]
+    },
+    "hyp:H0": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8239917700853873,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.8732,
+        "crashy": 0.8812,
+        "crowded": 0.7952,
+        "jittery": 0.7483,
+        "large_mixed": 0.6945,
+        "lossy": 0.8714,
+        "mostly_labelled": 0.9963
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 7.129768000595504,
+      "mean_ci95": [
+        0.794695358509922,
+        0.8523326607746852
+      ]
+    },
+    "hyp:H1": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9491647658109855,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9686,
+        "crashy": 0.9853,
+        "crowded": 0.9466,
+        "jittery": 0.9522,
+        "large_mixed": 0.8617,
+        "lossy": 0.9626,
+        "mostly_labelled": 1.0
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 106.34887699961837,
+      "mean_ci95": [
+        0.9316982656191866,
+        0.9647132806721518
+      ]
+    },
+    "hyp:H2": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8047477595448015,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.8792,
+        "crashy": 0.8774,
+        "crowded": 0.7877,
+        "jittery": 0.822,
+        "large_mixed": 0.5941,
+        "lossy": 0.8271,
+        "mostly_labelled": 0.948
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 119.43735399927391,
+      "mean_ci95": [
+        0.7708495024961519,
+        0.837093155452229
+      ]
+    },
+    "hyp:H3": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9339986775879017,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9524,
+        "crashy": 0.9824,
+        "crowded": 0.9307,
+        "jittery": 0.956,
+        "large_mixed": 0.8011,
+        "lossy": 0.9649,
+        "mostly_labelled": 0.9959
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 664.4301870001073,
+      "mean_ci95": [
+        0.9151650142962875,
+        0.9510768400983237
+      ]
+    },
+    "hyp:H4": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.954068741998483,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9623,
+        "crashy": 0.9853,
+        "crowded": 0.9471,
+        "jittery": 0.9588,
+        "large_mixed": 0.8814,
+        "lossy": 0.971,
+        "mostly_labelled": 1.0
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 756.5197979993172,
+      "mean_ci95": [
+        0.9399703610556996,
+        0.9670296749151626
+      ]
+    },
+    "hyp:H5": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.934655147069408,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9496,
+        "crashy": 0.9716,
+        "crowded": 0.9399,
+        "jittery": 0.9006,
+        "large_mixed": 0.8558,
+        "lossy": 0.9588,
+        "mostly_labelled": 1.0
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 659.90460500052,
+      "mean_ci95": [
+        0.9170821522088676,
+        0.9511283738435643
+      ]
+    },
+    "hyp:H6": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.93224738939464,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "anonymous": 0.9833,
+        "crashy": 0.9796,
+        "crowded": 0.9506,
+        "jittery": 0.8791,
+        "large_mixed": 0.843,
+        "lossy": 0.9407,
+        "mostly_labelled": 0.9705
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 547.4252699996214,
+      "mean_ci95": [
+        0.9130690300056752,
+        0.9483131468289555
+      ]
+    }
+  },
+  "tests": {
+    "G1": {
+      "comparison": "H_final - P_final",
+      "mean_diff": 0.019802438955914558,
+      "ci_bonferroni": [
+        0.006352389394756074,
+        0.03518829209540272
+      ],
+      "holds": true
+    },
+    "G2": {
+      "comparison": "H_final - A",
+      "mean_diff": 0.0623625297885038,
+      "ci_bonferroni": [
+        0.03899197761619135,
+        0.09104898543645501
+      ],
+      "holds": true
+    },
+    "G3_paradigm_transition": {
+      "comparison": "H_final - H_initial",
+      "mean_diff": 0.020070064410581394,
+      "ci_bonferroni": [
+        0.006067108090095188,
+        0.03497113544388606
+      ],
+      "holds": true,
+      "score_holds": true
+    },
+    "descriptive_P_final_minus_P_initial": {
+      "comparison": "P_final - P_initial",
+      "mean_diff": 0.012848523061009854,
+      "ci_bonferroni": [
+        -0.0008744691981876973,
+        0.02667778337970111
+      ],
+      "holds": false
+    }
+  },
+  "transition": {
+    "initial_hypothesis": "H3",
+    "final_hypothesis": "H4",
+    "final_hypothesis_origin": "recombine",
+    "different_hypothesis": true,
+    "ast_similarity": 0.5999,
+    "code_differs": true
+  },
+  "diversity": {
+    "P": {
+      "programs": 12,
+      "usable": 12,
+      "code_clusters": 6,
+      "mean_pairwise_ast_similarity": 0.499,
+      "mean_pairwise_behavioural_distance": 0.0419,
+      "graph_signatures": [
+        "C",
+        "CC"
+      ]
+    },
+    "H": {
+      "programs": 11,
+      "usable": 11,
+      "code_clusters": 8,
+      "mean_pairwise_ast_similarity": 0.4983,
+      "mean_pairwise_behavioural_distance": 0.0623,
+      "graph_signatures": [
+        "C",
+        "CCCC"
+      ]
+    }
+  },
+  "stagnation_escapes": {
+    "P": 1,
+    "H": 0
+  },
+  "best_selection_sequence": {
+    "P": [
+      0.9504616833087904,
+      0.9504616833087904,
+      0.9504616833087904,
+      0.9504616833087904,
+      0.9624929257654137,
+      0.9624929257654137,
+      0.9624929257654137,
+      0.9624929257654137,
+      0.9624929257654137,
+      0.9624929257654137
+    ],
+    "H": [
+      0.9692052342016005,
+      0.9796395615252862,
+      0.9796395615252862,
+      0.9796395615252862,
+      0.9796395615252862,
+      0.9796395615252862,
+      0.9796395615252862,
+      0.9796395615252862
+    ]
+  },
+  "hypotheses": {
+    "H0": {
+      "id": "H0",
+      "name": "Greedy online offset tracker",
+      "mechanism": "A single pass over the events in timestamp order keeps one live state record per session (node, stream offset, durable offset, status) and assigns each anonymous event to the candidate session whose predicted next offset best matches the event's `off`.",
+      "principle": "Writes, checkpoints, commits and recovers all carry an absolute offset that must equal the owning session's current or durable offset, so offset arithmetic identifies the owner in most cases. A small reorder buffer of about 5-10 events lets out-of-order events be retried after their predecessors are applied. Duplicates are found by a matching (node, type, off, len) key within a recent time window. Gaps from missing writes are allowed when the offset is ahead and later confirmed by a labelled event. Crashes roll back every active session on the node. Missing recovers are inferred when a down session's next plausible event appears on any node at its durable offset. Final states come straight out of the tracker.",
+      "assumptions": [
+        "offset collisions between concurrent sessions on the same node are rare",
+        "jitter is small compared with the gap between consecutive events of one session",
+        "most write/checkpoint chains are long enough that a missing event leaves an unambiguous gap"
+      ],
+      "resources": "O(E * S) with tiny constants: under 5 ms for 600 events and 24 sessions; memory is O(S).",
+      "constraints": [
+        "it cannot revise an early wrong assignment, so errors cascade within a session",
+        "heavy reordering beyond the buffer window breaks the offset continuity it relies on"
+      ],
+      "advantages": [
+        "extremely fast and simple, so it is hard to exceed the CPU limit",
+        "labelled anchors immediately correct its state",
+        "it handles crash, rollback and recover semantics naturally in forward simulation"
+      ],
+      "weaknesses": [
+        "ties, where several sessions on one node expect the same offset (e.g. all at 0 after open), are resolved by heuristics",
+        "a cascade after one wrong choice in anonymous logs",
+        "sensitivity to strong jitter"
+      ],
+      "strong_families": [
+        "mostly_labelled",
+        "crashy"
+      ],
+      "weak_families": [
+        "jittery",
+        "crowded",
+        "anonymous"
+      ],
+      "test": "Run it on generated logs, stratified by family, with a known truth. If its assignment accuracy in the anonymous and crowded families is not clearly below that of the beam search, the extra search buys nothing. If its accuracy on mostly_labelled logs falls below 95%, the offset-matching premise itself is wrong.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 0
+    },
+    "H1": {
+      "id": "H1",
+      "name": "Multi-hypothesis beam tracking",
+      "mechanism": "A beam of the K best complete joint world-states (all session states, the assignments so far, and accumulated penalty) is expanded event by event, branching over every feasible owner and over the 'duplicate' interpretation, then pruned to the top K by score.",
+      "principle": "Ambiguity is local in time: which of two sessions at offset 512 on n1 took a write usually becomes clear a few events later. Keeping K alternatives defers the decision until evidence arrives. Each branch is scored with additive log-likelihood-style penalties: offset gap (a missing write), the amount of reordering needed, a missing recover or checkpoint, duplicate interpretation, and contradiction with a labelled sid (forbidden). Similar states are merged by hashing session offsets. The final best hypothesis provides both the assignments and the session states, so the two output terms are consistent.",
+      "assumptions": [
+        "penalties for missing, duplicate and jitter events can be calibrated so that the true history scores best",
+        "the branching factor stays modest (only sessions on the event's node, or down sessions for recover)"
+      ],
+      "resources": "O(E * K * b) state copies, with b at most S. With K of about 20-64 and copy-on-write session tuples it fits in about 0.3 s; a perf_counter guard shrinks K adaptively if needed.",
+      "constraints": [
+        "state copying must be cheap (immutable tuples), otherwise the 1 s budget is exceeded on 600-event, 24-session logs",
+        "events reordered further than the beam's reordering tolerance cannot be explained"
+      ],
+      "advantages": [
+        "it recovers from locally ambiguous choices that the greedy tracker gets wrong",
+        "it principally weighs competing explanations (missing event vs. duplicate vs. jitter)",
+        "it degrades gracefully: with K=1 it reduces to a greedy tracker"
+      ],
+      "weaknesses": [
+        "beam collapse when many symmetric sessions exist (crowded), because near-identical hypotheses fill the beam",
+        "it needs hand-tuned penalties",
+        "it is the most CPU-heavy of the four"
+      ],
+      "strong_families": [
+        "anonymous",
+        "lossy",
+        "crashy"
+      ],
+      "weak_families": [
+        "crowded"
+      ],
+      "test": "Sweep K over 1, 4, 16, 64 on a validation set. If accuracy plateaus at K=1, ambiguity is not deferrable and the hypothesis is wrong. If accuracy keeps rising while CPU usage approaches the limit on crowded logs, the beam is too narrow to be practical.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 1
+    },
+    "H2": {
+      "id": "H2",
+      "name": "Offset-chain path cover via min-cost assignment",
+      "mechanism": "A directed graph is built whose edges link event a to event b when b can directly follow a in one session (same node or recover-linked, with b.off equal to a.off+len or the durable offset, and timestamps compatible within the jitter bound). A minimum-cost path cover (a successor assignment solved with Hungarian/min-cost matching) then partitions the events into session chains rooted at the open events.",
+      "principle": "This treats reconstruction as a global linking problem rather than a time simulation. Every event chooses at most one successor and one predecessor, and costs reflect time gap, implied missing bytes, node change through crashes, and duplicate absorption (a duplicate attaches as a zero-cost twin, not as a chain link). Labelled events pin chains to session ids. The resulting paths are anchored at the S open events, so each path is a session. Because the optimisation is global, jitter-induced reorderings that confuse forward simulation are harmless: edges depend on offsets, not on log order. Final status and durable offset are derived by replaying each chain against the crash events on its nodes.",
+      "assumptions": [
+        "offsets plus approximate time give a sparse candidate-successor graph",
+        "missing events are a minority, so gap edges (off jumps) can be penalised without excluding the truth",
+        "crash timing can be checked after the chains are formed"
+      ],
+      "resources": "Candidate edges are limited to a time window and to offset matches. A Hungarian assignment on n up to 600 with a sparse cost matrix, or a min-cost flow, runs in well under 1 s in pure Python when it is split into per-node / per-epoch blocks.",
+      "constraints": [
+        "a dense matrix for 600 events is borderline (O(n^3)), so it must be decomposed or use a sparse successive-shortest-path solver",
+        "crash rollback semantics (offset resets to the durable offset) must be encoded as extra edge types, which is awkward"
+      ],
+      "advantages": [
+        "it is insensitive to the order of events in the log, so it is robust to heavy jitter",
+        "a global optimum means no greedy cascades",
+        "it naturally handles many concurrent sessions whose offsets differ"
+      ],
+      "weaknesses": [
+        "pairwise edge costs cannot express session-level constraints (e.g. no events while down, single node at a time), so it can produce inconsistent chains",
+        "when sessions on one node share identical offset sequences, the problem is fundamentally ambiguous and is handled by time cost only",
+        "crash/recover heavy logs need complex edge modelling"
+      ],
+      "strong_families": [
+        "jittery",
+        "crowded",
+        "anonymous"
+      ],
+      "weak_families": [
+        "crashy"
+      ],
+      "test": "Compare it with the greedy tracker on logs with jitter amplified from 0 to the maximum. If the advantage of path cover does not grow with jitter, order-independence is not the bottleneck. Also count chains that violate the 'no events while down' rule: a violation rate above about 5% falsifies the claim that pairwise costs suffice.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 2
+    },
+    "H3": {
+      "id": "H3",
+      "name": "Anchor-seeded global local search",
+      "mechanism": "One complete assignment of all anonymous events (with duplicate flags) is iteratively improved by a stochastic local search (reassign one event, swap two events, or toggle duplicate) whose objective is computed by fully replaying each affected session through an exact semantic simulator, including crash rollbacks and offset checks.",
+      "principle": "The initial solution comes from a cheap greedy pass or from nearest labelled anchors. The objective counts semantic violations: offset mismatches, events while down, events after commit/abort, a node mismatch with the active node, and the implied number of missing events and reorderings. Only the two sessions touched by a move need re-simulation, so thousands of moves fit in the budget. Annealing with a fixed seed keeps the result deterministic. Because the evaluator is the full session-level semantics, it enforces constraints that the graph method cannot express and escapes the irrevocable mistakes of the greedy tracker.",
+      "assumptions": [
+        "the true assignment is (near) the minimum of the violation-count objective",
+        "local moves connect the greedy start to the optimum without huge barriers",
+        "per-session replay is cheap (sessions average fewer than 50 events)"
+      ],
+      "resources": "Each move costs an O(session length) replay, so 5k-20k moves fit in about 0.6 s with a time.process_time() deadline. Memory is O(E).",
+      "constraints": [
+        "it needs a good initialisation when nearly all events are anonymous, otherwise annealing wanders",
+        "it must be deterministic (fixed random seed) and must stop by a CPU-time budget"
+      ],
+      "advantages": [
+        "the exact simulator gives correct final status/durable values for the chosen assignment, including inferred missing recovers",
+        "it optimises a global objective with full semantic constraints",
+        "it is anytime: quality improves with the available time and never ends worse than its greedy start"
+      ],
+      "weaknesses": [
+        "it may get stuck in local optima where two sessions' entire chains are swapped",
+        "objective plateaus on crowded symmetric logs",
+        "its time-bounded results depend on machine speed"
+      ],
+      "strong_families": [
+        "lossy",
+        "crashy",
+        "mostly_labelled"
+      ],
+      "weak_families": [
+        "crowded",
+        "anonymous"
+      ],
+      "test": "Measure objective vs. true-assignment correlation: on validation logs, check whether the ground-truth assignment always has an objective at most that of the found solution. If the truth often scores worse, the objective is misspecified. If the final accuracy equals the greedy start's accuracy, the move set is not effective.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 3
+    },
+    "H4": {
+      "id": "H4",
+      "name": "Beam-seeded semantic annealing with margin-gated override",
+      "mechanism": "A time-boxed multi-hypothesis beam over joint session states produces a complete assignment that seeds a simulated-annealing local search whose objective is an exact per-session crash-aware replay, and the annealed solution replaces the beam's only if it lowers that objective by more than a fixed margin.",
+      "principle": "The beam defers locally ambiguous choices and tolerates jitter through refundable offset gaps, so it gives a much better starting point than a greedy tracker. Annealing with full session replay then fixes the beam's irrevocable early-pruning errors, which are typical of crowded and crash-heavy logs. Gating the override on a clear objective improvement keeps the beam's answer where the replay objective is unreliable, as on heavily jittered logs. Assignments and session states always come from the same chosen solution, so the two parts of the output are consistent.",
+      "assumptions": [
+        "beam errors are mostly local reassignments that the annealing moves can repair",
+        "a large drop in the replay objective indicates a truly better assignment",
+        "the beam fits in about 0.3 s with an adaptive width"
+      ],
+      "resources": "Beam uses about 0.3 s of CPU (its width K adapts to the budget); annealing runs until 0.75 s total time.process_time(); memory is O(E*K).",
+      "constraints": [
+        "needs a CPU budget of at least about 0.5 s to run both phases",
+        "deterministic only with a fixed seed; the number of annealing iterations depends on machine speed"
+      ],
+      "advantages": [
+        "better seed than the greedy start used by H3",
+        "repairs beam collapse on crowded and crashy logs",
+        "keeps the beam's answer on jittery logs unless the evidence is strong"
+      ],
+      "weaknesses": [
+        "the fixed margin may reject small but genuine improvements",
+        "it inherits miscalibration in both penalty models",
+        "less annealing time than H3 had on its own"
+      ],
+      "strong_families": [
+        "anonymous",
+        "crowded",
+        "crashy",
+        "mostly_labelled"
+      ],
+      "weak_families": [
+        "jittery",
+        "lossy"
+      ],
+      "test": "Compare the full method against beam-only and against greedy-seeded annealing on dev logs, per family. If neither family group improves over the better of H1 and H3, the combination is not helping. If logs where annealing overrides the beam score lower than with the beam's answer, the margin or the objective is wrong.",
+      "origin": "recombine",
+      "parents": [
+        "H3",
+        "H1"
+      ],
+      "created_index": 4
+    },
+    "H5": {
+      "id": "H5",
+      "name": "Continuity-fragment contraction with track-swap search",
+      "mechanism": "Events are first contracted into fragments joined by mutually unique exact offset continuity (a.end == b.start on the same node within a time window), label-bearing fragments are pinned, and a time-boxed annealing then moves whole fragments, single events, and swapped session suffixes/windows (track-identity switches), scoring each move by a crash- and jitter-tolerant replay of only the two affected sessions.",
+      "principle": "Write lengths make offset continuity close to a unique key, so most anonymous events belong to chains whose ownership is decided once, either by any labelled member or by the chain's fit as a whole. The ambiguity that remains is mostly identity confusion between sessions that share a node and offsets, and a suffix-swap move fixes that in a single step. The replay model handles missing writes and recovers, duplicates, a jittered order inside a session, and crashes that truly happened before the session's activity, so true explanations are not over-penalised.",
+      "assumptions": [
+        "write lengths are varied enough that (node, offset) continuity is mostly unique",
+        "jitter is small relative to the time sessions spend at one offset",
+        "crashes are never missing from the log"
+      ],
+      "resources": "Fragment building is O(n * bucket size). Each move replays 2 sessions in O(session length), giving a few thousand moves inside a 0.65 s process-time budget; memory is O(n).",
+      "constraints": [
+        "needs at least one open event per session",
+        "no anonymous events means no search, only replay"
+      ],
+      "advantages": [
+        "block moves follow the real structure (chains and identity switches)",
+        "labels spread along whole chains",
+        "crash-before-open and jittered crashes are modelled explicitly"
+      ],
+      "weaknesses": [
+        "sessions in lock-step at identical offsets stay ambiguous",
+        "durable offsets after missing checkpoints cannot be recovered"
+      ],
+      "strong_families": [
+        "crowded",
+        "anonymous",
+        "crashy"
+      ],
+      "weak_families": [
+        "jittery",
+        "lossy"
+      ],
+      "test": "Turn off fragment contraction and suffix-swap moves (keeping only single-event moves) at the same budget. If anonymous and crowded scores do not drop, block structure is not the bottleneck.",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "created_index": 7
+    },
+    "H6": {
+      "id": "H6",
+      "name": "Lagrangian session-trajectory decomposition",
+      "mechanism": "Each session independently computes its optimal whole trajectory (open -> ... -> end) through the time-ordered event DAG with a crash-aware Viterbi DP whose own labelled events are high-reward waypoints, while subgradient-updated per-event prices resolve which session owns each contested anonymous event, followed by a price-free conflict/insertion repair.",
+      "principle": "Session semantics (offset continuation, gaps from missing writes, crash rollback to the durable offset, recover or missing-recover, duplicates, adjacent jitter swaps) are encoded as transition costs in a per-session DP. That DP sees the whole future, so the choice of an ambiguous write is decided by whether it leads to the session's later labelled events and exact offset chains. The only coupling between sessions, that each anonymous event has exactly one owner, is relaxed with Lagrange prices: over-claimed events get cheaper and unclaimed ones dearer until the trajectories partition the log. Final statuses come from re-running each session's DP restricted to its assigned events.",
+      "assumptions": [
+        "Within a session, offsets are mostly exact continuations, so true trajectories have much lower cost than mixed ones",
+        "Most jitter inversions inside a session swap adjacent pairs",
+        "Crash events are never missing, so rollbacks can be detected from crash positions"
+      ],
+      "resources": "One DP per session per iteration, roughly O(labels x ~12 candidates), with dominance pruning on (node, offset, durable) states. Iterations are time-boxed at about 0.55 s of CPU and there is a hard stop inside the DP; memory is linear in the number of events.",
+      "constraints": [
+        "Needs every session's open event",
+        "Exactness is lost for triple-or-longer jitter inversions"
+      ],
+      "advantages": [
+        "Uses downstream labelled waypoints and offset closure globally",
+        "Resolves cross-session contention through prices rather than greedy order",
+        "Gives a crash-consistent final state per session"
+      ],
+      "weaknesses": [
+        "Only a few subgradient iterations fit on large logs",
+        "Abort ownership has weak evidence",
+        "Missing recoveries at the end of the log look like down sessions"
+      ],
+      "strong_families": [
+        "mostly_labelled",
+        "crashy",
+        "lossy"
+      ],
+      "weak_families": [
+        "crowded",
+        "jittery"
+      ],
+      "test": "Compare against H1/H4 on the anonymous and crashy families. If the price-coupled DP does not beat the beam on crashy logs and on logs with sparse labels at equal runtime, the claim that whole-trajectory optimisation is the missing ingredient is wrong.",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "created_index": 9
+    }
+  },
+  "attribution": {
+    "H0": {
+      "name": "Greedy online offset tracker",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-00-29ebb6",
+      "best_selection": 0.8362,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.1434,
+        -0.1817,
+        -0.1059
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0511,
+        "confirmed": true
+      }
+    },
+    "H1": {
+      "name": "Multi-hypothesis beam tracking",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-01-7c8066",
+      "best_selection": 0.9687,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.011,
+        -0.0257,
+        -0.0016
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0396,
+        "confirmed": false
+      }
+    },
+    "H2": {
+      "name": "Offset-chain path cover via min-cost assignment",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-02-c9ea71",
+      "best_selection": 0.8528,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.1269,
+        -0.17,
+        -0.0847
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0809,
+        "confirmed": false
+      }
+    },
+    "H3": {
+      "name": "Anchor-seeded global local search",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 2,
+      "implementations_working": 2,
+      "independent_working_implementations": 2,
+      "best_implementation": "H-03-c1992a",
+      "best_selection": 0.9692,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0104,
+        -0.0194,
+        -0.0031
+      ],
+      "label": "mechanism inferior (supported: >= 2 independent implementations each significantly below the leader)",
+      "implementation_sensitivity": {
+        "best_minus_second_independent": [
+          0.0183,
+          0.0039,
+          0.035
+        ],
+        "significant": true
+      },
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0281,
+        "confirmed": false
+      }
+    },
+    "H4": {
+      "name": "Beam-seeded semantic annealing with margin-gated override",
+      "origin": "recombine",
+      "parents": [
+        "H3",
+        "H1"
+      ],
+      "implementations_attempted": 4,
+      "implementations_working": 4,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-04-b10734",
+      "best_selection": 0.9796,
+      "runtime_error_rate_dev": 0.0,
+      "label": "leader",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0009,
+        "confirmed": false
+      }
+    },
+    "H5": {
+      "name": "Continuity-fragment contraction with track-swap search",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-07-eae7b4",
+      "best_selection": 0.9627,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0169,
+        -0.03,
+        -0.0052
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0055,
+        "confirmed": true
+      }
+    },
+    "H6": {
+      "name": "Lagrangian session-trajectory decomposition",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-09-9ab0d7",
+      "best_selection": 0.9551,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0246,
+        -0.0486,
+        -0.0054
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0255,
+        "confirmed": true
+      }
+    }
+  },
+  "llm_conjectures": [
+    {
+      "child": "H-05-f37d59",
+      "parent": "H-04-b10734",
+      "hypothesis": "H4",
+      "llm_cause": "PARAMETERS",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-08-cc42de",
+      "parent": "H-04-b10734",
+      "hypothesis": "H4",
+      "llm_cause": "IMPLEMENTATION",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-10-a924e8",
+      "parent": "H-04-b10734",
+      "hypothesis": "H4",
+      "llm_cause": "IMPLEMENTATION",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    }
+  ],
+  "h_trace": [
+    {
+      "move": "recombine",
+      "hypothesis": "H4",
+      "child": "H-04-b10734",
+      "usable": true,
+      "leader_before": "H3",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-03-c1992a",
+      "delta_vs_leader": 0.010434327323685794,
+      "ci95": [
+        0.002837499764253239,
+        0.019333893128549495
+      ],
+      "significant": true,
+      "ast_similarity_to_leader": 0.5999,
+      "best_selection_after": 0.9796395615252862
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-05-f37d59",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-04-b10734",
+      "delta_vs_leader": -0.0018195155932750524,
+      "ci95": [
+        -0.0049518736566675995,
+        0.00041414141414141125
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.9793,
+      "best_selection_after": 0.9796395615252862
+    },
+    {
+      "move": "second_impl",
+      "hypothesis": "H3",
+      "child": "H-06-b27a2c",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-04-b10734",
+      "delta_vs_leader": -0.02869191105007217,
+      "ci95": [
+        -0.04608500364262394,
+        -0.011968660235386936
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.4699,
+      "best_selection_after": 0.9796395615252862
+    },
+    {
+      "move": "pivot",
+      "hypothesis": "H5",
+      "child": "H-07-eae7b4",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-04-b10734",
+      "delta_vs_leader": -0.01693368020936952,
+      "ci95": [
+        -0.029766944655750346,
+        -0.004922802915513075
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.4805,
+      "best_selection_after": 0.9796395615252862
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-08-cc42de",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-04-b10734",
+      "delta_vs_leader": -0.0023560882160545767,
+      "ci95": [
+        -0.006831417624521082,
+        0.0007262872628726288
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.975,
+      "best_selection_after": 0.9796395615252862
+    },
+    {
+      "move": "pivot",
+      "hypothesis": "H6",
+      "child": "H-09-9ab0d7",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-04-b10734",
+      "delta_vs_leader": -0.02455403520849923,
+      "ci95": [
+        -0.04864821313500194,
+        -0.005568105537247037
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.4441,
+      "best_selection_after": 0.9796395615252862
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-10-a924e8",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-04-b10734",
+      "delta_vs_leader": -0.002988175153615606,
+      "ci95": [
+        -0.008999488738015819,
+        0.00042014846235418994
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.9676,
+      "best_selection_after": 0.9796395615252862
+    }
+  ],
+  "p_trace": [
+    {
+      "child": "C-03-8dba55",
+      "move": "intervene:add_improvement_phase",
+      "parents": [
+        "C-00-8ae8f8"
+      ],
+      "usable": true,
+      "operation": "intervene:add_improvement_phase",
+      "compared_to": "C-00-8ae8f8",
+      "delta_vs_parent": -0.001962568172023386,
+      "ci95": [
+        -0.006289640147246646,
+        0.0018695995017488235
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.5752,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_emit",
+        "_make_fresh",
+        "_prep",
+        "_refine_core",
+        "_sim",
+        "refine"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9504616833087904
+    },
+    {
+      "child": "C-04-fb7850",
+      "move": "recombine",
+      "parents": [
+        "C-01-11080f",
+        "C-00-8ae8f8"
+      ],
+      "usable": true,
+      "operation": "recombine",
+      "compared_to": "C-01-11080f",
+      "delta_vs_parent": -0.01695067685994753,
+      "ci95": [
+        -0.03250418333890499,
+        -0.002582304195847048
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.6985,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_core",
+        "_fallback"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9504616833087904
+    },
+    {
+      "child": "C-05-193222",
+      "move": "expand",
+      "parents": [],
+      "usable": true,
+      "operation": "expand",
+      "compared_to": "C-01-11080f",
+      "delta_vs_parent": -0.006534390483967591,
+      "ci95": [
+        -0.028271327006465768,
+        0.012601787097631873
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.269,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_hungarian",
+        "_match"
+      ],
+      "removed_functions": [
+        "_opts"
+      ],
+      "best_selection_after": 0.9504616833087904
+    },
+    {
+      "child": "C-06-b25a36",
+      "move": "intervene:deferred_event_reorder_buffer",
+      "parents": [
+        "C-01-11080f"
+      ],
+      "usable": true,
+      "operation": "intervene:deferred_event_reorder_buffer",
+      "compared_to": "C-01-11080f",
+      "delta_vs_parent": 0.012031242456623169,
+      "ci95": [
+        0.003858995107641999,
+        0.020930006598126938
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.7897,
+      "graph_changed": false,
+      "functions_changed": false,
+      "structural": true,
+      "added_functions": [],
+      "removed_functions": [],
+      "best_selection_after": 0.9624929257654137
+    },
+    {
+      "child": "C-07-ae2965",
+      "move": "intervene:add_lookahead_reordering",
+      "parents": [
+        "C-01-11080f"
+      ],
+      "usable": true,
+      "operation": "intervene:add_lookahead_reordering",
+      "compared_to": "C-01-11080f",
+      "delta_vs_parent": 0.008909418214150443,
+      "ci95": [
+        0.003992670476531883,
+        0.014344155135846942
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.7827,
+      "graph_changed": false,
+      "functions_changed": false,
+      "structural": true,
+      "added_functions": [],
+      "removed_functions": [],
+      "best_selection_after": 0.9624929257654137
+    },
+    {
+      "child": "C-08-7187a2",
+      "move": "intervene:add_future_anchor_heuristic",
+      "parents": [
+        "C-04-fb7850"
+      ],
+      "usable": true,
+      "operation": "intervene:add_future_anchor_heuristic",
+      "compared_to": "C-04-fb7850",
+      "delta_vs_parent": 0.007607019230174743,
+      "ci95": [
+        0.0009353170105645588,
+        0.015486401447917773
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.7939,
+      "graph_changed": false,
+      "functions_changed": false,
+      "structural": true,
+      "added_functions": [],
+      "removed_functions": [],
+      "best_selection_after": 0.9624929257654137
+    },
+    {
+      "child": "C-09-0b12c3",
+      "move": "expand",
+      "parents": [],
+      "usable": true,
+      "operation": "expand",
+      "compared_to": "C-06-b25a36",
+      "delta_vs_parent": -0.02624726946617007,
+      "ci95": [
+        -0.04419547631017073,
+        -0.007745013099533915
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.3331,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [],
+      "removed_functions": [
+        "_opts"
+      ],
+      "best_selection_after": 0.9624929257654137
+    },
+    {
+      "child": "C-10-1fcc71",
+      "move": "intervene:add_improvement_phase",
+      "parents": [
+        "C-06-b25a36"
+      ],
+      "usable": true,
+      "operation": "intervene:add_improvement_phase",
+      "compared_to": "C-06-b25a36",
+      "delta_vs_parent": -0.0022526617643743104,
+      "ci95": [
+        -0.007765942684744465,
+        0.0014510094085237939
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.7387,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_make_engine"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9624929257654137
+    },
+    {
+      "child": "C-11-0f3498",
+      "move": "expand",
+      "parents": [],
+      "usable": true,
+      "operation": "expand",
+      "compared_to": "C-06-b25a36",
+      "delta_vs_parent": -0.03807821837589649,
+      "ci95": [
+        -0.0561880448178039,
+        -0.02072455145150083
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.348,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_best",
+        "_fallback",
+        "_median",
+        "_solve"
+      ],
+      "removed_functions": [
+        "_opts"
+      ],
+      "best_selection_after": 0.9624929257654137
+    }
+  ],
+  "h_first_leader": "H3",
+  "synthesis": {
+    "A": {
+      "calls": 1,
+      "cost_usd": 0.848964
+    },
+    "P": {
+      "calls": 12,
+      "cost_usd": 9.6323086
+    },
+    "H": {
+      "calls": 12,
+      "cost_usd": 14.002287
+    }
+  },
+  "provider": "claude_code (real model)",
+  "sandbox": {
+    "backend": "subprocess",
+    "network_isolated": true,
+    "limits": {
+      "wall_timeout_s": 60,
+      "item_timeout_s": 2.0,
+      "cpu_seconds": 20,
+      "memory_mb": 512,
+      "max_output_bytes": 20000000,
+      "file_size_bytes": 1000000,
+      "open_files": 64,
+      "timer": "cpu"
+    },
+    "strength": "namespace+rlimits+audit-hook"
+  }
+}

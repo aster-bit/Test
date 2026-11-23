@@ -1,0 +1,67 @@
+20:28:17 === arm A ===
+20:46:21 [A] A-00-21c50a generate usable=True sel=0.893 dev=0.859
+20:46:21 === arm P (program evolution) ===
+21:05:06 [C] C-00-385f1f generate usable=True sel=0.869 dev=0.865
+21:05:07 [C] C-01-9d133b generate usable=True sel=0.917 dev=0.917
+21:05:07 [C] C-02-c041c2 generate usable=True sel=0.922 dev=0.911
+21:05:07 [C] self-diagnosed intervention on C-02-c041c2
+21:07:15 [C] C-03-a0d3fe intervene:count_constrained_alignment_with_global_verification usable=True sel=0.933 dev=0.933
+21:07:15 [C] step 1: intervene:count_constrained_alignment_with_global_verification -> usable=True delta=0.010629370629370631 structural=True best=0.9327
+21:07:15 [C] recombine C-03-a0d3fe + C-02-c041c2
+21:09:46 [C] C-04-628b7a recombine usable=True sel=0.935 dev=0.937
+21:09:46 [C] step 2: recombine -> usable=True delta=0.002567571317571321 structural=True best=0.9353
+21:09:46 [C] self-diagnosed intervention on C-02-c041c2
+21:13:58 [C] C-05-b233d6 intervene:noisy_channel_joint_decoding usable=True sel=0.940 dev=0.945
+21:13:58 [C] step 3: intervene:noisy_channel_joint_decoding -> usable=True delta=0.017849718141480522 structural=True best=0.9399
+21:13:58 [C] recombine C-05-b233d6 + C-04-628b7a
+21:18:08 [C] C-06-ce710f recombine usable=True sel=0.943 dev=0.945
+21:18:08 [C] step 4: recombine -> usable=True delta=0.0030348285724629775 structural=True best=0.9430
+21:18:08 [C] self-diagnosed intervention on C-04-628b7a
+21:23:10 [C] C-07-f79f73 intervene:add_state_or_memory usable=True sel=0.924 dev=0.931
+21:23:10 [C] step 5: intervene:add_state_or_memory -> usable=True delta=-0.010796485435381316 structural=True best=0.9430
+21:23:10 [C] self-diagnosed intervention on C-04-628b7a
+21:26:56 [C] C-08-562f08 intervene:global_constrained_decoding usable=True sel=0.944 dev=0.949
+21:26:56 [C] step 6: intervene:global_constrained_decoding -> usable=True delta=0.008611442478473667 structural=True best=0.9439
+21:26:56 [C] self-diagnosed intervention on C-08-562f08
+21:30:59 [C] C-09-43fad4 intervene:add_damage_profile_channel_model usable=True sel=0.943 dev=0.949
+21:30:59 [C] step 7: intervene:add_damage_profile_channel_model -> usable=True delta=-0.0004783633957681388 structural=True best=0.9439
+21:30:59 [C] self-diagnosed intervention on C-08-562f08
+21:34:12 [C] C-10-639e28 intervene:add_document_channel_estimation usable=True sel=0.944 dev=0.949
+21:34:12 [C] step 8: intervene:add_document_channel_estimation -> usable=True delta=-6.250894482597117e-05 structural=True best=0.9439
+21:34:12 [C] stagnation (2) -> space expansion
+21:39:56 [C] C-11-314052 expand usable=True sel=0.853 dev=0.915
+21:39:56 [C] step 9: expand -> usable=True delta=-0.09048094815869137 structural=True best=0.9439
+21:39:56 arm P done: calls=12 cost=$10.83
+21:39:56 === arm H (hypothesis evolution) ===
+21:40:45 [H] hypothesis H0: Row-local noisy-channel repair with arithmetic verification - Each reconstructed row is repaired on its own: the program enumerates a bounded, weighted list of repair candidates for each field and keeps
+21:40:45 [H] hypothesis H1: Global token-stream segmentation by dynamic programming - A Viterbi-style DP runs over the flattened sequence of value tokens in each section. Its state is (token index, column position), and it cho
+21:40:45 [H] hypothesis H2: Section-level beam search constrained by subtotals and total - A beam search over the rows of a section keeps partial hypotheses keyed by their running AMOUNT sum. Each row contributes a few ranked repai
+21:40:45 [H] hypothesis H3: Whole-document constraint-violation local search - Iterative repair keeps a single complete document hypothesis (segmentation plus every field value). It applies hill-climbing or annealing mo
+21:48:36 [H] H-00-abd6eb implement:H0 usable=True sel=0.897 dev=0.858
+21:48:37 [H] H-01-888674 implement:H1 usable=True sel=0.830 dev=0.760
+21:48:38 [H] H-02-a27d45 implement:H2 usable=True sel=0.895 dev=0.859
+21:48:39 [H] H-03-465f44 implement:H3 usable=True sel=0.893 dev=0.865
+21:55:15 [H] move recombine on H4
+21:55:15 [H] H-04-f417a5 recombine:H4 usable=True sel=0.942 dev=0.943
+21:55:15 [H] step 1: recombine/H4 usable=True delta=0.04474801977769542 best=0.9417
+21:57:56 [H] move refine on H4
+21:57:56 [H] H-05-7fbff2 refine:H4 usable=True sel=0.942 dev=0.944
+21:57:56 [H] step 2: refine/H4 usable=True delta=0.000584045584045582 best=0.9423
+22:04:47 [H] move second_impl on H0
+22:04:48 [H] H-06-003182 implement:H0 usable=True sel=0.939 dev=0.941
+22:04:48 [H] step 3: second_impl/H0 usable=True delta=-0.003504489395422126 best=0.9423
+22:08:26 [H] move refine on H4
+22:08:26 [H] H-07-41fbcf refine:H4 usable=True sel=0.943 dev=0.944
+22:08:26 [H] step 4: refine/H4 usable=True delta=0.0009620009620009621 best=0.9432
+22:11:19 [H] move refine on H4
+22:11:19 [H] H-08-682748 refine:H4 usable=True sel=0.944 dev=0.946
+22:11:19 [H] step 5: refine/H4 usable=True delta=0.0008357771260997071 best=0.9441
+22:17:14 [H] move pivot on H5
+22:17:16 [H] H-09-0ecc0c pivot:H5 usable=True sel=0.911 dev=0.907
+22:17:16 [H] step 6: pivot/H5 usable=True delta=-0.03268768411376164 best=0.9441
+22:20:53 [H] move refine on H4
+22:20:54 [H] H-10-9e68f9 refine:H4 usable=True sel=0.947 dev=0.947
+22:20:54 [H] step 7: refine/H4 usable=True delta=0.0025962902931211933 best=0.9467
+22:20:54 arm H done: calls=12 cost=$8.58
+22:20:54 champions (chosen on SELECTION, before audit): {'A': 'A-00-21c50a', 'P_initial': 'C-02-c041c2', 'P_final': 'C-08-562f08', 'H_initial': 'H-00-abd6eb', 'H_final': 'H-10-9e68f9', 'hyp:H0': 'H-06-003182', 'hyp:H1': 'H-01-888674', 'hyp:H2': 'H-02-a27d45', 'hyp:H3': 'H-03-465f44', 'hyp:H4': 'H-10-9e68f9', 'hyp:H5': 'H-09-0ecc0c'}
+22:21:17 results written to /home/user/Test/experiments/hds-doc/rep0

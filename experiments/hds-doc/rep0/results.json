@@ -1,0 +1,1364 @@
+{
+  "config": {
+    "name": "hds-doc",
+    "env": "docrepair",
+    "seed": 2026,
+    "dev": 30,
+    "selection": 60,
+    "audit": 100,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 2.0,
+    "recombine_rate": 0.25,
+    "timer": "cpu",
+    "chunks": 2,
+    "replicate": 0,
+    "k_hyp": 4,
+    "explore_share": 0.4
+  },
+  "elapsed_s": 6775.3,
+  "champions": {
+    "A": "A-00-21c50a",
+    "P_initial": "C-02-c041c2",
+    "P_final": "C-08-562f08",
+    "H_initial": "H-00-abd6eb",
+    "H_final": "H-10-9e68f9",
+    "hyp:H0": "H-06-003182",
+    "hyp:H1": "H-01-888674",
+    "hyp:H2": "H-02-a27d45",
+    "hyp:H3": "H-03-465f44",
+    "hyp:H4": "H-10-9e68f9",
+    "hyp:H5": "H-09-0ecc0c"
+  },
+  "audit": {
+    "A": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8528522400148819,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 14
+      },
+      "per_family": {
+        "broken_layout": 0.8914,
+        "clean": 0.8854,
+        "heavy": 0.7484,
+        "long_heavy": 0.6617,
+        "lookalike": 0.9581,
+        "lost_chars": 0.8887,
+        "misread": 0.9357
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 65.205438000703,
+      "mean_ci95": [
+        0.8064255455353616,
+        0.8932803892786348
+      ]
+    },
+    "P_initial": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8695813135022153,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 7
+      },
+      "per_family": {
+        "broken_layout": 0.8921,
+        "clean": 0.8854,
+        "heavy": 0.7803,
+        "long_heavy": 0.6892,
+        "lookalike": 0.9573,
+        "lost_chars": 0.9345,
+        "misread": 0.9361
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 9.395201000188536,
+      "mean_ci95": [
+        0.828022700986035,
+        0.9044274339247227
+      ]
+    },
+    "P_final": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9315917423713926,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.9595,
+        "clean": 0.9975,
+        "heavy": 0.8923,
+        "long_heavy": 0.8526,
+        "lookalike": 0.9589,
+        "lost_chars": 0.9397,
+        "misread": 0.9463
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 186.0371849998046,
+      "mean_ci95": [
+        0.9210389691902314,
+        0.9419692945501821
+      ]
+    },
+    "H_initial": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.848129985630856,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 15
+      },
+      "per_family": {
+        "broken_layout": 0.8901,
+        "clean": 0.883,
+        "heavy": 0.749,
+        "long_heavy": 0.6218,
+        "lookalike": 0.9549,
+        "lost_chars": 0.8905,
+        "misread": 0.9391
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 219.78940500048338,
+      "mean_ci95": [
+        0.8022706333546623,
+        0.8897182961600255
+      ]
+    },
+    "H_final": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.933849160574868,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.9642,
+        "clean": 0.9975,
+        "heavy": 0.8983,
+        "long_heavy": 0.8508,
+        "lookalike": 0.9637,
+        "lost_chars": 0.9323,
+        "misread": 0.9535
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 64.53482300003088,
+      "mean_ci95": [
+        0.9230321014940795,
+        0.9443455133569748
+      ]
+    },
+    "hyp:H0": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9272869462976044,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.952,
+        "clean": 0.9975,
+        "heavy": 0.8842,
+        "long_heavy": 0.8423,
+        "lookalike": 0.9554,
+        "lost_chars": 0.943,
+        "misread": 0.9433
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 34.82370100027765,
+      "mean_ci95": [
+        0.9162194326603129,
+        0.938030104666508
+      ]
+    },
+    "hyp:H1": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.7667835702230412,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 26
+      },
+      "per_family": {
+        "broken_layout": 0.8839,
+        "clean": 0.883,
+        "heavy": 0.6662,
+        "long_heavy": 0.3217,
+        "lookalike": 0.9534,
+        "lost_chars": 0.722,
+        "misread": 0.9293
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 24.581058999501693,
+      "mean_ci95": [
+        0.7062729722535975,
+        0.8221605546565837
+      ]
+    },
+    "hyp:H2": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8526975957169496,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 15
+      },
+      "per_family": {
+        "broken_layout": 0.8976,
+        "clean": 0.8854,
+        "heavy": 0.7596,
+        "long_heavy": 0.6188,
+        "lookalike": 0.9581,
+        "lost_chars": 0.8903,
+        "misread": 0.9466
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 60.616808000304445,
+      "mean_ci95": [
+        0.8064465219420945,
+        0.8956218283302693
+      ]
+    },
+    "hyp:H3": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8611015688928368,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 13
+      },
+      "per_family": {
+        "broken_layout": 0.8894,
+        "clean": 0.883,
+        "heavy": 0.8295,
+        "long_heavy": 0.6093,
+        "lookalike": 0.9552,
+        "lost_chars": 0.887,
+        "misread": 0.9377
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 54.102074000184075,
+      "mean_ci95": [
+        0.8192117669251735,
+        0.8972743169451879
+      ]
+    },
+    "hyp:H4": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.933849160574868,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.9642,
+        "clean": 0.9975,
+        "heavy": 0.8983,
+        "long_heavy": 0.8508,
+        "lookalike": 0.9637,
+        "lost_chars": 0.9323,
+        "misread": 0.9535
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 64.53482300003088,
+      "mean_ci95": [
+        0.9230321014940795,
+        0.9443455133569748
+      ]
+    },
+    "hyp:H5": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9101577631596623,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.9503,
+        "clean": 0.9975,
+        "heavy": 0.847,
+        "long_heavy": 0.781,
+        "lookalike": 0.9611,
+        "lost_chars": 0.9274,
+        "misread": 0.9382
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 138.3559410005546,
+      "mean_ci95": [
+        0.8894303884600586,
+        0.9281692623217681
+      ]
+    }
+  },
+  "tests": {
+    "G1": {
+      "comparison": "H_final - P_final",
+      "mean_diff": 0.002257418203475353,
+      "ci_bonferroni": [
+        -0.002638043028237248,
+        0.006897110229630864
+      ],
+      "holds": false
+    },
+    "G2": {
+      "comparison": "H_final - A",
+      "mean_diff": 0.08099692055998625,
+      "ci_bonferroni": [
+        0.034589052380949496,
+        0.13733358156412848
+      ],
+      "holds": true
+    },
+    "G3_paradigm_transition": {
+      "comparison": "H_final - H_initial",
+      "mean_diff": 0.08571917494401207,
+      "ci_bonferroni": [
+        0.04016105782790863,
+        0.14336968119018417
+      ],
+      "holds": true,
+      "score_holds": true
+    },
+    "descriptive_P_final_minus_P_initial": {
+      "comparison": "P_final - P_initial",
+      "mean_diff": 0.06201042886917741,
+      "ci_bonferroni": [
+        0.024319425009394293,
+        0.11212474139201496
+      ],
+      "holds": true
+    }
+  },
+  "transition": {
+    "initial_hypothesis": "H0",
+    "final_hypothesis": "H4",
+    "final_hypothesis_origin": "recombine",
+    "different_hypothesis": true,
+    "ast_similarity": 0.3617,
+    "code_differs": true
+  },
+  "diversity": {
+    "P": {
+      "programs": 12,
+      "usable": 12,
+      "code_clusters": 2,
+      "mean_pairwise_ast_similarity": 0.6075,
+      "mean_pairwise_behavioural_distance": 0.0443,
+      "graph_signatures": [
+        "C",
+        "CC",
+        "CCC",
+        "CCCC",
+        "CCCCCC"
+      ]
+    },
+    "H": {
+      "programs": 11,
+      "usable": 11,
+      "code_clusters": 6,
+      "mean_pairwise_ast_similarity": 0.5694,
+      "mean_pairwise_behavioural_distance": 0.0462,
+      "graph_signatures": [
+        "C",
+        "CC",
+        "CCC"
+      ]
+    }
+  },
+  "stagnation_escapes": {
+    "P": 0,
+    "H": 0
+  },
+  "best_selection_sequence": {
+    "P": [
+      0.9220729259219173,
+      0.9327022965512879,
+      0.9352698678688592,
+      0.9399226440633978,
+      0.9429574726358608,
+      0.9429574726358608,
+      0.9438813103473329,
+      0.9438813103473329,
+      0.9438813103473329,
+      0.9438813103473329
+    ],
+    "H": [
+      0.8969292819140159,
+      0.9416773016917114,
+      0.9422613472757569,
+      0.9422613472757569,
+      0.9432233482377579,
+      0.9440591253638576,
+      0.9440591253638576,
+      0.9466554156569789
+    ]
+  },
+  "hypotheses": {
+    "H0": {
+      "id": "H0",
+      "name": "Row-local noisy-channel repair with arithmetic verification",
+      "mechanism": "Each reconstructed row is repaired on its own: the program enumerates a bounded, weighted list of repair candidates for each field and keeps the cheapest (code, qty, unit, amount) combination that passes the check digit and satisfies qty*unit == amount.",
+      "principle": "First a heuristic pre-pass fixes the layout. It detects the separator and the column order from the COLUMNS line, drops lines without values, and joins wrapped or merged lines by counting fields. Each field then gets candidates from an edit model whose costs follow the damage list: look-alike swaps, the specific digit misreads, a deleted or doubled digit, and a reinserted decimal mark at the known 2-decimal position. Three of the four fields are bound to each other through the product, and the code carries its own checksum. So a single damaged field in a row can almost always be pinned down exactly. The cost function prefers zero or one edit, which matches 'most values are intact'.",
+      "assumptions": [
+        "Damage per row is sparse (usually 0-2 damaged characters).",
+        "The column order and the separator can be read from the COLUMNS line and the first rows.",
+        "Layout repair by field counting is mostly unambiguous."
+      ],
+      "resources": "There are about 60 rows. Each has 4 fields with at most a few hundred candidates per field, and the product is checked with pruning (enumerate qty x unit, look up the amount). This takes well under 0.1 s, with negligible memory.",
+      "constraints": [
+        "Fails when a row has damage in two of qty/unit/amount that admits several consistent products, because no cross-row information is used."
+      ],
+      "advantages": [
+        "Simple and fast, with an easily tuned cost table.",
+        "Exact recovery for the dominant single-damage case."
+      ],
+      "weaknesses": [
+        "Ignores SUBTOTAL, TOTAL and ITEMS, so ties stay unresolved.",
+        "The greedy layout pre-pass can mis-split merged or wrapped rows, which shifts every later position."
+      ],
+      "strong_families": [
+        "clean",
+        "lookalike",
+        "misread"
+      ],
+      "weak_families": [
+        "broken_layout",
+        "heavy"
+      ],
+      "test": "Compare per-row exactness with oracle layout against the full pipeline on broken_layout. If layout errors don't dominate the losses, or if rows with ambiguous products are rare, the more global hypotheses add nothing. A large share of ties among rows that satisfy the product constraint refutes the claim that row-local is sufficient.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 0
+    },
+    "H1": {
+      "id": "H1",
+      "name": "Global token-stream segmentation by dynamic programming",
+      "mechanism": "A Viterbi-style DP runs over the flattened sequence of value tokens in each section. Its state is (token index, column position), and it chooses the row boundaries and the token-to-field assignment that minimise the total repair cost plus the layout-penalty cost.",
+      "principle": "Line breaks are unreliable because of wraps, merges and inserted lines. The method therefore drops them as hard structure and treats the section as one stream of separator-split tokens. Line ends are only soft evidence. A row costs the minimum noisy-channel repair cost of its 4 tokens under the column order. Junk tokens such as page markers can be skipped at a penalty. Starting a row away from a line start, or ending it away from a line end, costs a little. This gives the globally optimal segmentation, so one misparsed merge cannot shift all later items. The ITEMS count can be added as a length constraint by keeping (index, rows-so-far) states.",
+      "assumptions": [
+        "Tokens themselves are not split by damage, so separators stay intact.",
+        "The repair cost of a 4-token row is computable quickly with memoisation.",
+        "Inserted lines are recognisable as non-value tokens or are cheap to skip."
+      ],
+      "resources": "The DP has O(T * 4) states over about 240-300 tokens, and each transition evaluates a memoised row cost. Total cost is a few thousand row evaluations, which fits easily in 1 s. Adding the row-count dimension multiplies the work by about 60, which is still fine.",
+      "constraints": [
+        "The separator must be detectable. A three-space separator collides with whitespace damage if spacing is altered.",
+        "Not useful if layout damage is absent: it then reduces to the row-local approach."
+      ],
+      "advantages": [
+        "Principled handling of wraps, merges and inserted lines together.",
+        "Uses ITEMS as a global constraint on the number of rows."
+      ],
+      "weaknesses": [
+        "Within-row value ambiguity is still resolved only locally, so subtotals are not used.",
+        "Errors in the cost calibration between layout and value penalties can produce odd segmentations."
+      ],
+      "strong_families": [
+        "broken_layout",
+        "heavy"
+      ],
+      "weak_families": [
+        "misread"
+      ],
+      "test": "On broken_layout, measure the item-count accuracy and positional alignment of the DP against a greedy line-joiner. If the greedy approach matches the DP within noise, the global segmentation brings no gain.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 1
+    },
+    "H2": {
+      "id": "H2",
+      "name": "Section-level beam search constrained by subtotals and total",
+      "mechanism": "A beam search over the rows of a section keeps partial hypotheses keyed by their running AMOUNT sum. Each row contributes a few ranked repair candidates, and only complete hypotheses whose sum matches a candidate SUBTOTAL are accepted. The same search then reconciles the section subtotals against TOTAL.",
+      "principle": "The document has a hierarchy of checksums: the row product, the section subtotal, and the grand total with the item count. Row-local repair leaves residual ambiguity, for example a misread digit in both unit and amount that stays consistent, or the lost-decimal case. Requiring the AMOUNTs to sum exactly to the SUBTOTAL resolves it, because the subtotal itself has a small candidate set and is usually intact. Merging beam states on equal (row index, sum) makes the search a pseudo-polynomial subset-sum DP. Hypotheses are ranked by summed repair cost. This catches the remaining two-field damage that the other approaches can only guess.",
+      "assumptions": [
+        "SUBTOTAL and TOTAL values are mostly intact or repairable to a small candidate set.",
+        "Row segmentation is known or provided by an earlier step.",
+        "Each row has only a few plausible (qty, unit, amount) candidates."
+      ],
+      "resources": "There are at most about 60 rows and 5-20 candidates per row. The beam width is capped (for example 200) and states are deduplicated by sum. This runs in milliseconds to tens of milliseconds, with a perf_counter budget as a safeguard.",
+      "constraints": [
+        "Cannot help when the subtotal and a row are both badly damaged so that no consistent combination exists. It must fall back to the best unconstrained answer.",
+        "Depends on correct row segmentation, which comes from another method."
+      ],
+      "advantages": [
+        "Exploits the redundancy that the other approaches ignore.",
+        "Resolves ambiguous rows where several (unit, amount) pairs satisfy the product."
+      ],
+      "weaknesses": [
+        "Gains only where row-local ambiguity exists, so the marginal benefit may be small.",
+        "A wrong subtotal candidate can force wrong repairs onto correct rows unless the subtotal repair cost is weighed in."
+      ],
+      "strong_families": [
+        "misread",
+        "lost_chars",
+        "heavy"
+      ],
+      "weak_families": [
+        "broken_layout"
+      ],
+      "test": "Count how many rows are changed by the subtotal constraint relative to row-local argmin, and what fraction of those changes improve accuracy. If both numbers are near zero, the hypothesis is not worth its complexity.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 2
+    },
+    "H3": {
+      "id": "H3",
+      "name": "Whole-document constraint-violation local search",
+      "mechanism": "Iterative repair keeps a single complete document hypothesis (segmentation plus every field value). It applies hill-climbing or annealing moves: edit a field, split or merge a row, or skip a line. Each move must reduce a global energy that sums the edit costs and the penalties for violated constraints, namely check digit, product, subtotal, total and item count.",
+      "principle": "The process starts from a naive parse. It lists the violated constraints and proposes only moves that touch the offending fields or lines. Each proposal is scored by the change in energy and the best one is applied until no move helps. Because the energy includes every level of the checksum hierarchy plus layout, layout and value repair interact with each other instead of running in a fixed pipeline order. A seeded random restart keeps the method deterministic while escaping local minima. Damage is sparse, so only a few moves are needed from a mostly correct start.",
+      "assumptions": [
+        "The initial naive parse is close to the truth (few violations).",
+        "The energy landscape is navigable with single-move steps from that start.",
+        "Edit-cost weights reflect the damage probabilities."
+      ],
+      "resources": "Each move evaluation is local, with an incremental update of a row product and a section sum. Several thousand moves fit easily within a 0.5 s perf_counter budget. The algorithm is anytime, so it stops at the budget.",
+      "constraints": [
+        "Must use a fixed random seed and a time-independent move order, or a move cap, to stay deterministic. Pure perf_counter budgets risk nondeterminism.",
+        "Gives poor results when the initial parse is very wrong, for example heavy merges that shift all fields."
+      ],
+      "advantages": [
+        "Unifies layout and value repair under one objective.",
+        "Uses all constraints at once.",
+        "Easy to extend with new move types."
+      ],
+      "weaknesses": [
+        "No optimality guarantee, so it can get stuck in local minima on heavy damage.",
+        "Tuning the energy weights is delicate.",
+        "Slower and less predictable than the exact DPs."
+      ],
+      "strong_families": [
+        "heavy",
+        "lost_chars"
+      ],
+      "weak_families": [
+        "broken_layout"
+      ],
+      "test": "On a synthetic set with known truth, compare its final energy and accuracy against an exact DP (segmentation DP followed by subtotal beam). If the local search often stops at a higher energy than the exact method, or never beats it on accuracy, the local-search hypothesis is refuted.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 3
+    },
+    "H4": {
+      "id": "H4",
+      "name": "Checksum-constrained beam over probability-scored noisy-channel row lattices",
+      "mechanism": "A slot-DP segments each section's token stream into rows (allowing skipped junk and missing fields). Each row becomes a k-best lattice of (qty, unit) candidates scored by a single noisy-channel cost: one-op enumeration with summed path probabilities plus edit-distance-priced derivation of the third field. A subset-sum beam keyed on running AMOUNT sum then selects one candidate per row against SUBTOTAL edit cost, and a second DP selects among section options against TOTAL.",
+      "principle": "X's edit model is the right likelihood for single-field damage, and Y's checksum hierarchy is the right prior for resolving residual ambiguity. Both underperform because their row candidate lists are shallow or inconsistently priced. Here one cost scale (the spec's damage operations, as -log probability) is used for enumeration, for derived fields with many edits, and for the subtotal and total comparisons. The beam therefore trades a row edit against a subtotal edit on equal terms. Summing over derivation paths makes the ambiguous lost-digit repairs (especially in codes) prefer the more probable string. The segmentation DP with an empty-field move keeps positions aligned in broken layouts.",
+      "assumptions": [
+        "Most values carry 0-1 damage operations; heavier damage is concentrated in at most one of qty/unit/amount per row.",
+        "SUBTOTAL and TOTAL are usually intact or within a few edits.",
+        "Data lines consist only of value tokens, while noise lines contain spaces/punctuation or non-lookalike letters."
+      ],
+      "resources": "Each damaged row expands ~150 one-op strings per field, a Q x U hash join (~5k lookups), and up to a few hundred capped edit-distance DPs only when no cheap consistent combination exists. The beam is 300 states per section. That is typically 50-300 ms per 60-row document, and a perf_counter budget switches to a cheap mode after 0.45 s.",
+      "constraints": [
+        "Cannot recover rows whose two or more fields are each damaged by two or more operations.",
+        "Code repair has no cross-row information; a lost code digit remains ambiguous among about 3-5 checksum-valid strings."
+      ],
+      "advantages": [
+        "Consistent costs across row repair and subtotal/total reconciliation.",
+        "Derived-field pricing covers multi-edit fields without exponential enumeration.",
+        "Missing-field segmentation avoids positional shifts."
+      ],
+      "weaknesses": [
+        "Code-digit loss is intrinsically ambiguous.",
+        "A damaged subtotal close to a wrong sum can pull an incorrect repair."
+      ],
+      "strong_families": [
+        "lost_chars",
+        "heavy",
+        "misread"
+      ],
+      "weak_families": [
+        "broken_layout"
+      ],
+      "test": "On lost_chars/heavy, compare against row-local argmin (beam disabled) and against Y's candidate generator. If accuracy does not rise above about 0.72, or if most rows changed by the beam become wrong, the hypothesis that consistent candidate pricing is the bottleneck is refuted.",
+      "origin": "recombine",
+      "parents": [
+        "H0",
+        "H2"
+      ],
+      "created_index": 4
+    },
+    "H5": {
+      "id": "H5",
+      "name": "Per-document self-calibrating channel (EM) with constraint-automaton decoding",
+      "mechanism": "A two-pass hard-EM loop: pass 1 decodes every row with prior channel costs (codes by an exact Viterbi whose automaton state is the running check-digit sum mod 10, numbers by best-first lattice generation plus exact weighted alignment of derived values), then counts the repair operations the confident decodes used to re-estimate per-document op rates, and pass 2 re-decodes all ambiguous rows under the document's own channel before a subtotal reconciliation picks among row alternatives.",
+      "principle": "Damage in one document comes from one process, so the repairs found in the many easily fixed rows show which repair types this particular document favours. Re-weighting the channel with that evidence breaks the constraint-satisfying ties in ambiguous rows in the direction this document's damage actually takes. Code decoding is exact over all 6.76M valid codes, because the checksum is carried as DP state rather than checked after a bounded enumeration. A derived third field is priced by exact weighted alignment, so several damages in one field are still reachable.",
+      "assumptions": [
+        "damage type mix is homogeneous within a document",
+        "enough damaged-but-resolvable rows exist (>=6 rows) to estimate rates",
+        "most rows are intact so the fast path covers them"
+      ],
+      "resources": "Fast path for intact rows; damaged rows cost about 2-10 ms (bounded heap pops, memoised alignments); the second pass touches only damaged rows; guarded by process_time budget (pass 2 skipped beyond 0.45 s, stopped at 0.8 s).",
+      "constraints": [
+        "tokens must chunk into 4-field rows (no field fully missing)",
+        "no LLM at runtime"
+      ],
+      "advantages": [
+        "family-adaptive tie-breaking",
+        "exact check-digit decoding with deletions/doubles",
+        "multi-damage recall via derived-field alignment"
+      ],
+      "weaknesses": [
+        "documents with very few damaged rows give little signal (falls back to prior)",
+        "subtotal reconciliation limited to single/pair changes",
+        "segmentation still assumes token count divisible by 4"
+      ],
+      "strong_families": [
+        "lost_chars",
+        "heavy",
+        "misread"
+      ],
+      "weak_families": [
+        "broken_layout"
+      ],
+      "test": "Run with pass 2 disabled (prior costs only) versus enabled on dev: if heavy/lost_chars do not improve, or improve no more than when the re-estimated costs are randomly permuted among op types, the per-document calibration hypothesis is wrong.",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "created_index": 9
+    }
+  },
+  "attribution": {
+    "H0": {
+      "name": "Row-local noisy-channel repair with arithmetic verification",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 2,
+      "implementations_working": 2,
+      "independent_working_implementations": 2,
+      "best_implementation": "H-06-003182",
+      "best_selection": 0.9388,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0079,
+        -0.014,
+        -0.0019
+      ],
+      "label": "mechanism inferior (supported: >= 2 independent implementations each significantly below the leader)",
+      "implementation_sensitivity": {
+        "best_minus_second_independent": [
+          0.0418,
+          0.0097,
+          0.0806
+        ],
+        "significant": true
+      },
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0484,
+        "confirmed": false
+      }
+    },
+    "H1": {
+      "name": "Global token-stream segmentation by dynamic programming",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-01-888674",
+      "best_selection": 0.8299,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.1167,
+        -0.179,
+        -0.0625
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0328,
+        "confirmed": false
+      }
+    },
+    "H2": {
+      "name": "Section-level beam search constrained by subtotals and total",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-02-a27d45",
+      "best_selection": 0.8954,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0513,
+        -0.0894,
+        -0.0191
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0219,
+        "confirmed": true
+      }
+    },
+    "H3": {
+      "name": "Whole-document constraint-violation local search",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-03-465f44",
+      "best_selection": 0.8935,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0532,
+        -0.092,
+        -0.0207
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0167,
+        "confirmed": true
+      }
+    },
+    "H4": {
+      "name": "Checksum-constrained beam over probability-scored noisy-channel row lattices",
+      "origin": "recombine",
+      "parents": [
+        "H0",
+        "H2"
+      ],
+      "implementations_attempted": 5,
+      "implementations_working": 5,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-10-9e68f9",
+      "best_selection": 0.9467,
+      "runtime_error_rate_dev": 0.0,
+      "label": "leader",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0062,
+        "confirmed": true
+      }
+    },
+    "H5": {
+      "name": "Per-document self-calibrating channel (EM) with constraint-automaton decoding",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-09-0ecc0c",
+      "best_selection": 0.9114,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0353,
+        -0.0637,
+        -0.0136
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0229,
+        "confirmed": true
+      }
+    }
+  },
+  "llm_conjectures": [
+    {
+      "child": "H-05-7fbff2",
+      "parent": "H-04-f417a5",
+      "hypothesis": "H4",
+      "llm_cause": "MECHANISM_LIMIT",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-07-41fbcf",
+      "parent": "H-05-7fbff2",
+      "hypothesis": "H4",
+      "llm_cause": "MECHANISM_LIMIT",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-08-682748",
+      "parent": "H-07-41fbcf",
+      "hypothesis": "H4",
+      "llm_cause": "PARAMETERS",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-10-9e68f9",
+      "parent": "H-08-682748",
+      "hypothesis": "H4",
+      "llm_cause": "MECHANISM_LIMIT",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    }
+  ],
+  "h_trace": [
+    {
+      "move": "recombine",
+      "hypothesis": "H4",
+      "child": "H-04-f417a5",
+      "usable": true,
+      "leader_before": "H0",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-00-abd6eb",
+      "delta_vs_leader": 0.04474801977769542,
+      "ci95": [
+        0.013039081517259892,
+        0.0829599743216725
+      ],
+      "significant": true,
+      "ast_similarity_to_leader": 0.459,
+      "best_selection_after": 0.9416773016917114
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-05-7fbff2",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-04-f417a5",
+      "delta_vs_leader": 0.000584045584045582,
+      "ci95": [
+        0.0,
+        0.001538461538461533
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.9282,
+      "best_selection_after": 0.9422613472757569
+    },
+    {
+      "move": "second_impl",
+      "hypothesis": "H0",
+      "child": "H-06-003182",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-05-7fbff2",
+      "delta_vs_leader": -0.003504489395422126,
+      "ci95": [
+        -0.007961113387409494,
+        0.0007137835574524538
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.5681,
+      "best_selection_after": 0.9422613472757569
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-07-41fbcf",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-05-7fbff2",
+      "delta_vs_leader": 0.0009620009620009621,
+      "ci95": [
+        0.0,
+        0.0027176527176527186
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.9128,
+      "best_selection_after": 0.9432233482377579
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-08-682748",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-07-41fbcf",
+      "delta_vs_leader": 0.0008357771260997071,
+      "ci95": [
+        -0.0010665797762571963,
+        0.0036303899207124992
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.898,
+      "best_selection_after": 0.9440591253638576
+    },
+    {
+      "move": "pivot",
+      "hypothesis": "H5",
+      "child": "H-09-0ecc0c",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-08-682748",
+      "delta_vs_leader": -0.03268768411376164,
+      "ci95": [
+        -0.062445712721405755,
+        -0.009912339024348016
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.5248,
+      "best_selection_after": 0.9440591253638576
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H4",
+      "child": "H-10-9e68f9",
+      "usable": true,
+      "leader_before": "H4",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-08-682748",
+      "delta_vs_leader": 0.0025962902931211933,
+      "ci95": [
+        -0.0012758617328509783,
+        0.006515780002933484
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.9521,
+      "best_selection_after": 0.9466554156569789
+    }
+  ],
+  "p_trace": [
+    {
+      "child": "C-03-a0d3fe",
+      "move": "intervene:count_constrained_alignment_with_global_verification",
+      "parents": [
+        "C-02-c041c2"
+      ],
+      "usable": true,
+      "operation": "intervene:count_constrained_alignment_with_global_verification",
+      "compared_to": "C-02-c041c2",
+      "delta_vs_parent": 0.010629370629370631,
+      "ci95": [
+        0.0,
+        0.027498057498057497
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.7747,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "align_dp",
+        "items_cands",
+        "reconstruct",
+        "subtotal_choice"
+      ],
+      "removed_functions": [
+        "align"
+      ],
+      "best_selection_after": 0.9327022965512879
+    },
+    {
+      "child": "C-04-628b7a",
+      "move": "recombine",
+      "parents": [
+        "C-03-a0d3fe",
+        "C-02-c041c2"
+      ],
+      "usable": true,
+      "operation": "recombine",
+      "compared_to": "C-03-a0d3fe",
+      "delta_vs_parent": 0.002567571317571321,
+      "ci95": [
+        -6.914381914381133e-05,
+        0.0054075250715035755
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.843,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_best",
+        "_dup_dels",
+        "_fallback",
+        "_ins_cands",
+        "_misread_cands"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9352698678688592
+    },
+    {
+      "child": "C-05-b233d6",
+      "move": "intervene:noisy_channel_joint_decoding",
+      "parents": [
+        "C-02-c041c2"
+      ],
+      "usable": true,
+      "operation": "intervene:noisy_channel_joint_decoding",
+      "compared_to": "C-02-c041c2",
+      "delta_vs_parent": 0.017849718141480522,
+      "ci95": [
+        0.0029289683832694645,
+        0.03692860477005256
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.5412,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "align_counts",
+        "backtrack",
+        "channel_cost",
+        "make_money_valid",
+        "mis_cost",
+        "money_cost_of",
+        "money_str",
+        "neighbours",
+        "norm_money_obs",
+        "qty_obs",
+        "qty_valid",
+        "search",
+        "str_to_cents"
+      ],
+      "removed_functions": [
+        "align",
+        "code_valid",
+        "edits",
+        "to_digits"
+      ],
+      "best_selection_after": 0.9399226440633978
+    },
+    {
+      "child": "C-06-ce710f",
+      "move": "recombine",
+      "parents": [
+        "C-05-b233d6",
+        "C-04-628b7a"
+      ],
+      "usable": true,
+      "operation": "recombine",
+      "compared_to": "C-05-b233d6",
+      "delta_vs_parent": 0.0030348285724629775,
+      "ci95": [
+        0.0002202128815032049,
+        0.005923798921110746
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.7249,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "align_dp",
+        "beam_section",
+        "path_of",
+        "reconstruct"
+      ],
+      "removed_functions": [
+        "align_counts",
+        "backtrack"
+      ],
+      "best_selection_after": 0.9429574726358608
+    },
+    {
+      "child": "C-07-f79f73",
+      "move": "intervene:add_state_or_memory",
+      "parents": [
+        "C-04-628b7a"
+      ],
+      "usable": true,
+      "operation": "intervene:add_state_or_memory",
+      "compared_to": "C-04-628b7a",
+      "delta_vs_parent": -0.010796485435381316,
+      "ci95": [
+        -0.018996356756694754,
+        -0.0027045197083142105
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.7485,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_top",
+        "align_rows",
+        "code_search",
+        "decode",
+        "estimate_rates",
+        "fmt_money",
+        "money_obs",
+        "qty_obs",
+        "rate_costs",
+        "split_code",
+        "wdist"
+      ],
+      "removed_functions": [
+        "_best",
+        "_dup_dels",
+        "_ins_cands",
+        "_misread_cands",
+        "solve"
+      ],
+      "best_selection_after": 0.9429574726358608
+    },
+    {
+      "child": "C-08-562f08",
+      "move": "intervene:global_constrained_decoding",
+      "parents": [
+        "C-04-628b7a"
+      ],
+      "usable": true,
+      "operation": "intervene:global_constrained_decoding",
+      "compared_to": "C-04-628b7a",
+      "delta_vs_parent": 0.008611442478473667,
+      "ci95": [
+        0.0023918853477676917,
+        0.015368535057863918
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.7518,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_section_beam",
+        "_two_edit",
+        "align_rows",
+        "decode_rows",
+        "mdist",
+        "money_parse",
+        "reconcile",
+        "wdist"
+      ],
+      "removed_functions": [
+        "solve",
+        "subtotal_choice"
+      ],
+      "best_selection_after": 0.9438813103473329
+    },
+    {
+      "child": "C-09-43fad4",
+      "move": "intervene:add_damage_profile_channel_model",
+      "parents": [
+        "C-08-562f08"
+      ],
+      "usable": true,
+      "operation": "intervene:add_damage_profile_channel_model",
+      "compared_to": "C-08-562f08",
+      "delta_vs_parent": -0.0004783633957681388,
+      "ci95": [
+        -0.0033010914499860193,
+        0.0020637589256102557
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.8265,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_classify",
+        "build_profile",
+        "chan_lik",
+        "parse_code_tok",
+        "reach5",
+        "repair_code",
+        "repair_codes"
+      ],
+      "removed_functions": [
+        "_two_edit"
+      ],
+      "best_selection_after": 0.9438813103473329
+    },
+    {
+      "child": "C-10-639e28",
+      "move": "intervene:add_document_channel_estimation",
+      "parents": [
+        "C-08-562f08"
+      ],
+      "usable": true,
+      "operation": "intervene:add_document_channel_estimation",
+      "compared_to": "C-08-562f08",
+      "delta_vs_parent": -6.250894482597117e-05,
+      "ci95": [
+        -0.0030934391107731865,
+        0.002846061377078128
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.8263,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "_classify",
+        "code_posterior",
+        "estimate_channel",
+        "repair_codes",
+        "split_code"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9438813103473329
+    },
+    {
+      "child": "C-11-314052",
+      "move": "expand",
+      "parents": [],
+      "usable": true,
+      "operation": "expand",
+      "compared_to": "C-08-562f08",
+      "delta_vs_parent": -0.09048094815869137,
+      "ci95": [
+        -0.1516958486779115,
+        -0.036574101863039464
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.5927,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "align",
+        "as_written",
+        "check_ok",
+        "decode_code",
+        "ed",
+        "fwd",
+        "inv",
+        "is_value_token",
+        "mcost",
+        "mlb",
+        "norm_digits",
+        "parse_money",
+        "qty_obs",
+        "row_hypotheses",
+        "shape_costs",
+        "valid_cents_str"
+      ],
+      "removed_functions": [
+        "_best",
+        "_dup_dels",
+        "_fallback",
+        "_ins_cands",
+        "_misread_cands",
+        "_rev",
+        "_section_beam",
+        "_two_edit",
+        "align_dp",
+        "align_rows",
+        "code_check",
+        "code_valid",
+        "edits",
+        "fix_code",
+        "items_cands",
+        "looks_value",
+        "mdist",
+        "money_parse",
+        "qty_cands",
+        "reconstruct",
+        "solve_row",
+        "split_line",
+        "to_digits",
+        "tok_type_cost",
+        "wdist"
+      ],
+      "best_selection_after": 0.9438813103473329
+    }
+  ],
+  "h_first_leader": "H0",
+  "synthesis": {
+    "A": {
+      "calls": 1,
+      "cost_usd": 3.6188548000000003
+    },
+    "P": {
+      "calls": 12,
+      "cost_usd": 10.832237800000001
+    },
+    "H": {
+      "calls": 12,
+      "cost_usd": 8.578404
+    }
+  },
+  "provider": "claude_code (real model)",
+  "sandbox": {
+    "backend": "subprocess",
+    "network_isolated": true,
+    "limits": {
+      "wall_timeout_s": 60,
+      "item_timeout_s": 2.0,
+      "cpu_seconds": 20,
+      "memory_mb": 512,
+      "max_output_bytes": 20000000,
+      "file_size_bytes": 1000000,
+      "open_files": 64,
+      "timer": "cpu"
+    },
+    "strength": "namespace+rlimits+audit-hook"
+  }
+}
