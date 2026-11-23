@@ -259,7 +259,7 @@ class ClaudeCodeProvider:
     name = "claude_code"
     simulated = False
 
-    def __init__(self, meter: CostMeter | None = None, binary: str | None = None, timeout: float = 300.0,
+    def __init__(self, meter: CostMeter | None = None, binary: str | None = None, timeout: float = 1200.0,
                  concurrency: int = 4, workdir: str | None = None, max_retries: int = 30):
         import shutil
         import tempfile
@@ -341,6 +341,9 @@ class ClaudeCodeProvider:
             blob = (err + " " + json.dumps(doc or {}))[:2000].lower()
             if not any(t.lower() in blob for t in self.TRANSIENT):
                 return doc, latency, err
+            import sys
+            print(f"[provider] transient error after {latency / 1000:.0f}s: {err[:120]}; retry in {delay:.0f}s",
+                  file=sys.stderr, flush=True)
             time.sleep(delay)
             delay = min(600.0, delay * 2)
         return doc, latency, err
