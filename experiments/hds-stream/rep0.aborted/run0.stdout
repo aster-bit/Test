@@ -1,0 +1,20 @@
+14:39:20 === arm A ===
+14:44:42 [A] A-00-4504f8 generate usable=True sel=0.887 dev=0.826
+14:44:42 === arm P (program evolution) ===
+[provider] transient error after 846s: cli_error:success; retry in 5s
+[provider] transient error after 1s: cli_error:success; retry in 10s
+[provider] transient error after 1s: cli_error:success; retry in 20s
+[provider] transient error after 1s: cli_error:success; retry in 40s
+[provider] transient error after 1s: cli_error:success; retry in 80s
+[provider] transient error after 1s: cli_error:success; retry in 160s
+[provider] transient error after 1s: cli_error:success; retry in 320s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
+[provider] transient error after 1s: cli_error:success; retry in 600s
