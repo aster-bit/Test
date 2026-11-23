@@ -10,6 +10,12 @@ def get_env(name: str) -> TaskEnvironment:
     elif name in ("calendar_multimode_scheduling", "calsched"):
         from .calsched import CalendarSchedulingEnv
         env = CalendarSchedulingEnv()
+    elif name in ("degraded_manifest_extraction", "docrepair"):
+        from .docrepair import DocRepairEnv
+        env = DocRepairEnv()
+    elif name in ("session_log_reconstruction", "streamrec"):
+        from .streamrec import StreamRecEnv
+        env = StreamRecEnv()
     else:
         raise KeyError(name)
     assert_solution_free(env)
