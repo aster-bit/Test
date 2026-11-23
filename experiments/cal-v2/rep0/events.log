@@ -49,3 +49,5 @@
 04:15:09 arm C done in 2119s, calls=12, cost=$4.736
 04:15:09 champions (chosen on SELECTION, before audit): {'A': 'A-00-79a13c', 'B_best': 'B-03-da940d', 'C_initial': 'C-02-011438', 'C_final': 'C-03-8feefe'}
 04:17:33 direct Claude baseline on audit ...
+04:34:29 audit done
+04:34:31 results written to /home/user/Test/experiments/cal-v2/rep0

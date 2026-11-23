@@ -49,3 +49,105 @@
 04:15:09 arm C done in 2119s, calls=12, cost=$4.736
 04:15:09 champions (chosen on SELECTION, before audit): {'A': 'A-00-79a13c', 'B_best': 'B-03-da940d', 'C_initial': 'C-02-011438', 'C_final': 'C-03-8feefe'}
 04:17:33 direct Claude baseline on audit ...
+04:34:29 audit done
+04:34:31 results written to /home/user/Test/experiments/cal-v2/rep0
+{
+ "champions": {
+  "A": "A-00-79a13c",
+  "B_best": "B-03-da940d",
+  "C_initial": "C-02-011438",
+  "C_final": "C-03-8feefe"
+ },
+ "hypotheses": {
+  "H1_primary": {
+   "comparison": "C_final - C_initial",
+   "mean_diff": 0.003318296558680583,
+   "ci99_bonferroni": [
+    -0.00039966976817668693,
+    0.00854999988643489
+   ],
+   "holds": false
+  },
+  "H2": {
+   "comparison": "C_final - B_best",
+   "mean_diff": 0.005012087052106222,
+   "ci99_bonferroni": [
+    -8.700132317816931e-05,
+    0.01273665577250924
+   ],
+   "holds": false
+  },
+  "H3": {
+   "comparison": "C_final - A",
+   "mean_diff": 0.006490993358051505,
+   "ci99_bonferroni": [
+    0.0007003687310811671,
+    0.015211544968268558
+   ],
+   "holds": true
+  },
+  "H4": {
+   "comparison": "C_final - H_manual",
+   "mean_diff": 0.06613560921323229,
+   "ci99_bonferroni": [
+    0.033934325664665047,
+    0.10727859647431154
+   ],
+   "holds": true
+  },
+  "H5": {
+   "comparison": "C_final - D_direct",
+   "mean_diff": 0.058601670498472355,
+   "ci99_bonferroni": [
+    0.029865629700845737,
+    0.0935565438276707
+   ],
+   "holds": true
+  }
+ },
+ "audit": {
+  "A": [
+   0.1946,
+   [
+    0.13384197924576446,
+    0.2613165668793431
+   ]
+  ],
+  "B_best": [
+   0.1961,
+   [
+    0.13522583291704912,
+    0.26284048757919803
+   ]
+  ],
+  "C_initial": [
+   0.1978,
+   [
+    0.13672724471415287,
+    0.26557079618266083
+   ]
+  ],
+  "C_final": [
+   0.2011,
+   [
+    0.1400397042319895,
+    0.2682927870027404
+   ]
+  ],
+  "H_manual": [
+   0.135,
+   [
+    0.0793856598397698,
+    0.19892666702659592
+   ]
+  ],
+  "D_direct": [
+   0.1425,
+   [
+    0.08579476968435194,
+    0.20770633965707105
+   ]
+  ]
+ }
+}
+exit 0

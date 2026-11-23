@@ -1,0 +1,4224 @@
+{
+ "A": [
+  {
+   "id": "audit-0000",
+   "family": "tight_due",
+   "score": 0.014919187733112309,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "mid",
+   "score": 0.052669039145907474,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "calendar_heavy",
+   "score": 0.023718439173680182,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "dense_precedence",
+   "score": 0.02308960967564596,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "mid",
+   "score": 0.058823529411764705,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "xl",
+   "score": 0.006722926118332902,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "mid",
+   "score": 0.03728704596592736,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "xl",
+   "score": 0.006648973320296131,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "mode_rich",
+   "score": 0.029574861367837338,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "mid",
+   "score": 0.04031900753212229,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "mode_rich",
+   "score": 0.03628750872295883,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "xl",
+   "score": 0.0051038934839620735,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "calendar_heavy",
+   "score": 0.019904165130851456,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "calendar_heavy",
+   "score": 0.039917055469155,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "mid",
+   "score": 0.05627705627705628,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "mid",
+   "score": 0.45614035087719296,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "tight_due",
+   "score": 0.0181190681622088,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "tight_due",
+   "score": 0.011162790697674419,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "dense_precedence",
+   "score": 0.07763532763532764,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "calendar_heavy",
+   "score": 0.024579962663347853,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "xl",
+   "score": 0.005779159068142707,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "dense_precedence",
+   "score": 0.0420032310177706,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "mid",
+   "score": 0.7835051546391752,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "big",
+   "score": 0.027096014137050855,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "mode_rich",
+   "score": 0.09688581314878893,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "mode_rich",
+   "score": 0.07529722589167767,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "calendar_heavy",
+   "score": 0.02392638036809816,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "calendar_heavy",
+   "score": 0.04181600955794504,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "mid",
+   "score": 0.020934332304980166,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "mode_rich",
+   "score": 0.1398176291793313,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "mid",
+   "score": 0.02688919796012981,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "big",
+   "score": 0.023935091277890466,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "mode_rich",
+   "score": 0.037193575655114115,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "mode_rich",
+   "score": 0.703125,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "xl",
+   "score": 0.04102167182662539,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "mid",
+   "score": 0.03801945181255526,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "big",
+   "score": 0.027629079606285616,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "tight_due",
+   "score": 0.023021781086297214,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "big",
+   "score": 0.05387453874538745,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "calendar_heavy",
+   "score": 0.04198473282442748,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "mid",
+   "score": 0.3333333333333333,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "tight_due",
+   "score": 0.01040807260265279,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "big",
+   "score": 0.021295794982855082,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "big",
+   "score": 0.014329867940432705,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "mid",
+   "score": 0.043782021425244524,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "mode_rich",
+   "score": 0.735632183908046,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "big",
+   "score": 0.060027758501040945,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "tight_due",
+   "score": 0.019980288504614283,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "mid",
+   "score": 0.04742388758782201,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "calendar_heavy",
+   "score": 0.015206372194062274,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "mid",
+   "score": 0.025992779783393503,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "calendar_heavy",
+   "score": 0.03502129673450071,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "mid",
+   "score": 0.03070507960576194,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "mode_rich",
+   "score": 0.1884498480243161,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "xl",
+   "score": 0.006307339449541285,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "mid",
+   "score": 0.01899373610830471,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "big",
+   "score": 0.117061973986228,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "mid",
+   "score": 0.03206498503634032,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "dense_precedence",
+   "score": 0.5771144278606966,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "mode_rich",
+   "score": 0.023944805194805196,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "mode_rich",
+   "score": 0.02328589909443726,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "mid",
+   "score": 0.27835051546391754,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "tight_due",
+   "score": 0.030132039273219727,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "tight_due",
+   "score": 0.03136456211812627,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "mode_rich",
+   "score": 0.13730569948186527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "mid",
+   "score": 0.10449927431059507,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_due",
+   "score": 0.04272674305690426,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "xl",
+   "score": 0.0050713468900710984,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "mode_rich",
+   "score": 0.05106382978723404,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "mid",
+   "score": 0.029832935560859187,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "tight_due",
+   "score": 0.015235276193792714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "xl",
+   "score": 0.018879848329251915,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "dense_precedence",
+   "score": 0.04028347631480791,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "mid",
+   "score": 0.024332624616111506,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "mode_rich",
+   "score": 0.010529624391010529,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "mid",
+   "score": 0.3737864077669903,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "big",
+   "score": 0.05593719332679097,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "mid",
+   "score": 0.02639976791412823,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "big",
+   "score": 0.010114982277167804,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "tight_due",
+   "score": 0.023455465276713168,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "big",
+   "score": 0.031513903192584965,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "calendar_heavy",
+   "score": 0.05534351145038168,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "big",
+   "score": 0.2422062350119904,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "mid",
+   "score": 0.14634146341463414,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "dense_precedence",
+   "score": 0.856,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "xl",
+   "score": 0.01160573203291015,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "mid",
+   "score": 0.06926406926406926,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "mode_rich",
+   "score": 0.023674558186062022,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "mid",
+   "score": 0.022806255430060818,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "B_best": [
+  {
+   "id": "audit-0000",
+   "family": "tight_due",
+   "score": 0.015172801348693454,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "mid",
+   "score": 0.052039381153305204,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "calendar_heavy",
+   "score": 0.02382782475019216,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "dense_precedence",
+   "score": 0.022281167108753316,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "mid",
+   "score": 0.058823529411764705,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "xl",
+   "score": 0.006883107506437872,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "mid",
+   "score": 0.03760129659643436,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "xl",
+   "score": 0.0067163336719720055,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "mode_rich",
+   "score": 0.029976580796252927,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "mid",
+   "score": 0.040390590324012425,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "mode_rich",
+   "score": 0.03795620437956204,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "xl",
+   "score": 0.0053949164107813035,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "calendar_heavy",
+   "score": 0.019933554817275746,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "calendar_heavy",
+   "score": 0.03946694003075346,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "mid",
+   "score": 0.05642361111111111,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "mid",
+   "score": 0.5,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "tight_due",
+   "score": 0.017654476670870115,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "tight_due",
+   "score": 0.011211460604173155,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "dense_precedence",
+   "score": 0.07741477272727272,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "calendar_heavy",
+   "score": 0.02416641174671153,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "xl",
+   "score": 0.005941535292719639,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "dense_precedence",
+   "score": 0.0420032310177706,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "mid",
+   "score": 0.6972477064220184,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "big",
+   "score": 0.02612152186257808,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "mode_rich",
+   "score": 0.08641975308641975,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "mode_rich",
+   "score": 0.08284883720930232,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "calendar_heavy",
+   "score": 0.024171056709017664,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "calendar_heavy",
+   "score": 0.041666666666666664,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "mid",
+   "score": 0.02090669014084507,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "mode_rich",
+   "score": 0.14603174603174604,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "mid",
+   "score": 0.027501185395922237,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "big",
+   "score": 0.02455264253017062,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "mode_rich",
+   "score": 0.04127579737335835,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "mode_rich",
+   "score": 0.6818181818181818,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "xl",
+   "score": 0.04598698481561822,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "mid",
+   "score": 0.036440677966101696,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "big",
+   "score": 0.029038112522686024,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "tight_due",
+   "score": 0.023079049198452183,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "big",
+   "score": 0.05698672911787666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "calendar_heavy",
+   "score": 0.04198473282442748,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "mid",
+   "score": 0.48128342245989303,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "tight_due",
+   "score": 0.010493313711689807,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "big",
+   "score": 0.021723122238586155,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "big",
+   "score": 0.01452577613215608,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "mid",
+   "score": 0.044256120527306965,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "mode_rich",
+   "score": 0.6881720430107527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "big",
+   "score": 0.06400295967443581,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "tight_due",
+   "score": 0.019275650445155158,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "mid",
+   "score": 0.04660529344073648,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "calendar_heavy",
+   "score": 0.0155096011816839,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "mid",
+   "score": 0.025927259632697156,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "calendar_heavy",
+   "score": 0.03515439429928741,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "mid",
+   "score": 0.03182711198428291,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "mode_rich",
+   "score": 0.19314641744548286,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "xl",
+   "score": 0.006618531889290012,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "mid",
+   "score": 0.019218973625025556,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "big",
+   "score": 0.13088109495295125,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "mid",
+   "score": 0.0320786997433704,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "dense_precedence",
+   "score": 0.5771144278606966,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "mode_rich",
+   "score": 0.02406199021207178,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "mode_rich",
+   "score": 0.02425876010781671,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "mid",
+   "score": 0.26732673267326734,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "tight_due",
+   "score": 0.031177020084072863,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "tight_due",
+   "score": 0.03132203389830508,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "mode_rich",
+   "score": 0.13695090439276486,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "mid",
+   "score": 0.10975609756097561,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_due",
+   "score": 0.04209720627631076,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "xl",
+   "score": 0.005219126563819173,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "mode_rich",
+   "score": 0.05183585313174946,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "mid",
+   "score": 0.029856687898089172,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "tight_due",
+   "score": 0.015269173719570718,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "xl",
+   "score": 0.019845553433529853,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "dense_precedence",
+   "score": 0.04126862820022927,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "mid",
+   "score": 0.024635254723750298,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "mode_rich",
+   "score": 0.011041529334212262,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "mid",
+   "score": 0.3598130841121495,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "big",
+   "score": 0.05931321540062435,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "mid",
+   "score": 0.02799138726545678,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "big",
+   "score": 0.010306553911205074,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "tight_due",
+   "score": 0.023765144454799627,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "big",
+   "score": 0.03603391427225624,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "calendar_heavy",
+   "score": 0.05534351145038168,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "big",
+   "score": 0.32371794871794873,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "mid",
+   "score": 0.1388888888888889,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "dense_precedence",
+   "score": 0.856,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "xl",
+   "score": 0.011747187293183322,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "mid",
+   "score": 0.07196401799100449,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "mode_rich",
+   "score": 0.02253968253968254,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "mid",
+   "score": 0.02244548952543822,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "C_initial": [
+  {
+   "id": "audit-0000",
+   "family": "tight_due",
+   "score": 0.014853527712831797,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "mid",
+   "score": 0.05135322692574601,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "calendar_heavy",
+   "score": 0.02410575427682737,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "dense_precedence",
+   "score": 0.02308960967564596,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "mid",
+   "score": 0.0595446584938704,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "xl",
+   "score": 0.006769390991502758,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "mid",
+   "score": 0.03857665447289658,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "xl",
+   "score": 0.006633776514201299,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "mode_rich",
+   "score": 0.029976580796252927,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "mid",
+   "score": 0.04042647712127943,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "mode_rich",
+   "score": 0.03751803751803752,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "xl",
+   "score": 0.0049016758694178045,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "calendar_heavy",
+   "score": 0.019809244314013204,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "calendar_heavy",
+   "score": 0.03995848469122989,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "mid",
+   "score": 0.05642361111111111,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "mid",
+   "score": 0.5416666666666666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "tight_due",
+   "score": 0.0181190681622088,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "tight_due",
+   "score": 0.011242973141786383,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "dense_precedence",
+   "score": 0.07763532763532764,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "calendar_heavy",
+   "score": 0.024579962663347853,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "xl",
+   "score": 0.00574433863514514,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "dense_precedence",
+   "score": 0.0420032310177706,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "mid",
+   "score": 0.8539325842696629,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "big",
+   "score": 0.028261314765513003,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "mode_rich",
+   "score": 0.11067193675889328,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "mode_rich",
+   "score": 0.06382978723404255,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "calendar_heavy",
+   "score": 0.023367285799880167,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "calendar_heavy",
+   "score": 0.03904071388733965,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "mid",
+   "score": 0.020999115826702032,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "mode_rich",
+   "score": 0.1464968152866242,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "mid",
+   "score": 0.027632205812291567,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "big",
+   "score": 0.024349979364424266,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "mode_rich",
+   "score": 0.039783001808318265,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "mode_rich",
+   "score": 0.6818181818181818,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "xl",
+   "score": 0.048938134810710986,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "mid",
+   "score": 0.03832442067736185,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "big",
+   "score": 0.027543467033912895,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "tight_due",
+   "score": 0.02343859649122807,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "big",
+   "score": 0.054599850411368736,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "calendar_heavy",
+   "score": 0.04173441734417344,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "mid",
+   "score": 0.4891304347826087,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "tight_due",
+   "score": 0.010457182936938085,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "big",
+   "score": 0.021863998517695014,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "big",
+   "score": 0.01452026193413685,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "mid",
+   "score": 0.04423529411764706,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "mode_rich",
+   "score": 0.6956521739130435,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "big",
+   "score": 0.06702828361100349,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "tight_due",
+   "score": 0.017930369060062717,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "mid",
+   "score": 0.04818560380725759,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "calendar_heavy",
+   "score": 0.015798382546548806,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "mid",
+   "score": 0.026239067055393587,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "calendar_heavy",
+   "score": 0.03515439429928741,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "mid",
+   "score": 0.032387045181927226,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "mode_rich",
+   "score": 0.19935691318327975,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "xl",
+   "score": 0.006345136997276077,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "mid",
+   "score": 0.019301848049281315,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "big",
+   "score": 0.10227272727272728,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "mid",
+   "score": 0.0320786997433704,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "dense_precedence",
+   "score": 0.5771144278606966,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "mode_rich",
+   "score": 0.024532224532224534,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "mode_rich",
+   "score": 0.02379903040987219,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "mid",
+   "score": 0.28272251308900526,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "tight_due",
+   "score": 0.03105734558566942,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "tight_due",
+   "score": 0.03142002176278564,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "mode_rich",
+   "score": 0.16987179487179488,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "mid",
+   "score": 0.1085972850678733,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_due",
+   "score": 0.04248744689069139,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "xl",
+   "score": 0.00512549935931258,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "mode_rich",
+   "score": 0.05005213764337852,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "mid",
+   "score": 0.0295159386068477,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "tight_due",
+   "score": 0.015526572619998225,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "xl",
+   "score": 0.01916292495189224,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "dense_precedence",
+   "score": 0.04126862820022927,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "mid",
+   "score": 0.024759615384615383,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "mode_rich",
+   "score": 0.010633232820187272,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "mid",
+   "score": 0.3888888888888889,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "big",
+   "score": 0.056943056943056944,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "mid",
+   "score": 0.024836244541484715,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "big",
+   "score": 0.01018808777429467,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "tight_due",
+   "score": 0.023419562222562376,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "big",
+   "score": 0.028156054471843946,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "calendar_heavy",
+   "score": 0.05566218809980806,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "big",
+   "score": 0.2229580573951435,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "mid",
+   "score": 0.14516129032258066,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "dense_precedence",
+   "score": 0.856,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "xl",
+   "score": 0.011678271835078677,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "mid",
+   "score": 0.07223476297968397,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "mode_rich",
+   "score": 0.02406779661016949,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "mid",
+   "score": 0.02287083424090612,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "C_final": [
+  {
+   "id": "audit-0000",
+   "family": "tight_due",
+   "score": 0.01524347212420607,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "mid",
+   "score": 0.053199137311286844,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "calendar_heavy",
+   "score": 0.02410575427682737,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "dense_precedence",
+   "score": 0.02308960967564596,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "mid",
+   "score": 0.0595446584938704,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "xl",
+   "score": 0.006880292532717475,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "mid",
+   "score": 0.03744351194318916,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "xl",
+   "score": 0.006730007917656373,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "mode_rich",
+   "score": 0.029864675688287448,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "mid",
+   "score": 0.040229885057471264,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "mode_rich",
+   "score": 0.036931818181818184,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "xl",
+   "score": 0.0051922997988753435,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "calendar_heavy",
+   "score": 0.01992619926199262,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "calendar_heavy",
+   "score": 0.04078389830508475,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "mid",
+   "score": 0.05632582322357019,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "mid",
+   "score": 0.6782608695652174,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "tight_due",
+   "score": 0.017921911670578196,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "tight_due",
+   "score": 0.011242973141786383,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "dense_precedence",
+   "score": 0.07746979388770434,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "calendar_heavy",
+   "score": 0.024579962663347853,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "xl",
+   "score": 0.00595647800074125,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "dense_precedence",
+   "score": 0.0420032310177706,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "mid",
+   "score": 0.8444444444444444,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "big",
+   "score": 0.031221719457013575,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "mode_rich",
+   "score": 0.11594202898550725,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "mode_rich",
+   "score": 0.07972027972027972,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "calendar_heavy",
+   "score": 0.02411873840445269,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "calendar_heavy",
+   "score": 0.042997542997543,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "mid",
+   "score": 0.021229050279329607,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "mode_rich",
+   "score": 0.1464968152866242,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "mid",
+   "score": 0.027632205812291567,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "big",
+   "score": 0.023925385239253853,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "mode_rich",
+   "score": 0.04127579737335835,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "mode_rich",
+   "score": 0.6818181818181818,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "xl",
+   "score": 0.06362545018007203,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "mid",
+   "score": 0.03770276194651469,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "big",
+   "score": 0.02894356005788712,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "tight_due",
+   "score": 0.022996419719085653,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "big",
+   "score": 0.05759368836291913,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "calendar_heavy",
+   "score": 0.04263565891472868,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "mid",
+   "score": 0.47619047619047616,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "tight_due",
+   "score": 0.010438546241486856,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "big",
+   "score": 0.02189239332096475,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "big",
+   "score": 0.01468471062482004,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "mid",
+   "score": 0.044256120527306965,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "mode_rich",
+   "score": 0.6881720430107527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "big",
+   "score": 0.06565464895635674,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "tight_due",
+   "score": 0.020558679819304877,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "mid",
+   "score": 0.04838709677419355,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "calendar_heavy",
+   "score": 0.015753938484621154,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "mid",
+   "score": 0.02595529920692141,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "calendar_heavy",
+   "score": 0.03512102515424775,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "mid",
+   "score": 0.03180212014134275,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "mode_rich",
+   "score": 0.2198581560283688,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "xl",
+   "score": 0.00634595045030608,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "mid",
+   "score": 0.019230769230769232,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "big",
+   "score": 0.20052424639580602,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "mid",
+   "score": 0.0327653997378768,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "dense_precedence",
+   "score": 0.5771144278606966,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "mode_rich",
+   "score": 0.02428983120625772,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "mode_rich",
+   "score": 0.024953789279112754,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "mid",
+   "score": 0.3,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "tight_due",
+   "score": 0.031006851701312274,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "tight_due",
+   "score": 0.031445684726381706,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "mode_rich",
+   "score": 0.1531791907514451,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "mid",
+   "score": 0.10434782608695652,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_due",
+   "score": 0.04334975369458128,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "xl",
+   "score": 0.005280596396769518,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "mode_rich",
+   "score": 0.050686378035902854,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "mid",
+   "score": 0.030012004801920768,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "tight_due",
+   "score": 0.015266509639710373,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "xl",
+   "score": 0.02063903281519862,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "dense_precedence",
+   "score": 0.039444850255661065,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "mid",
+   "score": 0.024747717443536762,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "mode_rich",
+   "score": 0.01055284296739644,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "mid",
+   "score": 0.3598130841121495,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "big",
+   "score": 0.06871609403254973,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "mid",
+   "score": 0.02780323861900397,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "big",
+   "score": 0.01046043808672329,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "tight_due",
+   "score": 0.023689711233258498,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "big",
+   "score": 0.03878326996197719,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "calendar_heavy",
+   "score": 0.05560882070949185,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "big",
+   "score": 0.27371273712737126,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "mid",
+   "score": 0.15280135823429541,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "dense_precedence",
+   "score": 0.856,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "xl",
+   "score": 0.011950179533213645,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "mid",
+   "score": 0.07289293849658314,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "mode_rich",
+   "score": 0.023905723905723906,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "mid",
+   "score": 0.022880801917629114,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "H_manual": [
+  {
+   "id": "audit-0000",
+   "family": "tight_due",
+   "score": 0.01216764308246958,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "mid",
+   "score": 0.029365079365079365,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "calendar_heavy",
+   "score": 0.014100523083920855,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "dense_precedence",
+   "score": 0.016840417000801924,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "mid",
+   "score": 0.02425972172672137,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "xl",
+   "score": 0.00502653871840838,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "mid",
+   "score": 0.02468085106382979,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "xl",
+   "score": 0.004879749041477867,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0012",
+   "family": "mode_rich",
+   "score": 0.015717092337917484,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "mid",
+   "score": 0.020128290201282904,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "mode_rich",
+   "score": 0.008786752281176074,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "xl",
+   "score": 0.003486193022102188,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "calendar_heavy",
+   "score": 0.012900143334925944,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "calendar_heavy",
+   "score": 0.022774327122153208,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "mid",
+   "score": 0.03565551289083928,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "mid",
+   "score": 0.11001410437235543,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "tight_due",
+   "score": 0.009017713365539453,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "tight_due",
+   "score": 0.008820646847435479,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "dense_precedence",
+   "score": 0.045740663029794376,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "calendar_heavy",
+   "score": 0.018414918414918414,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "xl",
+   "score": 0.004456416249083959,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "dense_precedence",
+   "score": 0.01299783369438427,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "mid",
+   "score": 0.06946983546617916,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "big",
+   "score": 0.012114827495391098,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "mode_rich",
+   "score": 0.03137254901960784,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "mode_rich",
+   "score": 0.026243093922651933,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "calendar_heavy",
+   "score": 0.014396456256921373,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "calendar_heavy",
+   "score": 0.023964395754878465,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "mid",
+   "score": 0.018136693394425352,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0036",
+   "family": "mode_rich",
+   "score": 0.020655590480466997,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "mid",
+   "score": 0.012738853503184714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "big",
+   "score": 0.015141793917618376,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "mode_rich",
+   "score": 0.014170692431561997,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "mode_rich",
+   "score": 0.11392405063291139,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "xl",
+   "score": 0.02148140642415645,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "mid",
+   "score": 0.019765571133072857,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "big",
+   "score": 0.017241379310344827,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "tight_due",
+   "score": 0.01611969111969112,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "big",
+   "score": 0.028593811202506855,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "calendar_heavy",
+   "score": 0.022025171624713957,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "mid",
+   "score": 0.03874300473525613,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "tight_due",
+   "score": 0.007536418363126695,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "big",
+   "score": 0.015571390868302983,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "big",
+   "score": 0.009611760271390879,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "mid",
+   "score": 0.02017167381974249,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "mode_rich",
+   "score": 0.08020050125313283,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "big",
+   "score": 0.019800846972645073,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "tight_due",
+   "score": 0.008853422264570431,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "mid",
+   "score": 0.03161592505854801,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "calendar_heavy",
+   "score": 0.010246401561356429,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0059",
+   "family": "mid",
+   "score": 0.01446073508736694,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "calendar_heavy",
+   "score": 0.023771281721811758,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "mid",
+   "score": 0.017153748411689963,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "mode_rich",
+   "score": 0.018568433662773286,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "xl",
+   "score": 0.004521167283189478,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "mid",
+   "score": 0.013672727272727272,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "big",
+   "score": 0.04096385542168675,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "mid",
+   "score": 0.023734177215189875,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "dense_precedence",
+   "score": 0.03799541434654438,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "mode_rich",
+   "score": 0.014482081492390771,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "mode_rich",
+   "score": 0.018194070080862535,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0070",
+   "family": "mid",
+   "score": 0.04764005293339215,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "tight_due",
+   "score": 0.018567454798331016,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "tight_due",
+   "score": 0.021434536512944233,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "mode_rich",
+   "score": 0.02595494613124388,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "mid",
+   "score": 0.07045009784735812,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_due",
+   "score": 0.02915065588975752,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "xl",
+   "score": 0.003859981078524125,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "mode_rich",
+   "score": 0.02416918429003021,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "mid",
+   "score": 0.017605633802816902,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "tight_due",
+   "score": 0.01018774559743851,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "xl",
+   "score": 0.009960408418420504,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "dense_precedence",
+   "score": 0.02049335863377609,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "mid",
+   "score": 0.01873067830514639,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "mode_rich",
+   "score": 0.0073666849917537105,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "mid",
+   "score": 0.09005847953216374,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "big",
+   "score": 0.0202630643441166,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "mid",
+   "score": 0.019165964616680707,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "big",
+   "score": 0.007734514444370992,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "tight_due",
+   "score": 0.013509337336099951,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "big",
+   "score": 0.012440035775266282,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "calendar_heavy",
+   "score": 0.034421364985163204,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "big",
+   "score": 0.04732895970009372,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "mid",
+   "score": 0.05784061696658098,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "dense_precedence",
+   "score": 0.3862815884476534,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "xl",
+   "score": 0.006579150579150579,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "mid",
+   "score": 0.015426643098184156,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "mode_rich",
+   "score": 0.014475025484199796,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "mid",
+   "score": 0.01786018030277258,
+   "valid": true,
+   "violations": []
+  }
+ ],
+ "D_direct": [
+  {
+   "id": "audit-0000",
+   "family": "tight_due",
+   "score": 0.011620400258231117,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0001",
+   "family": "mid",
+   "score": 0.039508809396689805,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0002",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0003",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0004",
+   "family": "calendar_heavy",
+   "score": 0.0148859543817527,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0005",
+   "family": "dense_precedence",
+   "score": 0.01694915254237288,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0006",
+   "family": "mid",
+   "score": 0.048815506101938265,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0007",
+   "family": "xl",
+   "score": 0.003181914266323999,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0008",
+   "family": "mid",
+   "score": 0.019069538056879828,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0009",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0010",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0011",
+   "family": "xl",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "precedence_violated"
+   ]
+  },
+  {
+   "id": "audit-0012",
+   "family": "mode_rich",
+   "score": 0.013675213675213675,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0013",
+   "family": "mid",
+   "score": 0.01881331403762663,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0014",
+   "family": "mode_rich",
+   "score": 0.011156404205106201,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0015",
+   "family": "xl",
+   "score": 0.0019776440240756666,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0016",
+   "family": "calendar_heavy",
+   "score": 0.017487046632124352,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0017",
+   "family": "calendar_heavy",
+   "score": 0.010881854154889768,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0018",
+   "family": "mid",
+   "score": 0.03031716417910448,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0019",
+   "family": "mid",
+   "score": 0.04307012700165654,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0020",
+   "family": "tight_due",
+   "score": 0.014917421417155035,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0021",
+   "family": "tight_due",
+   "score": 0.011003565970453388,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0022",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0023",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0024",
+   "family": "dense_precedence",
+   "score": 0.06846733668341709,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0025",
+   "family": "calendar_heavy",
+   "score": 0.010176478165657607,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0026",
+   "family": "xl",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "precedence_violated"
+   ]
+  },
+  {
+   "id": "audit-0027",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0028",
+   "family": "dense_precedence",
+   "score": 0.035342093339374714,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0029",
+   "family": "mid",
+   "score": 0.3568075117370892,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0030",
+   "family": "big",
+   "score": 0.00931174089068826,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0031",
+   "family": "mode_rich",
+   "score": 0.00997506234413965,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0032",
+   "family": "mode_rich",
+   "score": 0.01345926800472255,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0033",
+   "family": "calendar_heavy",
+   "score": 0.009072932418285449,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0034",
+   "family": "calendar_heavy",
+   "score": 0.03419638495359062,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0035",
+   "family": "mid",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "capacity_violated"
+   ]
+  },
+  {
+   "id": "audit-0036",
+   "family": "mode_rich",
+   "score": 0.07516339869281045,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0037",
+   "family": "mid",
+   "score": 0.02605570530098832,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0038",
+   "family": "big",
+   "score": 0.009471065093506701,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0039",
+   "family": "mode_rich",
+   "score": 0.007426160337552743,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0040",
+   "family": "mode_rich",
+   "score": 0.12129380053908356,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0041",
+   "family": "xl",
+   "score": 0.008056547845253477,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0042",
+   "family": "mid",
+   "score": 0.026757934038581208,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0043",
+   "family": "big",
+   "score": 0.015217804831653034,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0044",
+   "family": "tight_due",
+   "score": 0.019672517375427023,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0045",
+   "family": "big",
+   "score": 0.015436667371537323,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0046",
+   "family": "calendar_heavy",
+   "score": 0.0286992172940738,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0047",
+   "family": "mid",
+   "score": 0.02086714583816369,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0048",
+   "family": "tight_due",
+   "score": 0.006592964824120603,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0049",
+   "family": "big",
+   "score": 0.01443954968184043,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0050",
+   "family": "big",
+   "score": 0.009173761841947476,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0051",
+   "family": "mid",
+   "score": 0.013350376366993325,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0052",
+   "family": "mode_rich",
+   "score": 0.057245080500894455,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0053",
+   "family": "big",
+   "score": 0.02138442521631644,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0054",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0055",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0056",
+   "family": "tight_due",
+   "score": 0.014953396365587072,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0057",
+   "family": "mid",
+   "score": 0.027892561983471075,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0058",
+   "family": "calendar_heavy",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "incomplete_schedule"
+   ]
+  },
+  {
+   "id": "audit-0059",
+   "family": "mid",
+   "score": 0.023099133782483156,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0060",
+   "family": "calendar_heavy",
+   "score": 0.012723521320495186,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0061",
+   "family": "mid",
+   "score": 0.02627311060655206,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0062",
+   "family": "mode_rich",
+   "score": 0.018641010222489478,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0063",
+   "family": "xl",
+   "score": 0.0024041088405638727,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0064",
+   "family": "mid",
+   "score": 0.01689432063263839,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0065",
+   "family": "big",
+   "score": 0.009399189089568744,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0066",
+   "family": "mid",
+   "score": 0.025184687709872398,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0067",
+   "family": "dense_precedence",
+   "score": 0.3945578231292517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0068",
+   "family": "mode_rich",
+   "score": 0.013513513513513514,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0069",
+   "family": "mode_rich",
+   "score": 0.0,
+   "valid": false,
+   "violations": [
+    "incomplete_schedule"
+   ]
+  },
+  {
+   "id": "audit-0070",
+   "family": "mid",
+   "score": 0.025911708253358926,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0071",
+   "family": "tight_due",
+   "score": 0.02844056242011078,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0072",
+   "family": "tight_due",
+   "score": 0.021524412970555348,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0073",
+   "family": "mode_rich",
+   "score": 0.016358024691358025,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0074",
+   "family": "mid",
+   "score": 0.0851063829787234,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0075",
+   "family": "tight_due",
+   "score": 0.03620803159973667,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0076",
+   "family": "infeasible_mode",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0077",
+   "family": "xl",
+   "score": 0.0024826881183901473,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0078",
+   "family": "mode_rich",
+   "score": 0.017253774263120056,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0079",
+   "family": "infeasible_cycle",
+   "score": 1.0,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0080",
+   "family": "mid",
+   "score": 0.011547344110854504,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0081",
+   "family": "tight_due",
+   "score": 0.0067947971267715,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0082",
+   "family": "xl",
+   "score": 0.006299918285578723,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0083",
+   "family": "dense_precedence",
+   "score": 0.02335135135135135,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0084",
+   "family": "mid",
+   "score": 0.01568448302116644,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0085",
+   "family": "mode_rich",
+   "score": 0.005034944014428496,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0086",
+   "family": "mid",
+   "score": 0.05284831846259437,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0087",
+   "family": "big",
+   "score": 0.007149128308039634,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0088",
+   "family": "mid",
+   "score": 0.015056254136333554,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0089",
+   "family": "big",
+   "score": 0.0038639365918097753,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0090",
+   "family": "tight_due",
+   "score": 0.010442260442260442,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0091",
+   "family": "big",
+   "score": 0.00648222683557175,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0092",
+   "family": "calendar_heavy",
+   "score": 0.02121433796634967,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0093",
+   "family": "big",
+   "score": 0.018518518518518517,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0094",
+   "family": "mid",
+   "score": 0.06512301013024602,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0095",
+   "family": "dense_precedence",
+   "score": 0.7535211267605634,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0096",
+   "family": "xl",
+   "score": 0.003860024283720846,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0097",
+   "family": "mid",
+   "score": 0.01571966595709841,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0098",
+   "family": "mode_rich",
+   "score": 0.009646739130434782,
+   "valid": true,
+   "violations": []
+  },
+  {
+   "id": "audit-0099",
+   "family": "mid",
+   "score": 0.00858193706579485,
+   "valid": true,
+   "violations": []
+  }
+ ]
+}
