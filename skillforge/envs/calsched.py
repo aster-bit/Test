@@ -51,7 +51,7 @@ A valid answer scores L / cost, where L is a hidden lower bound on the optimal c
 is better, 1.0 is usually unattainable). A correct "infeasible" answer scores 1.
 
 LIMITS: at most {CPU_LIMIT_S} second of CPU time per instance (measure with time.process_time(); exceeding
-about twice that aborts the instance with score 0). Instances have 15 to 100 jobs, 2 to 4 resources,
+about twice that aborts the instance with score 0). Instances have 15 to 150 jobs, 2 to 4 resources,
 1 to 3 modes per job, durations 1..12.
 """
 
@@ -124,21 +124,21 @@ def _lower_bound(inp: dict) -> int:
 
 
 FAMILIES = [
-    Family("mid", 2.0, "20-35 jobs, mixed features"),
+    Family("mid", 2.0, "35-55 jobs, mixed features"),
     Family("calendar_heavy", 1.5, "many calendar breakpoints incl. zero-capacity maintenance windows"),
     Family("mode_rich", 1.5, "every job has 3 modes with duration/resource trade-offs"),
     Family("tight_due", 1.5, "tight due dates with heavy weights: tardiness dominates"),
     Family("dense_precedence", 1.0, "deep precedence structure"),
-    Family("big", 1.5, "45-60 jobs"),
+    Family("big", 1.5, "70-90 jobs"),
     Family("infeasible_cycle", 0.4, "precedence cycle"),
     Family("infeasible_mode", 0.4, "a job without executable mode / unknown predecessor"),
-    Family("xl", 1.5, "70-100 jobs (scale shift: sealed audit only)", audit_only=True),
+    Family("xl", 1.5, "110-150 jobs (scale shift: sealed audit only)", audit_only=True),
 ]
 
 
 class CalendarSchedulingEnv(TaskEnvironment):
     name = "calendar_multimode_scheduling"
-    version = "1"
+    version = "2"  # v2: larger instances after the cal-v1 headroom gate failed (0.417 < 0.5)
 
     def public_spec(self) -> str:
         return SPEC
@@ -159,20 +159,20 @@ class CalendarSchedulingEnv(TaskEnvironment):
         return FAMILIES
 
     def generate(self, family: str, rng: random.Random, instance_id: str) -> Instance:
-        p = dict(n=(20, 35), res=(2, 4), cap=(3, 7), bps=(0, 3), zero_p=0.25, modes=(1, 3), prec=0.12,
+        p = dict(n=(35, 55), res=(2, 4), cap=(3, 7), bps=(0, 3), zero_p=0.25, modes=(1, 3), prec=0.12,
                  due_p=0.5, due_tight=1.3, w=(1, 4), rel_p=0.25)
         if family == "calendar_heavy":
-            p.update(n=(18, 32), bps=(3, 6), zero_p=0.45)
+            p.update(n=(30, 50), bps=(3, 6), zero_p=0.45)
         elif family == "mode_rich":
-            p.update(n=(18, 32), modes=(3, 3))
+            p.update(n=(30, 50), modes=(3, 3))
         elif family == "tight_due":
-            p.update(n=(18, 32), due_p=0.9, due_tight=0.85, w=(3, 9))
+            p.update(n=(30, 50), due_p=0.9, due_tight=0.85, w=(3, 9))
         elif family == "dense_precedence":
-            p.update(n=(20, 34), prec=0.4)
+            p.update(n=(30, 50), prec=0.4)
         elif family == "big":
-            p.update(n=(45, 60))
+            p.update(n=(70, 90))
         elif family == "xl":
-            p.update(n=(70, 100), bps=(1, 5))
+            p.update(n=(110, 150), bps=(1, 5))
         elif family in ("infeasible_cycle", "infeasible_mode"):
             p.update(n=(15, 30))
         n = rng.randint(*p["n"])
