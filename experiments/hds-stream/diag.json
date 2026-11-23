@@ -1,0 +1,621 @@
+{
+  "rule": "PASS iff (a) >= 3 of the proposed hypotheses have an executable implementation, (b) mean AST similarity within a hypothesis exceeds the mean between hypotheses with one-sided permutation p <= 0.05, (c) mean between-hypothesis AST similarity is lower than the mean pairwise similarity of the control group (plain independent generations), (d) the usable programs receive different scores on >= 50% of the calibration instances.",
+  "passed": true,
+  "criteria": {
+    "a_hypotheses_with_working_implementation": 4,
+    "a_ok": true,
+    "b_ast_within": 0.5474260000604664,
+    "b_ast_between": 0.4070786183929371,
+    "b_perm_p": 0.010197960407918417,
+    "b_ok": true,
+    "c_control_mean_pairwise_ast": 0.4098109311726162,
+    "c_ok": true,
+    "d_discrimination": 0.8888888888888888,
+    "d_ok": true
+  },
+  "behaviour": {
+    "within_distance": 0.03326088261441592,
+    "between_distance": 0.05162127089192887,
+    "perm_p": 0.010197960407918417
+  },
+  "hypotheses": [
+    {
+      "id": "H0",
+      "name": "Greedy online offset-chaining tracker",
+      "mechanism": "A single pass over the events in timestamp order keeps a per-session live state (node, stream offset, durable offset, status). Each anonymous event goes to the compatible session with the lowest mismatch cost, where the cost comes from exact offset continuity (write.off == session.off, checkpoint/commit.off == session.off, recover.off == durable)'s and the node.",
+      "principle": "Offsets act as a near-unique fingerprint. A write at off=X on node n almost always continues exactly one session whose stream offset is X on n, so a local greedy match is right in most cases. Small reorderings are handled with a look-ahead window of a few events, which can be swapped in when that makes the offset chain consistent. Labelled events are applied first as anchors, which re-synchronises the state. A duplicate is detected when an event's node/type/off/len fingerprint equals an event already applied within a short time window, and it gets the same session. Missing writes and checkpoints are bridged by allowing offset jumps with a penalty.",
+      "assumptions": [
+        "Offsets of concurrent sessions on the same node rarely coincide",
+        "Jitter is small relative to the typical gap between consecutive events of one session",
+        "Missing events are sparse enough that most offset gaps are explained by a single dropped write"
+      ],
+      "resources": "O(E * S * W), where W is the look-ahead window. With 600 events, 24 sessions and W around 8, this is well under 10 ms. Memory is linear.",
+      "constraints": [
+        "Cannot revise an early wrong decision once later evidence contradicts it, unless a separate repair pass is added"
+      ],
+      "advantages": [
+        "Extremely fast and simple, leaving the full CPU budget unused for safety",
+        "Final status and durable values come directly from the replayed state",
+        "Robust on mostly-labelled logs, where anchors constantly correct the drift"
+      ],
+      "weaknesses": [
+        "Error cascades: one wrong assignment corrupts a session's offset and causes later misassignments",
+        "Ambiguity when several sessions share the same offset, e.g. all at 0 right after open or after a crash rollback",
+        "Heavy jitter breaks the strict-order assumption"
+      ],
+      "strong_families": [
+        "mostly_labelled",
+        "crashy"
+      ],
+      "weak_families": [
+        "jittery",
+        "anonymous",
+        "crowded"
+      ],
+      "test": "On generated logs, measure assignment accuracy as jitter magnitude and the anonymous fraction grow. If accuracy falls sharply on jittery/anonymous logs compared with the beam or global-matching variants, the greedy local fingerprint is not enough.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 0
+    },
+    {
+      "id": "H1",
+      "name": "Beam search over joint session-state hypotheses",
+      "mechanism": "A beam of K full world-states (every session's node, offsets and status, plus the assignments so far) advances through the events in time order. Each anonymous event branches into one child per plausible session, children are scored by an accumulated log-likelihood (continuity, gap penalties for missing events, a jitter penalty for out-of-order use, duplicate detection), and only the top K are kept.",
+      "principle": "Many ambiguities are resolved only by later events: two sessions at the same offset diverge once a later write or checkpoint reveals which one moved. Keeping several joint hypotheses delays these decisions until the evidence arrives, avoiding greedy cascades. A probabilistic cost model (P(missing write), P(duplicate), P(reorder within jitter)) ranks hypotheses consistently. Crash rollbacks are applied deterministically in each hypothesis, so status and durable values follow the best hypothesis.",
+      "assumptions": [
+        "Correct hypotheses stay within the top K because ambiguity is local in time",
+        "Hand-set cost parameters approximate the generator's degradation rates"
+      ],
+      "resources": "O(E * K * S). With K around 32-64, E up to 600 and S up to 24, this is roughly 1M child evaluations. That is feasible in Python only with cheap state copying (persistent tuples or diffs), so a perf_counter budget with an adaptive K is needed.",
+      "constraints": [
+        "State copying cost limits K under the 1 s CPU budget for 600-event, 24-session logs"
+      ],
+      "advantages": [
+        "Recovers from early ambiguities that greedy cannot",
+        "Handles symmetric cases (several sessions at offset 0) by deferring the choice",
+        "A single coherent model for crashes, duplicates and missing events"
+      ],
+      "weaknesses": [
+        "Beam collapse onto equivalent hypotheses (label-permutation symmetry) wastes width",
+        "Out-of-order events still need a reorder mechanism, such as a buffered window, which multiplies branching",
+        "Python overhead is risky on the largest crowded logs"
+      ],
+      "strong_families": [
+        "anonymous",
+        "crowded",
+        "lossy"
+      ],
+      "weak_families": [
+        "jittery"
+      ],
+      "test": "Compare against greedy with K=1 on the same cost model. If increasing K from 1 to 64 gives under 2 points of accuracy on anonymous/crowded logs, deferring decisions brings no value.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 1
+    },
+    {
+      "id": "H2",
+      "name": "Global chain linking via min-cost assignment",
+      "mechanism": "Each session is treated as a path through an offset graph: candidate successor links between events (write at off \u2192 event at off+len, checkpoint \u2192 next event at the same offset, crash rollback \u2192 recover at the durable offset) are weighted by node agreement and time gap. A min-cost bipartite matching (Hungarian or successive shortest path) then picks one predecessor and one successor per event, and the resulting chains are rooted at the open events.",
+      "principle": "Offset arithmetic defines successor relations independent of timestamp order, so jitter mostly vanishes: matching uses offsets plus a soft time window rather than strict sequence. Solving the predecessor/successor problem globally, rather than event by event, prevents cascade errors and resolves contention between sessions jointly. Chains that start from an open event give the session identity, and labelled events act as hard constraints that pin chains. Duplicates are merged before matching using their node/type/off/len fingerprints, and missing events are handled with 'gap' links at extra cost.",
+      "assumptions": [
+        "Most consecutive session events are linked by exact offset arithmetic",
+        "Missing events are rare enough that gap links stay costlier than true links"
+      ],
+      "resources": "Building the link graph is O(E * W) with a time window W. A Hungarian matching on about 600x600 costs O(n^3), roughly 2e8 operations in pure Python, which is too slow; a sparse successive-shortest-path with a heap, or a greedy-by-cost matching with repair, is needed. The sparse version runs in tens of milliseconds.",
+      "constraints": [
+        "A dense Hungarian matching is too slow in Python at the upper size; it must be sparse",
+        "Chains can merge across sessions unless the session start (open) and label constraints are enforced"
+      ],
+      "advantages": [
+        "Nearly immune to clock jitter because links use offsets, not order",
+        "Globally consistent, with no cascade errors",
+        "Natural treatment of duplicates as parallel nodes collapsed before linking"
+      ],
+      "weaknesses": [
+        "Crash/recover chains need node-level crash timing, which a pure link model expresses poorly",
+        "Long runs of missing events break chains into fragments that must be stitched heuristically",
+        "Identical offsets across sessions (all starting at 0) create symmetric link costs"
+      ],
+      "strong_families": [
+        "jittery",
+        "crowded",
+        "anonymous"
+      ],
+      "weak_families": [
+        "lossy",
+        "crashy"
+      ],
+      "test": "Under increasing jitter, compare its accuracy with greedy and beam. If chain linking is no better under high jitter, or fragments heavily on lossy logs, offset linking is not the dominant signal.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 2
+    },
+    {
+      "id": "H3",
+      "name": "Constraint-propagation with iterative relabel (local search)",
+      "mechanism": "Starting from a cheap initial labelling of every event, the method repeatedly replays each session's event list (sorted by timestamp, with tolerance for swaps) to compute a consistency-violation score, then applies hill-climbing or simulated-annealing moves (reassign one event, or swap the labels of two events) that reduce total violations, within a perf_counter budget.",
+      "principle": "Each session must form a self-consistent offset story, with writes contiguous, checkpoints matching the stream offset and recovers matching the durable offset, consistent with crash events on its node. The total violation count is therefore a direct objective whose zero roughly matches the truth. Local search can fix any errors left by the initial labelling regardless of event order. Because the score is recomputed per affected session only, moves are cheap and thousands of iterations fit in the budget. Status and durable values come from replaying the final best labelling.",
+      "assumptions": [
+        "The truth is near a local minimum of the violation score reachable from a good initial labelling",
+        "The violation score separates truth from alternatives: degradations add few violations to the true labelling"
+      ],
+      "resources": "Each move re-simulates two sessions of about 25-50 events each, so roughly 10-50k moves fit in 0.6 s of Python. The time budget makes the runtime deterministic as long as the random seed is fixed.",
+      "constraints": [
+        "Determinism requires a fixed RNG seed, and the iteration count must be time-bounded with a safe margin"
+      ],
+      "advantages": [
+        "Global objective, with any event revisable at any time",
+        "Can be combined with any initializer (greedy) as a refinement stage",
+        "Swap moves directly handle the symmetric session-at-offset-0 confusion"
+      ],
+      "weaknesses": [
+        "Plateaus: many labellings have equal scores when missing events make violations unavoidable",
+        "Timestamp-order replay within a session must tolerate jitter swaps, which complicates the score",
+        "Quality depends on the time budget, and results can vary slightly with CPU speed"
+      ],
+      "strong_families": [
+        "lossy",
+        "jittery",
+        "anonymous"
+      ],
+      "weak_families": [
+        "crowded"
+      ],
+      "test": "Start from the greedy labelling and log the violation score against true accuracy. If lower scores do not correlate with higher accuracy, or accuracy plateaus after a few hundred moves, the objective or the search is inadequate.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 3
+    }
+  ],
+  "group_scores": {
+    "H0": [
+      0.9167,
+      0.9037
+    ],
+    "H1": [
+      0.9702,
+      0.965
+    ],
+    "H2": [
+      0.9209,
+      0.9148
+    ],
+    "H3": [
+      0.9221,
+      0.9249
+    ],
+    "control": [
+      0.9254,
+      0.9522,
+      0.9762,
+      0.9163
+    ]
+  },
+  "pairwise_ast": [
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-01-6b1458",
+      "same_hypothesis": true,
+      "similarity": 0.5823
+    },
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-02-97bd2e",
+      "same_hypothesis": false,
+      "similarity": 0.4092
+    },
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-03-3448b3",
+      "same_hypothesis": false,
+      "similarity": 0.3986
+    },
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-04-e74e3b",
+      "same_hypothesis": false,
+      "similarity": 0.4292
+    },
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-05-d25e4a",
+      "same_hypothesis": false,
+      "similarity": 0.4429
+    },
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-06-1b06c9",
+      "same_hypothesis": false,
+      "similarity": 0.3597
+    },
+    {
+      "a": "D-00-2f7b79",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": false,
+      "similarity": 0.4006
+    },
+    {
+      "a": "D-01-6b1458",
+      "b": "D-02-97bd2e",
+      "same_hypothesis": false,
+      "similarity": 0.3821
+    },
+    {
+      "a": "D-01-6b1458",
+      "b": "D-03-3448b3",
+      "same_hypothesis": false,
+      "similarity": 0.3848
+    },
+    {
+      "a": "D-01-6b1458",
+      "b": "D-04-e74e3b",
+      "same_hypothesis": false,
+      "similarity": 0.4593
+    },
+    {
+      "a": "D-01-6b1458",
+      "b": "D-05-d25e4a",
+      "same_hypothesis": false,
+      "similarity": 0.4505
+    },
+    {
+      "a": "D-01-6b1458",
+      "b": "D-06-1b06c9",
+      "same_hypothesis": false,
+      "similarity": 0.3884
+    },
+    {
+      "a": "D-01-6b1458",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": false,
+      "similarity": 0.4161
+    },
+    {
+      "a": "D-02-97bd2e",
+      "b": "D-03-3448b3",
+      "same_hypothesis": true,
+      "similarity": 0.5425
+    },
+    {
+      "a": "D-02-97bd2e",
+      "b": "D-04-e74e3b",
+      "same_hypothesis": false,
+      "similarity": 0.4077
+    },
+    {
+      "a": "D-02-97bd2e",
+      "b": "D-05-d25e4a",
+      "same_hypothesis": false,
+      "similarity": 0.4098
+    },
+    {
+      "a": "D-02-97bd2e",
+      "b": "D-06-1b06c9",
+      "same_hypothesis": false,
+      "similarity": 0.3333
+    },
+    {
+      "a": "D-02-97bd2e",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": false,
+      "similarity": 0.4227
+    },
+    {
+      "a": "D-03-3448b3",
+      "b": "D-04-e74e3b",
+      "same_hypothesis": false,
+      "similarity": 0.3641
+    },
+    {
+      "a": "D-03-3448b3",
+      "b": "D-05-d25e4a",
+      "same_hypothesis": false,
+      "similarity": 0.3737
+    },
+    {
+      "a": "D-03-3448b3",
+      "b": "D-06-1b06c9",
+      "same_hypothesis": false,
+      "similarity": 0.3166
+    },
+    {
+      "a": "D-03-3448b3",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": false,
+      "similarity": 0.3988
+    },
+    {
+      "a": "D-04-e74e3b",
+      "b": "D-05-d25e4a",
+      "same_hypothesis": true,
+      "similarity": 0.5762
+    },
+    {
+      "a": "D-04-e74e3b",
+      "b": "D-06-1b06c9",
+      "same_hypothesis": false,
+      "similarity": 0.4573
+    },
+    {
+      "a": "D-04-e74e3b",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": false,
+      "similarity": 0.4773
+    },
+    {
+      "a": "D-05-d25e4a",
+      "b": "D-06-1b06c9",
+      "same_hypothesis": false,
+      "similarity": 0.4059
+    },
+    {
+      "a": "D-05-d25e4a",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": false,
+      "similarity": 0.4814
+    },
+    {
+      "a": "D-06-1b06c9",
+      "b": "D-07-89d0b1",
+      "same_hypothesis": true,
+      "similarity": 0.4887
+    }
+  ],
+  "programs": [
+    {
+      "group": "H0",
+      "kind": "H",
+      "id": "D-00-2f7b79",
+      "usable": true,
+      "problem": null,
+      "sha256": "4e0fe78ebd20306ec16c9751dbbf4f2717aaed987a8a9e44c5a84e5281dd0212",
+      "strategy": "I implemented H0 as a greedy online tracker. One pass runs over the events in timestamp order and keeps a live state for each session: node, stream offset, durable offset, status, pre-crash offset and a set of fingerprints already applied.",
+      "graph": "C",
+      "mean_score": 0.9167255176638656,
+      "per_family": {
+        "anonymous": 0.905,
+        "crashy": 0.9471,
+        "crowded": 0.8371,
+        "jittery": 0.9283,
+        "lossy": 0.9284,
+        "mostly_labelled": 1.0
+      }
+    },
+    {
+      "group": "H0",
+      "kind": "H",
+      "id": "D-01-6b1458",
+      "usable": true,
+      "problem": null,
+      "sha256": "638a82019a83cdba4fbea12ad0ac6553af6ba5613364bd66b367d48ec6fbbd09",
+      "strategy": "This implements the greedy online offset-chaining tracker (H0). One pass over the events in timestamp order keeps a live state for each session: node, stream offset, durable offset, status, pre-crash offset, and crash time and node. Each anonymous event goes to the session with the lowest mismatch cost. Exact offset continuity costs 0, an offset gap left by a dropped event is penalised, and other cases are handled as follows:\n- **Late pre-crash events:** within the jitter window of a crash they are applied to the session's pre-crash snapshot.\n- **Missing recovers:** a write at the durable offs",
+      "graph": "C",
+      "mean_score": 0.903742906425014,
+      "per_family": {
+        "anonymous": 0.8471,
+        "crashy": 0.9514,
+        "crowded": 0.8254,
+        "jittery": 0.9285,
+        "lossy": 0.9246,
+        "mostly_labelled": 0.9945
+      }
+    },
+    {
+      "group": "H1",
+      "kind": "H",
+      "id": "D-02-97bd2e",
+      "usable": true,
+      "problem": null,
+      "sha256": "e5f01e75611a0215f8a5b0e0910c74e8ff520bc83bb470b5d77047c593238475",
+      "strategy": "Beam search over joint world states. Each hypothesis holds every session's status, node, stream offset, durable offset, end/crash time and unexplained offset gaps, plus a shared linked list of assignments. Events are processed in log order. Each anonymous event branches into one child per plausible session, and each child is scored by a hand-set cost model: zero for exact continuity, gap penalties for missing writes, checkpoints or recovers, a jitter cost for late events that fill a recorded gap (which refunds the gap penalty), late-after-crash and late-after-end costs, and a duplicate cost fo",
+      "graph": "CC",
+      "mean_score": 0.9701551775726132,
+      "per_family": {
+        "anonymous": 0.9862,
+        "crashy": 0.9606,
+        "crowded": 0.9581,
+        "jittery": 0.9612,
+        "lossy": 0.9622,
+        "mostly_labelled": 1.0
+      }
+    },
+    {
+      "group": "H1",
+      "kind": "H",
+      "id": "D-03-3448b3",
+      "usable": true,
+      "problem": null,
+      "sha256": "35fe167e1fe657d83a40e62f3bf5ac483b41b3a243c78069dda65c0a893c80df",
+      "strategy": "A beam search keeps up to 48 joint world-states and advances them through the log in timestamp order. Each world-state holds every session's status, node, stream offset, durable offset, crash context and pending-recover flag, plus a small map used to detect duplicates. Each anonymous event branches into one child per plausible session, and each child pays a hand-set negative-log-likelihood cost:\n- 0 for an exact continuation;\n- a gap cost for missing writes or checkpoints;\n- a late or reorder cost for events that fall behind the current offset, including events from before a crash that are log",
+      "graph": "CC",
+      "mean_score": 0.9650367043381206,
+      "per_family": {
+        "anonymous": 0.9614,
+        "crashy": 0.9626,
+        "crowded": 0.9624,
+        "jittery": 0.9384,
+        "lossy": 0.9717,
+        "mostly_labelled": 1.0
+      }
+    },
+    {
+      "group": "H2",
+      "kind": "H",
+      "id": "D-04-e74e3b",
+      "usable": true,
+      "problem": null,
+      "sha256": "1a141873dfe3ceade46354e5b767648adbeecf38ea29f7a93fcbc6e1e990ad7a",
+      "strategy": "Treat every session as a path through an offset graph. First, duplicates are collapsed by their node/type/off/len fingerprint. Then a sparse greedy min-cost matching (union-find, labels as hard constraints, no cycles) builds exact successor links (event post-offset = next event pre-offset, same node, cost = time gap with jitter/crash penalties). The jitter bound and time scale are re-estimated from the accepted links, and the matching is re-run. A second, chain-level min-cost stitching stage (lazy priority queue that re-prices stale links) joins fragments through gap links (missing writes), cr",
+      "graph": "C",
+      "mean_score": 0.9208969829519921,
+      "per_family": {
+        "anonymous": 0.898,
+        "crashy": 0.9444,
+        "crowded": 0.8475,
+        "jittery": 0.9448,
+        "lossy": 0.9323,
+        "mostly_labelled": 1.0
+      }
+    },
+    {
+      "group": "H2",
+      "kind": "H",
+      "id": "D-05-d25e4a",
+      "usable": true,
+      "problem": null,
+      "sha256": "5b004500a4d4f211e73d95ea45ff754200e18df9f340c9045c3e3a64e435293d",
+      "strategy": "Each session is modelled as a path in an offset-successor graph. First, duplicates are merged by their node/type/off/len fingerprint inside a short time window. Then sparse candidate links are built. Exact links join a write at `off` to an event starting at `off+len`, or a checkpoint to the next event at the same offset. Recover links follow a crash on the predecessor's node, and aborts link to any predecessor on the same node. Each link is weighted by node agreement, crash consistency, label agreement and a soft time cost tolerant of jitter.",
+      "graph": "CC",
+      "mean_score": 0.914792422998552,
+      "per_family": {
+        "anonymous": 0.9161,
+        "crashy": 0.9192,
+        "crowded": 0.8606,
+        "jittery": 0.9408,
+        "lossy": 0.9303,
+        "mostly_labelled": 0.9457
+      }
+    },
+    {
+      "group": "H3",
+      "kind": "H",
+      "id": "D-06-1b06c9",
+      "usable": true,
+      "problem": null,
+      "sha256": "1ca53ea5c499835eb003564158ea5659341aeecca1b959add64493a060ada633",
+      "strategy": "Constraint propagation plus local search over event labels. A cheap online greedy pass gives an initial labelling: it replays every session's state in log order and sends each anonymous event to the session where it fits best. A per-session violation score then measures how consistent each session is. The score replays the session's events together with crashes on its current node. Within a jitter window estimated from the data, an event that exactly fits the current state can be pulled forward, which tolerates swaps. Penalties apply to offset gaps (+1), offset regressions (+3), node mismatche",
+      "graph": "C",
+      "mean_score": 0.9221083622555276,
+      "per_family": {
+        "anonymous": 0.9143,
+        "crashy": 0.9595,
+        "crowded": 0.8295,
+        "jittery": 0.9055,
+        "lossy": 0.974,
+        "mostly_labelled": 1.0
+      }
+    },
+    {
+      "group": "H3",
+      "kind": "H",
+      "id": "D-07-89d0b1",
+      "usable": true,
+      "problem": null,
+      "sha256": "cc4d213cfb5b8e96cf84aebf51fc0a0aaaa29fee8c0c1abecf06db89ae60eaaf",
+      "strategy": "A greedy online pass gives every anonymous event a first label: it walks the log in time order and puts each event in the session whose current state it fits most cheaply. Simulated annealing then refines that labelling within a fixed perf_counter budget, using a fixed seed. Each session is scored by replaying its events together with the crash events, and the replay may reorder events within a jitter window estimated from labelled sessions. The replay charges for gaps and backward offsets, node mismatches, missing recovers, events after a session ends, duplicates and events before the open. I",
+      "graph": "C",
+      "mean_score": 0.9248706025887541,
+      "per_family": {
+        "anonymous": 0.9199,
+        "crashy": 0.9814,
+        "crowded": 0.8597,
+        "jittery": 0.8909,
+        "lossy": 0.9514,
+        "mostly_labelled": 0.9876
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-08-565ac4",
+      "usable": true,
+      "problem": null,
+      "sha256": "d1c745f0fbd63f593914edea685cd08f876953f9ebc8d115b53928295bd0be4d",
+      "strategy": "Replay the log in order with a small beam search over which session each event belongs to. Each guess has a cost: same node, and offset matching the session's position or a gap from missing events or a slightly reordered event, plus duplicates. The tagged event that comes next for each session acts as a forward check on the offset, and later passes add the previous pass's guesses as extra checks. Crashes roll sessions back to their durable offset. Events that arrive just after a crash, within an estimated clock-jitter window, are treated as late copies of pre-crash events, not as a hidden reco",
+      "graph": "C",
+      "mean_score": 0.9254099424610968,
+      "per_family": {
+        "anonymous": 0.8828,
+        "crashy": 0.9625,
+        "crowded": 0.9178,
+        "jittery": 0.8809,
+        "lossy": 0.9344,
+        "mostly_labelled": 0.9943
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-09-c45ca4",
+      "usable": true,
+      "problem": null,
+      "sha256": "3ab84fce7bab4d40f7eb18f1d75e62260add80f127fe2aa7821a905d347b07e0",
+      "strategy": "The solver runs a deterministic beam search over the events in timestamp order. Each hypothesis tracks a full simulated state per session: status, node, stream offset, durable offset, write gaps not yet filled, recent offset boundaries, crash time, pre-crash boundaries and recent event keys. Each anonymous event branches over every session that could have produced it, with costs that model the log's degradation:\n- **Missing events:** extra costs for missing writes (offset gaps), missing checkpoints (a recover or restart above the known durable offset) and missing recovers (a down session reapp",
+      "graph": "C",
+      "mean_score": 0.9522428936151813,
+      "per_family": {
+        "anonymous": 0.9478,
+        "crashy": 0.955,
+        "crowded": 0.9173,
+        "jittery": 0.9609,
+        "lossy": 0.9569,
+        "mostly_labelled": 0.9945
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-10-a90b4e",
+      "usable": true,
+      "problem": null,
+      "sha256": "065ce6a2fd6a86f05d417fbfcad7461947a91f44894a0211654074094b0cbf23",
+      "strategy": "The solver uses a deterministic beam search that replays the log in timestamp order. It simulates every session's state machine: status, node, stream offset, durable offset, plus short-lived holes in the offset range and the stream offset just before a crash. Each anonymous or known-sid event branches into every session it could fit, scored with costs for each kind of degradation:\n- **Exact offset match:** free.\n- **Forward gap** (writes missing from the log): penalised, and the skipped range is recorded as a hole that a late, out-of-order event can fill cheaply.\n- **Late pre-crash writes or c",
+      "graph": "C",
+      "mean_score": 0.9762047258119024,
+      "per_family": {
+        "anonymous": 0.9835,
+        "crashy": 0.9606,
+        "crowded": 0.9674,
+        "jittery": 0.9753,
+        "lossy": 0.9747,
+        "mostly_labelled": 1.0
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-11-591a36",
+      "usable": true,
+      "problem": null,
+      "sha256": "826f83befb42b04d23bfe81375054ac4067e26a0522a8a95da7aeb7e2c55fa39",
+      "strategy": "The solver replays the log in timestamp order. It keeps a model of every session: its node, status, stream offset, durable offset, the set of offsets it has reached, and a fingerprint set of applied events.",
+      "graph": "CC",
+      "mean_score": 0.9162791635436,
+      "per_family": {
+        "anonymous": 0.9168,
+        "crashy": 0.9292,
+        "crowded": 0.8542,
+        "jittery": 0.9235,
+        "lossy": 0.9108,
+        "mostly_labelled": 1.0
+      }
+    }
+  ],
+  "calls": 13,
+  "synthesis_cost_usd": 8.938615200000001,
+  "environment_sha256": "905bebe3d4de6bb3ce7f332fa88bdf97a7831179530f54b01c830c844ab2bd98",
+  "config": {
+    "name": "hds-stream",
+    "env": "streamrec",
+    "seed": 2026,
+    "dev": 30,
+    "selection": 60,
+    "audit": 100,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 2.0,
+    "recombine_rate": 0.25,
+    "timer": "cpu",
+    "chunks": 2,
+    "replicate": 0,
+    "k_hyp": 4,
+    "explore_share": 0.4
+  },
+  "n": 36
+}

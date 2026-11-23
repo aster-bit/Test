@@ -1,0 +1,70 @@
+[provider] transient error after 1200s: timeout; retry in 5s
+{
+ "passed": true,
+ "criteria": {
+  "a_hypotheses_with_working_implementation": 4,
+  "a_ok": true,
+  "b_ast_within": 0.5474260000604664,
+  "b_ast_between": 0.4070786183929371,
+  "b_perm_p": 0.010197960407918417,
+  "b_ok": true,
+  "c_control_mean_pairwise_ast": 0.4098109311726162,
+  "c_ok": true,
+  "d_discrimination": 0.8888888888888888,
+  "d_ok": true
+ },
+ "behaviour": {
+  "within_distance": 0.03326088261441592,
+  "between_distance": 0.05162127089192887,
+  "perm_p": 0.010197960407918417
+ },
+ "group_scores": {
+  "H0": [
+   0.9167,
+   0.9037
+  ],
+  "H1": [
+   0.9702,
+   0.965
+  ],
+  "H2": [
+   0.9209,
+   0.9148
+  ],
+  "H3": [
+   0.9221,
+   0.9249
+  ],
+  "control": [
+   0.9254,
+   0.9522,
+   0.9762,
+   0.9163
+  ]
+ },
+ "calls": 13,
+ "synthesis_cost_usd": 8.938615200000001
+}
+[
+ {
+  "id": "H0",
+  "name": "Greedy online offset-chaining tracker",
+  "mechanism": "A single pass over the events in timestamp order keeps a per-session live state (node, stream offset, durable offset, status). Each anonymous event goes to the compatible session with the lowest mismatch cost, where the cost comes from exact offset continuity (write.off == session.off, checkpoint/commit.off == session.off, recover.off == durable)'s and the node."
+ },
+ {
+  "id": "H1",
+  "name": "Beam search over joint session-state hypotheses",
+  "mechanism": "A beam of K full world-states (every session's node, offsets and status, plus the assignments so far) advances through the events in time order. Each anonymous event branches into one child per plausible session, children are scored by an accumulated log-likelihood (continuity, gap penalties for missing events, a jitter penalty for out-of-order use, duplicate detection), and only the top K are kept."
+ },
+ {
+  "id": "H2",
+  "name": "Global chain linking via min-cost assignment",
+  "mechanism": "Each session is treated as a path through an offset graph: candidate successor links between events (write at off \u2192 event at off+len, checkpoint \u2192 next event at the same offset, crash rollback \u2192 recover at the durable offset) are weighted by node agreement and time gap. A min-cost bipartite matching (Hungarian or successive shortest path) then picks one predecessor and one successor per event, and the resulting chains are rooted at the open events."
+ },
+ {
+  "id": "H3",
+  "name": "Constraint-propagation with iterative relabel (local search)",
+  "mechanism": "Starting from a cheap initial labelling of every event, the method repeatedly replays each session's event list (sorted by timestamp, with tolerance for swaps) to compute a consistency-violation score, then applies hill-climbing or simulated-annealing moves (reassign one event, or swap the labels of two events) that reduce total violations, within a perf_counter budget."
+ }
+]
+exit 0

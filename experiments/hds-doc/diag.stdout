@@ -1,0 +1,69 @@
+[provider] transient error after 1200s: timeout; retry in 5s
+{
+ "passed": true,
+ "criteria": {
+  "a_hypotheses_with_working_implementation": 4,
+  "a_ok": true,
+  "b_ast_within": 0.5564417921477363,
+  "b_ast_between": 0.4877046544399251,
+  "b_perm_p": 0.03579284143171366,
+  "b_ok": true,
+  "c_control_mean_pairwise_ast": 0.6235861624834608,
+  "c_ok": true,
+  "d_discrimination": 0.9166666666666666,
+  "d_ok": true
+ },
+ "behaviour": {
+  "within_distance": 0.05902150640947309,
+  "between_distance": 0.06615540014477486,
+  "perm_p": 0.26774645070985803
+ },
+ "group_scores": {
+  "H0": [
+   0.8578,
+   0.9052
+  ],
+  "H1": [
+   0.9574,
+   0.8981
+  ],
+  "H2": [
+   0.9049,
+   0.8489
+  ],
+  "H3": [
+   0.95,
+   0.9186
+  ],
+  "control": [
+   0.8919,
+   0.9258,
+   0.899
+  ]
+ },
+ "calls": 13,
+ "synthesis_cost_usd": 14.5534356
+}
+[
+ {
+  "id": "H0",
+  "name": "Deterministic rule cascade",
+  "mechanism": "A fixed sequence of greedy rewrite passes infers the document style by voting, rebuilds rows from line fragments, normalizes each field with rules keyed to its position, then patches each row once using check-digit and arithmetic tests."
+ },
+ {
+  "id": "H1",
+  "name": "Per-row noisy-channel candidate lattice",
+  "mechanism": "For each reconstructed row, enumerate weighted inverse-channel candidates per field, then pick the joint (code, qty, unit, amount) tuple that maximizes channel likelihood subject to the check digit and qty*unit == amount."
+ },
+ {
+  "id": "H2",
+  "name": "Global token-stream Viterbi segmentation",
+  "mechanism": "Dynamic programming over the flat token stream of the document body, with states (field slot within the row cycle, section context), jointly decides row segmentation, junk-line skipping and field assignment by maximizing summed token-fit and row-consistency scores."
+ },
+ {
+  "id": "H3",
+  "name": "Section-sum constrained beam search",
+  "mechanism": "A beam search runs over the rows of each section, choosing among each row's top-K repaired candidates while tracking the running amount sum. Complete states are scored against candidate readings of the SUBTOTAL, and then section results are reconciled with the TOTAL and ITEMS count."
+ }
+]
+exit 0

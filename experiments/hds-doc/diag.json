@@ -1,0 +1,615 @@
+{
+  "rule": "PASS iff (a) >= 3 of the proposed hypotheses have an executable implementation, (b) mean AST similarity within a hypothesis exceeds the mean between hypotheses with one-sided permutation p <= 0.05, (c) mean between-hypothesis AST similarity is lower than the mean pairwise similarity of the control group (plain independent generations), (d) the usable programs receive different scores on >= 50% of the calibration instances.",
+  "passed": true,
+  "criteria": {
+    "a_hypotheses_with_working_implementation": 4,
+    "a_ok": true,
+    "b_ast_within": 0.5564417921477363,
+    "b_ast_between": 0.4877046544399251,
+    "b_perm_p": 0.03579284143171366,
+    "b_ok": true,
+    "c_control_mean_pairwise_ast": 0.6235861624834608,
+    "c_ok": true,
+    "d_discrimination": 0.9166666666666666,
+    "d_ok": true
+  },
+  "behaviour": {
+    "within_distance": 0.05902150640947309,
+    "between_distance": 0.06615540014477486,
+    "perm_p": 0.26774645070985803
+  },
+  "hypotheses": [
+    {
+      "id": "H0",
+      "name": "Deterministic rule cascade",
+      "mechanism": "A fixed sequence of greedy rewrite passes infers the document style by voting, rebuilds rows from line fragments, normalizes each field with rules keyed to its position, then patches each row once using check-digit and arithmetic tests.",
+      "principle": "The passes run in order. (1) Infer the separator, decimal mark, thousands style, pcs style and column order from the COLUMNS line and from majority votes over the body. (2) Drop lines that match no expected pattern, join wrapped fragments until four fields exist, and split merged lines into groups of four. (3) Map look-alike characters to letters or digits depending on the field slot. (4) Repair a code that fails its check digit by trying single-character edits. (5) Repair the arithmetic by recomputing whichever of QTY, UNIT or AMOUNT is inconsistent from the other two. Most values are intact, so a cheap greedy cascade should already recover nearly every field on clean, lookalike and broken_layout documents.",
+      "assumptions": [
+        "Style features (separator, decimal mark, grouping, pcs) are recoverable by majority vote",
+        "At most one field per row is damaged in most rows, so the other two fields fix it arithmetically",
+        "Look-alike substitutions can be undone from context alone: letters cannot appear in digit slots and vice versa"
+      ],
+      "resources": "Linear in document length with tiny constants; well under 10 ms per document.",
+      "constraints": [
+        "Cannot resolve rows where two or more of QTY/UNIT/AMOUNT are damaged by digit misreads",
+        "A wrong merge or wrap decision early in the cascade is never revisited"
+      ],
+      "advantages": [
+        "Simplest to implement and debug",
+        "Very fast and robust against timeouts",
+        "Strong on look-alike confusions, which are fully reversible"
+      ],
+      "weaknesses": [
+        "Greedy: makes no use of subtotal or total redundancy to settle ambiguous rows",
+        "Lost or doubled digits in two fields of the same row give a wrong UNIT",
+        "A misread code may have several single-edit candidates that pass the check digit; the cascade picks one arbitrarily"
+      ],
+      "strong_families": [
+        "clean",
+        "lookalike"
+      ],
+      "weak_families": [
+        "heavy",
+        "misread"
+      ],
+      "test": "Measure field accuracy per family against a synthetic generator built from the spec. The hypothesis is wrong if accuracy on misread or lost_chars falls more than ~10 points below a candidate-lattice method, or if layout reconstruction fails on more than a few percent of broken_layout rows.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 0
+    },
+    {
+      "id": "H1",
+      "name": "Per-row noisy-channel candidate lattice",
+      "mechanism": "For each reconstructed row, enumerate weighted inverse-channel candidates per field, then pick the joint (code, qty, unit, amount) tuple that maximizes channel likelihood subject to the check digit and qty*unit == amount.",
+      "principle": "Model every degradation operation with a cost: look-alike swap, each listed digit misread, lost digit, doubled digit, lost decimal mark. For each observed field token, generate original strings reachable within one or two operations, ranked by total cost. Codes are filtered by the check digit and QTY by the 1..500 range. Then search over the K-best QTY, UNIT and AMOUNT candidates for the cheapest consistent triple, using the integer constraint amount_cents == qty*unit_cents. The constraint is very selective, so two damaged fields in one row are usually still uniquely recoverable.",
+      "assumptions": [
+        "Damage per value is limited to about two operations, so the candidate sets stay small (tens to hundreds)",
+        "The confusion table in the spec is the complete set of misreads",
+        "Row boundaries can be recovered beforehand by a separate layout pass"
+      ],
+      "resources": "About 60 rows \u00d7 a few hundred candidates per field; using a dict keyed by amount_cents, the triple search is roughly O(|Q|\u00b7|U|), a few ms per row. Total is well under 1 s with a perf_counter guard that lowers K when time runs short.",
+      "constraints": [
+        "Relies on a separate deterministic layout pass to cut rows correctly",
+        "Candidate generation must be capped to avoid blow-up on long money strings with many damaged characters"
+      ],
+      "advantages": [
+        "Principled handling of misreads and lost or doubled digits",
+        "Exploits the strong multiplicative constraint inside every row",
+        "Yields ranked alternatives that a later section-sum step can reuse"
+      ],
+      "weaknesses": [
+        "Row-local: a damaged row whose AMOUNT is consistent with a wrong QTY/UNIT pair is not caught",
+        "Layout errors pass straight through and corrupt whole rows",
+        "Channel cost weights need tuning"
+      ],
+      "strong_families": [
+        "misread",
+        "lost_chars",
+        "lookalike"
+      ],
+      "weak_families": [
+        "broken_layout"
+      ],
+      "test": "Remove the arithmetic constraint and choose each field's cheapest candidate on its own. If accuracy on misread and lost_chars barely changes, the joint lattice adds nothing. Also count rows where the cheapest consistent triple is wrong while the true triple is among the candidates.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 1
+    },
+    {
+      "id": "H2",
+      "name": "Global token-stream Viterbi segmentation",
+      "mechanism": "Dynamic programming over the flat token stream of the document body, with states (field slot within the row cycle, section context), jointly decides row segmentation, junk-line skipping and field assignment by maximizing summed token-fit and row-consistency scores.",
+      "principle": "Tokenize the body by the inferred separator and by line breaks, keeping line breaks as soft evidence rather than hard row boundaries. The DP walks the tokens and assigns each one either to the next column slot in the cyclic column order or to junk. The transition score at a row-closing slot includes a reward when the row's best repaired values satisfy qty*unit == amount and the code passes its check digit. Wrapped rows, merged rows and inserted lines are all just alternative paths through one lattice, so layout is decided globally instead of by fragile line rules.",
+      "assumptions": [
+        "The separator can be identified so the text tokenizes into field-sized pieces",
+        "Inserted junk lines contain tokens that score poorly as field values",
+        "SECTION, SUBTOTAL and TOTAL keywords are intact and act as anchors"
+      ],
+      "resources": "O(T \u00d7 4 \u00d7 small) states over T \u2264 ~300 tokens; each row-closing transition calls a bounded row scorer. Cache scores per token window and stay under ~200 ms.",
+      "constraints": [
+        "Needs a usable tokenization: with a three-space separator, damaged spacing could merge or split tokens",
+        "Its value-level repair is only as good as the embedded row scorer"
+      ],
+      "advantages": [
+        "Handles wrap, merge and junk insertion uniformly and optimally instead of heuristically",
+        "Never commits early to a bad line split",
+        "Can still recover rows when a separator coincides with a wrap"
+      ],
+      "weaknesses": [
+        "More complex, and needs scoring weights tuned against each other",
+        "Brings little gain on documents with clean layout",
+        "A wrong junk/value decision at a token that is valid both ways can shift a whole row"
+      ],
+      "strong_families": [
+        "broken_layout",
+        "heavy"
+      ],
+      "weak_families": [
+        "clean"
+      ],
+      "test": "On broken_layout and heavy documents, compare row-boundary accuracy against a greedy line-joining parser. If the DP does not reduce misaligned rows, which zero out all later items by position, the hypothesis fails.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 2
+    },
+    {
+      "id": "H3",
+      "name": "Section-sum constrained beam search",
+      "mechanism": "A beam search runs over the rows of each section, choosing among each row's top-K repaired candidates while tracking the running amount sum. Complete states are scored against candidate readings of the SUBTOTAL, and then section results are reconciled with the TOTAL and ITEMS count.",
+      "principle": "The checksum hierarchy is used as hard redundancy: per row qty*unit = amount, per section \u03a3amount = SUBTOTAL, and overall \u03a3subtotals = TOTAL with item count = ITEMS. Each row contributes a short ranked list of consistent triples. A beam keyed by (row index, running sum in cents) keeps the cheapest path per sum, and the final state must hit one of the SUBTOTAL's candidate readings. That reading may itself be damaged, so it costs channel operations. The ITEMS count also decides between split and merge hypotheses for ambiguous layout. This catches row errors that are locally consistent but globally wrong.",
+      "assumptions": [
+        "Most subtotals and totals are intact or cheaply repairable, so the sum constraints are informative",
+        "The true row triple appears in each row's top-K list",
+        "Sections are small enough (\u2264 60 rows total) for a beam keyed by sums to stay narrow"
+      ],
+      "resources": "Each section has \u2264 60 rows; with K \u2248 5\u201310 and the beam capped at a few hundred distinct sums, a section takes a few ms. Fall back to the row-local best when the perf_counter budget is exceeded.",
+      "constraints": [
+        "Useless when the subtotal itself is heavily damaged and has too many readings",
+        "Depends on an upstream row-candidate generator and layout parser"
+      ],
+      "advantages": [
+        "Corrects locally consistent but wrong rows, e.g. a misread in AMOUNT that happens to divide cleanly",
+        "Uses ITEMS to validate the row count, guarding against position shifts",
+        "Degrades gracefully to row-local choices"
+      ],
+      "weaknesses": [
+        "Sums cannot tell apart two errors that cancel, nor a code error, since codes do not enter the sums",
+        "Gives no help with code repair",
+        "Little added value on clean or lookalike documents"
+      ],
+      "strong_families": [
+        "misread",
+        "lost_chars",
+        "heavy"
+      ],
+      "weak_families": [
+        "clean",
+        "lookalike"
+      ],
+      "test": "Count rows where the beam changes the row-local argmax, and check whether those changes are corrections or regressions against ground truth. If corrections do not clearly outnumber regressions on misread and heavy documents, the global constraint is not worth having.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 3
+    }
+  ],
+  "group_scores": {
+    "H0": [
+      0.8578,
+      0.9052
+    ],
+    "H1": [
+      0.9574,
+      0.8981
+    ],
+    "H2": [
+      0.9049,
+      0.8489
+    ],
+    "H3": [
+      0.95,
+      0.9186
+    ],
+    "control": [
+      0.8919,
+      0.9258,
+      0.899
+    ]
+  },
+  "pairwise_ast": [
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-01-60b71a",
+      "same_hypothesis": true,
+      "similarity": 0.5221
+    },
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-02-7de6c8",
+      "same_hypothesis": false,
+      "similarity": 0.4297
+    },
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-03-a23e59",
+      "same_hypothesis": false,
+      "similarity": 0.4311
+    },
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-04-e43254",
+      "same_hypothesis": false,
+      "similarity": 0.4357
+    },
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-05-d2e0ae",
+      "same_hypothesis": false,
+      "similarity": 0.4654
+    },
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-06-033ace",
+      "same_hypothesis": false,
+      "similarity": 0.4069
+    },
+    {
+      "a": "D-00-3d5ff8",
+      "b": "D-07-9cef95",
+      "same_hypothesis": false,
+      "similarity": 0.4225
+    },
+    {
+      "a": "D-01-60b71a",
+      "b": "D-02-7de6c8",
+      "same_hypothesis": false,
+      "similarity": 0.4021
+    },
+    {
+      "a": "D-01-60b71a",
+      "b": "D-03-a23e59",
+      "same_hypothesis": false,
+      "similarity": 0.386
+    },
+    {
+      "a": "D-01-60b71a",
+      "b": "D-04-e43254",
+      "same_hypothesis": false,
+      "similarity": 0.4355
+    },
+    {
+      "a": "D-01-60b71a",
+      "b": "D-05-d2e0ae",
+      "same_hypothesis": false,
+      "similarity": 0.4364
+    },
+    {
+      "a": "D-01-60b71a",
+      "b": "D-06-033ace",
+      "same_hypothesis": false,
+      "similarity": 0.3922
+    },
+    {
+      "a": "D-01-60b71a",
+      "b": "D-07-9cef95",
+      "same_hypothesis": false,
+      "similarity": 0.4006
+    },
+    {
+      "a": "D-02-7de6c8",
+      "b": "D-03-a23e59",
+      "same_hypothesis": true,
+      "similarity": 0.5658
+    },
+    {
+      "a": "D-02-7de6c8",
+      "b": "D-04-e43254",
+      "same_hypothesis": false,
+      "similarity": 0.5448
+    },
+    {
+      "a": "D-02-7de6c8",
+      "b": "D-05-d2e0ae",
+      "same_hypothesis": false,
+      "similarity": 0.5428
+    },
+    {
+      "a": "D-02-7de6c8",
+      "b": "D-06-033ace",
+      "same_hypothesis": false,
+      "similarity": 0.5999
+    },
+    {
+      "a": "D-02-7de6c8",
+      "b": "D-07-9cef95",
+      "same_hypothesis": false,
+      "similarity": 0.6021
+    },
+    {
+      "a": "D-03-a23e59",
+      "b": "D-04-e43254",
+      "same_hypothesis": false,
+      "similarity": 0.5733
+    },
+    {
+      "a": "D-03-a23e59",
+      "b": "D-05-d2e0ae",
+      "same_hypothesis": false,
+      "similarity": 0.5099
+    },
+    {
+      "a": "D-03-a23e59",
+      "b": "D-06-033ace",
+      "same_hypothesis": false,
+      "similarity": 0.5703
+    },
+    {
+      "a": "D-03-a23e59",
+      "b": "D-07-9cef95",
+      "same_hypothesis": false,
+      "similarity": 0.5764
+    },
+    {
+      "a": "D-04-e43254",
+      "b": "D-05-d2e0ae",
+      "same_hypothesis": true,
+      "similarity": 0.5245
+    },
+    {
+      "a": "D-04-e43254",
+      "b": "D-06-033ace",
+      "same_hypothesis": false,
+      "similarity": 0.5442
+    },
+    {
+      "a": "D-04-e43254",
+      "b": "D-07-9cef95",
+      "same_hypothesis": false,
+      "similarity": 0.5503
+    },
+    {
+      "a": "D-05-d2e0ae",
+      "b": "D-06-033ace",
+      "same_hypothesis": false,
+      "similarity": 0.5426
+    },
+    {
+      "a": "D-05-d2e0ae",
+      "b": "D-07-9cef95",
+      "same_hypothesis": false,
+      "similarity": 0.5041
+    },
+    {
+      "a": "D-06-033ace",
+      "b": "D-07-9cef95",
+      "same_hypothesis": true,
+      "similarity": 0.6133
+    }
+  ],
+  "programs": [
+    {
+      "group": "H0",
+      "kind": "H",
+      "id": "D-00-3d5ff8",
+      "usable": true,
+      "problem": null,
+      "sha256": "5523fa11eca3d0b4bf9571e0ba1db6165bd6ca5d464ce9761b6e3805d13ea876",
+      "strategy": "This is a deterministic greedy rule cascade with five passes and no language-model nodes.\n(1) Infer the separator and column order from the COLUMNS line, falling back to a vote over body lines. Infer the decimal mark and grouping style by majority vote over the text.\n(2) Within each section, drop lines whose tokens cannot be manifest fields, such as page markers. Join the remaining tokens into one stream, which absorbs both wrapped and merged rows, and cut it into rows of four. If the count or the code slots don't line up, re-anchor rows on code-like tokens.\n(3) Normalise each field by its slo",
+      "graph": "CCCCCC",
+      "mean_score": 0.8577867163917802,
+      "per_family": {
+        "broken_layout": 0.8313,
+        "clean": 0.9948,
+        "heavy": 0.6411,
+        "lookalike": 0.945,
+        "lost_chars": 0.8215,
+        "misread": 0.9563
+      }
+    },
+    {
+      "group": "H0",
+      "kind": "H",
+      "id": "D-01-60b71a",
+      "usable": true,
+      "problem": null,
+      "sha256": "37cb99a0d6bfb4a0ced28034c560ddcbbe41e554f857fe3767d20f92eb9d1ab8",
+      "strategy": "This is a deterministic three-node cascade that follows the hypothesis. It first reads the style from the COLUMNS line: the separator kind and the column order, with a majority vote as fallback. It then drops structural and noise lines, using a per-token pattern test, and splits the remaining fragments of each section into one stream of fields. Cutting that stream into groups of four undoes wraps and merges, and if the count is not a multiple of four it resyncs on code-like tokens. Each field is then cleaned by slot: look-alikes are mapped to letters in the code's letter positions and to digit",
+      "graph": "CCC",
+      "mean_score": 0.9052446654591866,
+      "per_family": {
+        "broken_layout": 0.9292,
+        "clean": 0.9948,
+        "heavy": 0.7874,
+        "lookalike": 0.9328,
+        "lost_chars": 0.8654,
+        "misread": 0.9314
+      }
+    },
+    {
+      "group": "H1",
+      "kind": "H",
+      "id": "D-02-7de6c8",
+      "usable": true,
+      "problem": null,
+      "sha256": "c02933483993096d3b7f3d16a40b9cc0ea1057018022686e9f335e577646e21f",
+      "strategy": "A deterministic layout pass finds the column order and separator from the COLUMNS line. It flattens each section's data lines into one field-token stream, which removes wrapping and merging, drops page and noise lines, and re-cuts the stream into 4-field rows with a small typed DP. For each row, a noisy-channel lattice generates inverse-channel candidates for QTY, UNIT and AMOUNT: look-alike letters, inverse misreads, lost digits, doubled digits and a lost decimal mark. Each candidate is scored with a weighted edit-distance channel cost. The best-first search walks the cost-sorted (QTY, UNIT),",
+      "graph": "CCC",
+      "mean_score": 0.9573614344231378,
+      "per_family": {
+        "broken_layout": 0.9533,
+        "clean": 1.0,
+        "heavy": 0.908,
+        "lookalike": 0.9715,
+        "lost_chars": 0.9374,
+        "misread": 0.9877
+      }
+    },
+    {
+      "group": "H1",
+      "kind": "H",
+      "id": "D-03-a23e59",
+      "usable": true,
+      "problem": null,
+      "sha256": "677b2b78041a3daf15c978de6435565eaf283c66f67a5659407d651c9aa952fc",
+      "strategy": "The solution has three deterministic stages, which is the per-row noisy-channel lattice from hypothesis H1.",
+      "graph": "CCC",
+      "mean_score": 0.8981347463471292,
+      "per_family": {
+        "broken_layout": 0.8582,
+        "clean": 1.0,
+        "heavy": 0.737,
+        "lookalike": 0.9715,
+        "lost_chars": 0.8789,
+        "misread": 0.9857
+      }
+    },
+    {
+      "group": "H2",
+      "kind": "H",
+      "id": "D-04-e43254",
+      "usable": true,
+      "problem": null,
+      "sha256": "f9692bd81c5137ed0831ef9bbaf839e6a5f28eb119b4fe9fefc3074fe9202216",
+      "strategy": "This is a global Viterbi or dynamic-programming segmentation over the token stream of each section. The separator and column order come from the COLUMNS line. Each body line is split into field tokens, and its line breaks are kept only as soft evidence: crossing a break inside a row costs a little, and a trailing separator makes a wrap free. The DP walks the tokens and, from every position, can take one of three steps: emit a row of the next 4 tokens in column order (possibly skipping up to 2 whole junk lines in the middle of the row), skip a whole line as junk (cheap if no token looks like a ",
+      "graph": "CC",
+      "mean_score": 0.9048843385690001,
+      "per_family": {
+        "broken_layout": 0.8521,
+        "clean": 1.0,
+        "heavy": 0.8468,
+        "lookalike": 0.9582,
+        "lost_chars": 0.8624,
+        "misread": 0.9742
+      }
+    },
+    {
+      "group": "H2",
+      "kind": "H",
+      "id": "D-05-d2e0ae",
+      "usable": true,
+      "problem": null,
+      "sha256": "4e178977b54a5fa9efb00373f02402fe64e66fdabc801624b985f925c9a52863",
+      "strategy": "The body is split into one token stream per section. Tokens come from splitting on the separator found in the COLUMNS line. Line-break flags stay attached to tokens as soft evidence, and the SECTION/SUBTOTAL/TOTAL keyword lines act as anchors. A Viterbi-style DP runs over each section's stream. At every token it either skips the token as junk (small penalty) or closes a row from the next 4 tokens in column order. A row may skip one interior junk token, which covers junk lines inserted inside a wrapped row. The row-closing score comes from a cached row scorer: it generates repair candidates per",
+      "graph": "CCC",
+      "mean_score": 0.8489431418077021,
+      "per_family": {
+        "broken_layout": 0.8461,
+        "clean": 0.9973,
+        "heavy": 0.8239,
+        "lookalike": 0.9582,
+        "lost_chars": 0.6072,
+        "misread": 0.9662
+      }
+    },
+    {
+      "group": "H3",
+      "kind": "H",
+      "id": "D-06-033ace",
+      "usable": true,
+      "problem": null,
+      "sha256": "231264ad71ff3064d160909135f3e25bbd6d488dd719250a1f75e6a7e816bbac",
+      "strategy": "Each section's text is turned into a stream of fields: split every line on the separator, skip noise lines, and group the fields into rows of four using the column order. That handles wrapped and merged rows, and a small alignment step fixes layouts where the field count is off. For each row, a reverse channel model (look-alike letters, reversed misreads, a doubled digit removed, a lost digit restored, a lost decimal mark) gives costed readings of QTY, UNIT and AMOUNT; combining them under qty\u00b7unit = amount gives the row's top 8 consistent triples. Wildcard triples cover the case where one fie",
+      "graph": "CC",
+      "mean_score": 0.9500476159719915,
+      "per_family": {
+        "broken_layout": 0.9598,
+        "clean": 1.0,
+        "heavy": 0.8898,
+        "lookalike": 0.9658,
+        "lost_chars": 0.9171,
+        "misread": 0.9776
+      }
+    },
+    {
+      "group": "H3",
+      "kind": "H",
+      "id": "D-07-9cef95",
+      "usable": true,
+      "problem": null,
+      "sha256": "da34c14614a7bad3af738b49ff02836b823803c5801ceb820856ee01bade761c",
+      "strategy": "The approach is a section-sum constrained beam search over per-row candidate triples, built on a degradation channel model.",
+      "graph": "CC",
+      "mean_score": 0.9186265950461999,
+      "per_family": {
+        "broken_layout": 0.856,
+        "clean": 1.0,
+        "heavy": 0.8901,
+        "lookalike": 0.9715,
+        "lost_chars": 0.878,
+        "misread": 0.9854
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-08-db419c",
+      "usable": true,
+      "problem": null,
+      "sha256": "bdfc6449b4cc111ec9aec5b87d1ffb090714aea867b80e1a9e25efc35b7694cf",
+      "strategy": "Use deterministic constraint-based decoding with no language model. First read the separator and column order from the COLUMNS line, and drop junk lines (tokens that don't look like codes, quantities or money). Then join each section's data tokens into one stream and split it into rows of four with a type-scored dynamic program; this undoes wrapped and merged lines. For each money and quantity token, list the values it could originally have been: lookalike letters mapped back, plus one reversed damage step (misread digit, lost digit, doubled digit, lost decimal mark), checked against the docum",
+      "graph": "C",
+      "mean_score": 0.8919327002437449,
+      "per_family": {
+        "broken_layout": 0.8542,
+        "clean": 0.9973,
+        "heavy": 0.7082,
+        "lookalike": 0.9793,
+        "lost_chars": 0.8777,
+        "misread": 0.9751
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-09-c1e6d8",
+      "usable": false,
+      "problem": "format error: reply must contain a ```pipeline block and a ```python block",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strategy": "",
+      "graph": ""
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-10-718096",
+      "usable": true,
+      "problem": null,
+      "sha256": "0c42ccb193551430a3f0780c926f757753dcba3141576da0bca8d180bba8f386",
+      "strategy": "This is a deterministic parse-and-repair pipeline with no LLM calls. First it reads the column order and separator from the COLUMNS line. It drops noise lines by checking token shape, puts each section's tokens into one stream (which undoes wrapped and merged rows), and splits the stream into rows of four, with a type-aware alignment step as a fallback. Codes are fixed by searching outward from the observed token (look-alike mappings, digit misreads, a lost or doubled digit) until a candidate passes the check digit, preferring the lowest-cost repair. For each row, QTY, UNIT and AMOUNT each get",
+      "graph": "CC",
+      "mean_score": 0.9258430074203764,
+      "per_family": {
+        "broken_layout": 0.9483,
+        "clean": 0.9973,
+        "heavy": 0.7105,
+        "lookalike": 0.9793,
+        "lost_chars": 0.9277,
+        "misread": 0.9774
+      }
+    },
+    {
+      "group": "control",
+      "kind": "G",
+      "id": "G-11-88cb1c",
+      "usable": true,
+      "problem": null,
+      "sha256": "eea715752a05819d0b7e149bfd2b7ba2b9abd868dd276d30a4005afbe2e963ec",
+      "strategy": "Deterministic parse-then-repair. The `COLUMNS` header gives the separator and column order. Noise lines are filtered out by character heuristics. Each section's remaining fields are joined into one token stream and split into rows by a typed alignment, which undoes wrapped and merged rows. Every damaged value is scored against candidate true values with a weighted edit distance built from the listed damage types (look-alike swaps, digit misreads, lost or doubled digits, lost decimal mark). Each row picks the cheapest (qty, unit) pair satisfying qty \u00d7 unit = amount, and codes are repaired with ",
+      "graph": "C",
+      "mean_score": 0.8990021702315492,
+      "per_family": {
+        "broken_layout": 0.8492,
+        "clean": 1.0,
+        "heavy": 0.8166,
+        "lookalike": 0.9715,
+        "lost_chars": 0.8536,
+        "misread": 0.9675
+      }
+    }
+  ],
+  "calls": 13,
+  "synthesis_cost_usd": 14.5534356,
+  "environment_sha256": "184558e7e454548cefaf6e735ca0481ca9db006fe092b6c50f86127e70010b41",
+  "config": {
+    "name": "hds-doc",
+    "env": "docrepair",
+    "seed": 2026,
+    "dev": 30,
+    "selection": 60,
+    "audit": 100,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 2.0,
+    "recombine_rate": 0.25,
+    "timer": "cpu",
+    "chunks": 2,
+    "replicate": 0,
+    "k_hyp": 4,
+    "explore_share": 0.4
+  },
+  "n": 36
+}
