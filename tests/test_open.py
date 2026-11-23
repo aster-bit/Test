@@ -165,3 +165,87 @@ def test_experiment_end_to_end_with_mock_generator(tmp_path, monkeypatch):
         E.run(cfg, provider=prov)  # a replicate is never re-run
     assert any(not r["usable"] for r in lineage) and any(r["usable"] for r in lineage)
     assert res["provider"].endswith("(SIMULATED)")
+
+
+# ----------------------------------------------------------------- second environment (calendar multi-mode)
+CAL = get_env("calsched")
+
+
+def _trivial_schedule(inp):
+    """Test helper only: one job at a time after the last calendar breakpoint (always valid)."""
+    jobs = {j["id"]: j for j in inp["jobs"]}
+    maxcap = {r: max(c for _, c in v["calendar"]) for r, v in inp["resources"].items()}
+    t = max(bt for v in inp["resources"].values() for bt, _ in v["calendar"])
+    done, sched = set(), {}
+    while len(done) < len(jobs):
+        for k, j in jobs.items():
+            if k not in done and all(p in done for p in j["after"]):
+                mi = next(i for i, m in enumerate(j["modes"]) if all(u <= maxcap.get(r, -1) for r, u in m["requires"].items()))
+                t = max(t, j["release"])
+                sched[k] = {"start": t, "mode": mi}
+                t += j["modes"][mi]["duration"]
+                done.add(k)
+    return sched
+
+
+def test_calsched_is_solution_free_and_registered():
+    assert_solution_free(CAL)
+    import skillforge.envs.calsched as m
+    assert not [n for n in dir(m) if "solve" in n.lower() or "sgs" in n.lower()]
+
+
+@given(st.integers(0, 2**32), st.sampled_from([f.name for f in CAL.families()]))
+@settings(max_examples=40, deadline=None)
+def test_calsched_checker_and_bound(seed, family):
+    inst = CAL.generate(family, random.Random(seed), "t")
+    if not inst.hidden["feasible"]:
+        assert family.startswith("infeasible")
+        assert CAL.check(inst, {"status": "infeasible"}).score == 1.0
+        return
+    assert not family.startswith("infeasible")
+    sched = _trivial_schedule(inst.input)
+    r = CAL.check(inst, {"status": "ok", "schedule": sched})
+    assert r.valid, r.message
+    assert 0 < r.score <= 1.0 and inst.hidden["lower_bound"] <= r.extra["cost"]
+    assert "bound" not in r.message
+    # precedence violation is caught
+    jobs = {j["id"]: j for j in inst.input["jobs"]}
+    k = next((k for k, j in jobs.items() if j["after"]), None)
+    if k:
+        bad = {**sched, k: {"start": jobs[k]["release"], "mode": sched[k]["mode"]}}
+        p0 = jobs[k]["after"][0]
+        if bad[k]["start"] < sched[p0]["start"] + jobs[p0]["modes"][sched[p0]["mode"]]["duration"]:
+            assert not CAL.check(inst, {"status": "ok", "schedule": bad}).valid
+    assert CAL.check(inst, {"status": "infeasible"}).score == 0.0
+
+
+def test_calsched_capacity_window_is_enforced():
+    ex = CAL.public_examples()[0]
+    inst_like = type("I", (), {"hidden": {"feasible": True, "lower_bound": 5, "reason": None}, "input": ex["input"]})
+    assert CAL.check(inst_like, ex["output"]).valid
+    bad = {"status": "ok", "schedule": {"A": {"start": 0, "mode": 0}, "B": {"start": 3, "mode": 0}}}
+    assert CAL.check(inst_like, bad).violations == ["capacity_violated"]
+
+
+def test_calsched_manual_baseline_runs_valid():
+    from skillforge.env_eval import EnvEvaluator
+    from skillforge.executor import Executor
+    from skillforge.llm import MockProvider
+    from skillforge.sandbox import ExecutionSandbox, SandboxLimits
+
+    text = (Path(__file__).resolve().parents[1] / "experiments/baselines/calsched_manual.md").read_text()
+    _, _, pipe, mod = parse_reply(text)
+    ir = build_ir(pipe, mod, "h")
+    xs = build_split(CAL, "t", 18, 3, include_audit_only=True)
+    ev = EnvEvaluator(CAL, Executor(ExecutionSandbox("subprocess", SandboxLimits(item_timeout_s=2.0, timer="cpu")),
+                                    MockProvider(), {}), chunks=2)
+    s = ev.evaluate(ir, xs, "t").summary()
+    assert s["valid_rate"] == 1.0 and s["errors"] == 0, s
+
+
+def test_cpu_timer_stops_busy_loop():
+    from skillforge.sandbox import ExecutionSandbox, SandboxLimits
+
+    sb = ExecutionSandbox("subprocess", SandboxLimits(item_timeout_s=0.5, timer="cpu"))
+    r = sb.run_batch([{"name": "t", "source": "def step(state, params):\n    while True:\n        pass", "params": {}}], [{}])
+    assert "timeout" in r.items[0].error.lower()

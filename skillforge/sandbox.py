@@ -91,6 +91,7 @@ class SandboxLimits:
     max_output_bytes: int = 20_000_000
     file_size_bytes: int = 1_000_000
     open_files: int = 64
+    timer: str = "real"  # "cpu": per-item limit in CPU seconds (load-independent)
 
 
 @dataclass
@@ -159,11 +160,12 @@ class ExecutionSandbox:
             err = "static validation failed: " + "; ".join(violations[:5])
             return BatchResult([ItemResult(s, err, 0.0) for s in states], setup_error=err,
                                backend=self.backend, violations=violations)
-        payload = json.dumps({"segments": segments, "states": states, "item_timeout_s": self.limits.item_timeout_s})
+        payload = json.dumps({"segments": segments, "states": states, "item_timeout_s": self.limits.item_timeout_s,
+                              "timer": self.limits.timer})
         import time
         t0 = time.perf_counter()
         # process-level limits scale with the batch; the per-item limit stays fixed
-        wall = max(self.limits.wall_timeout_s, self.limits.item_timeout_s * len(states) + 10)
+        wall = max(self.limits.wall_timeout_s, self.limits.item_timeout_s * len(states) * (3 if self.limits.timer == "cpu" else 1) + 10)
         if self.backend == "docker":
             out, err_text, code = self._run_docker(payload, wall)
         else:

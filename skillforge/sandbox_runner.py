@@ -72,7 +72,10 @@ def main() -> None:
             raise PermissionError("sandbox: blocked operation: %s" % event)
 
     sys.addaudithook(hook)
-    signal.signal(signal.SIGALRM, _alarm)
+    # "cpu" timer counts CPU time of this process (robust to machine load); "real" counts wall-clock time
+    cpu = payload.get("timer", "real") == "cpu"
+    which, sig = (signal.ITIMER_PROF, signal.SIGPROF) if cpu else (signal.ITIMER_REAL, signal.SIGALRM)
+    signal.signal(sig, _alarm)
     timeout = float(payload.get("item_timeout_s", 2.0))
 
     results = []
@@ -83,7 +86,7 @@ def main() -> None:
         t0 = time.perf_counter()
         err = None
         try:
-            signal.setitimer(signal.ITIMER_REAL, timeout)
+            signal.setitimer(which, timeout)
             for name, fn, params in steps:
                 state = fn(state, params)
                 if not isinstance(state, dict):
@@ -91,7 +94,7 @@ def main() -> None:
         except BaseException as e:  # noqa: BLE001 - includes RecursionError, MemoryError
             err = "%s: %s" % (type(e).__name__, str(e)[:300])
         finally:
-            signal.setitimer(signal.ITIMER_REAL, 0)
+            signal.setitimer(which, 0)
         ms = (time.perf_counter() - t0) * 1000.0
         try:
             json.dumps(state)

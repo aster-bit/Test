@@ -42,9 +42,11 @@ from .sandbox import ExecutionSandbox, SandboxLimits
 from .stats import mean
 
 ROOT = Path(__file__).resolve().parents[1]
+BASELINES = {"rcpsp_scheduling": "experiments/baselines/scheduling_manual.md",
+             "calendar_multimode_scheduling": "experiments/baselines/calsched_manual.md"}
 FROZEN_FILES = ["skillforge/envs/base.py", "skillforge/llm.py", "skillforge/ir.py", "skillforge/open_synth.py", "skillforge/experiment.py",
                 "skillforge/env_eval.py", "skillforge/novelty.py", "skillforge/executor.py", "skillforge/sandbox.py",
-                "skillforge/sandbox_runner.py", "experiments/baselines/scheduling_manual.md"]
+                "skillforge/sandbox_runner.py"]
 
 
 @dataclass
@@ -64,6 +66,8 @@ class ExpConfig:
     direct_model: str = "claude-opus-5-5"
     item_timeout_s: float = 3.0   # hard sandbox limit; the spec tells the generator 1.5 s (slack for load)
     recombine_rate: float = 0.25
+    timer: str = "real"           # sandbox per-item timer: "real" (sched-v1) or "cpu"
+    chunks: int = 4               # parallel sandbox processes per evaluation
     replicate: int = 0            # independent replicate index (same frozen protocol and data)
 
 
@@ -107,13 +111,13 @@ HYPOTHESES = {
 }
 
 
-def prepare(cfg: ExpConfig, replicates: int = 2) -> dict[str, Any]:
+def prepare(cfg: ExpConfig, replicates: int = 2, require_gate: bool = False) -> dict[str, Any]:
     env = get_env(cfg.env)
     splits = make_splits(cfg, env)
     pre = {
         "config": cfg.__dict__, "created": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "environment": {"name": env.name, "version": env.version, "source_sha256": env.source_hash()},
-        "frozen_files": {f: sha(ROOT / f) for f in FROZEN_FILES},
+        "frozen_files": {f: sha(ROOT / f) for f in FROZEN_FILES + [BASELINES[env.name]]},
         "splits": {k: {"n": len(v), "sha256": split_hash(v),
                        "families": sorted({i.family for i in v})} for k, v in splits.items()},
         "hypotheses": HYPOTHESES, "replicates": replicates,
@@ -121,8 +125,54 @@ def prepare(cfg: ExpConfig, replicates: int = 2) -> dict[str, Any]:
     p = exp_dir(cfg.name) / "prereg.json"
     if p.exists():
         raise SystemExit(f"{p} already exists — a pre-registration is never overwritten")
+    g = exp_dir(cfg.name) / "gate.json"
+    if require_gate:
+        gj = json.loads(g.read_text()) if g.exists() else None
+        if not gj or not gj["passed"] or gj["environment_sha256"] != env.source_hash():
+            raise SystemExit("headroom gate missing, failed, or run against a different environment version")
+        pre["headroom_gate"] = {k: gj[k] for k in ("k", "n", "usable", "discrimination", "threshold", "passed")}
     p.write_text(json.dumps(pre, indent=2))
     return pre
+
+
+GATE_MIN_DISCRIMINATION = 0.5
+
+
+def gate(cfg: ExpConfig, k: int = 3, n: int = 36) -> dict[str, Any]:
+    """Headroom gate, run BEFORE the protocol is frozen, on a throwaway calibration split.
+
+    Question answered: can this environment tell candidate programs apart at all? k independent from-scratch
+    programs are scored on n calibration instances (seed namespace disjoint from dev/selection/audit); the
+    gate passes iff at least 2 programs are usable and they receive different scores on at least
+    GATE_MIN_DISCRIMINATION of the instances. Programs are discarded (hashes recorded) and never enter an arm.
+    The gate measures the instrument, not any hypothesis: it compares from-scratch programs with each other.
+    """
+    env = get_env(cfg.env)
+    out = exp_dir(cfg.name)
+    if (out / "gate.json").exists():
+        raise SystemExit("gate.json exists — the gate is run once per experiment name")
+    cal = build_split(env, "calibration", n, cfg.seed + 777_000)
+    R = Runner(cfg, env, {"dev": cal, "selection": cal, "audit": cal}, out)
+    synth = OpenSynthesizer(env, R.provider, cfg.model, cfg.effort)
+    progs = R._parallel_generate(synth, "G", 0, k)
+    scores, info = [], []
+    for c in progs:
+        problem = R.usable_problem(c)
+        rec = {"sha256": hashlib.sha256(c.module.encode()).hexdigest(), "usable": problem is None,
+               "problem": problem, "graph": graph_signature(c.pipeline) if c.pipeline else ""}
+        if problem is None:
+            ev = R.evaluator.evaluate(c.ir, cal, "calibration")
+            scores.append(ev.scores)
+            rec.update(mean_score=mean(ev.scores), valid_rate=ev.summary()["valid_rate"],
+                       violations=ev.summary()["violations"])
+        info.append(rec)
+    differ = (sum(1 for i in range(n) if len({round(s[i], 6) for s in scores}) > 1) / n) if len(scores) >= 2 else 0.0
+    res = {"k": k, "n": n, "usable": len(scores), "discrimination": differ,
+           "threshold": GATE_MIN_DISCRIMINATION, "passed": len(scores) >= 2 and differ >= GATE_MIN_DISCRIMINATION,
+           "programs": info, "synthesis_cost_usd": synth.cost, "config": cfg.__dict__,
+           "environment_sha256": env.source_hash()}
+    (out / "gate.json").write_text(json.dumps(res, indent=2))
+    return res
 
 
 def verify(cfg: ExpConfig) -> dict[str, Any]:
@@ -157,9 +207,10 @@ class Runner:
         self.provider = provider or make_provider("claude_code", meter=self.meter, concurrency=cfg.parallel)
         if provider is not None:
             self.meter = provider.meter
-        sandbox = ExecutionSandbox("auto", SandboxLimits(item_timeout_s=cfg.item_timeout_s, wall_timeout_s=60))
+        sandbox = ExecutionSandbox("auto", SandboxLimits(item_timeout_s=cfg.item_timeout_s, wall_timeout_s=60,
+                                                         timer=cfg.timer))
         self.sandbox = sandbox
-        self.evaluator = EnvEvaluator(env, Executor(sandbox, self.provider, {}), chunks=4)
+        self.evaluator = EnvEvaluator(env, Executor(sandbox, self.provider, {}), chunks=cfg.chunks)
         self.lock = threading.Lock()
         self.log_f = (out / "events.log").open("a")
         self.candidates: dict[str, dict[str, Any]] = {}
@@ -356,7 +407,7 @@ class Runner:
 
     # ---------------------------------------------------------------- baselines
     def manual_baseline(self) -> Candidate:
-        text = (ROOT / "experiments/baselines/scheduling_manual.md").read_text()
+        text = (ROOT / BASELINES[self.env.name]).read_text()
         strat, _, pipe, mod = parse_reply(text)
         c = Candidate("H-manual", "H", "handwritten", [], strat, "", pipe, mod, time.time(), 0, 0, 0.0)
         c.ir = build_ir(pipe, mod, c.id)
@@ -513,16 +564,29 @@ def run(cfg: ExpConfig, provider=None) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="skillforge.experiment")
-    ap.add_argument("cmd", choices=["prepare", "run"])
+    ap.add_argument("cmd", choices=["gate", "prepare", "run"])
+    ap.add_argument("--env", default="scheduling")
+    ap.add_argument("--dev", type=int, default=40)
+    ap.add_argument("--selection", type=int, default=80)
+    ap.add_argument("--audit", type=int, default=120)
+    ap.add_argument("--timer", default="real")
+    ap.add_argument("--chunks", type=int, default=4)
+    ap.add_argument("--item-timeout", type=float, default=3.0)
     ap.add_argument("--name", required=True)
     ap.add_argument("--budget", type=int, default=12)
     ap.add_argument("--seed", type=int, default=2026)
     ap.add_argument("--replicate", type=int, default=0)
     ap.add_argument("--replicates", type=int, default=2)
     a = ap.parse_args(argv)
-    cfg = ExpConfig(name=a.name, budget=a.budget, seed=a.seed, replicate=a.replicate)
+    cfg = ExpConfig(name=a.name, env=a.env, budget=a.budget, seed=a.seed, replicate=a.replicate, dev=a.dev,
+                    selection=a.selection, audit=a.audit, timer=a.timer, chunks=a.chunks,
+                    item_timeout_s=a.item_timeout)
+    if a.cmd == "gate":
+        g = gate(cfg)
+        print(json.dumps({k: v for k, v in g.items() if k != "config"}, indent=1))
+        return 0 if g["passed"] else 3
     if a.cmd == "prepare":
-        pre = prepare(cfg, a.replicates)
+        pre = prepare(cfg, a.replicates, require_gate=cfg.env != "scheduling")
         print(json.dumps({k: pre[k] for k in ("environment", "splits")}, indent=1))
     else:
         res = run(cfg)

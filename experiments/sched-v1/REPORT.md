@@ -118,9 +118,9 @@ whether evolutionary synthesis helps where headroom exists.
 
 What the experiment does show (real model, sealed audit, both replicates):
 * a program synthesised from the specification alone beats the hand-written baseline (H4 supported);
-* against a direct Claude call per instance the result is MIXED (H5 holds in replicate 1 only); the direct
-  baseline costs $0.027–0.044 and 34–47 s (p95) per instance and returned 4.2% invalid schedules in one
-  replicate, while the synthesised skill costs nothing per instance and answers in ≤ 1 s.
+* it also beats a direct Claude call per instance in both replicates (H5 supported; +0.010 and +0.047); the
+  direct baseline costs $0.027–0.044 and 34–47 s (p95) per instance and returned 4.2% invalid schedules in
+  one replicate, while the synthesised skill has no per-instance model cost and answers in about 1 s.
 
 Follow-up: experiment `cal-v1` uses a harder environment and adds a pre-registered *headroom gate* that must
 pass before the protocol is frozen.
