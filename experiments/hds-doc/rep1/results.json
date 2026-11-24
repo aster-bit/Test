@@ -1,0 +1,1370 @@
+{
+  "config": {
+    "name": "hds-doc",
+    "env": "docrepair",
+    "seed": 2026,
+    "dev": 30,
+    "selection": 60,
+    "audit": 100,
+    "budget": 12,
+    "c_initial": 3,
+    "stagnation_patience": 2,
+    "parallel": 4,
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "direct_model": "claude-opus-5-5",
+    "item_timeout_s": 2.0,
+    "recombine_rate": 0.25,
+    "timer": "cpu",
+    "chunks": 2,
+    "replicate": 1,
+    "k_hyp": 4,
+    "explore_share": 0.4
+  },
+  "elapsed_s": 6123.8,
+  "champions": {
+    "A": "A-00-08e06a",
+    "P_initial": "C-00-ebe21c",
+    "P_final": "C-09-949aae",
+    "H_initial": "H-02-ba0796",
+    "H_final": "H-10-fea9fa",
+    "hyp:H0": "H-00-bb0981",
+    "hyp:H1": "H-01-aada86",
+    "hyp:H2": "H-10-fea9fa",
+    "hyp:H3": "H-03-53c9ac",
+    "hyp:H4": "H-04-f99411",
+    "hyp:H5": "H-06-9a6402"
+  },
+  "audit": {
+    "A": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8342591012290625,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 15
+      },
+      "per_family": {
+        "broken_layout": 0.8896,
+        "clean": 0.8854,
+        "heavy": 0.7209,
+        "long_heavy": 0.5796,
+        "lookalike": 0.9529,
+        "lost_chars": 0.8802,
+        "misread": 0.9287
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 225.2081979986542,
+      "mean_ci95": [
+        0.7866317116438011,
+        0.8779156909924407
+      ]
+    },
+    "P_initial": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8715795539411263,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 7
+      },
+      "per_family": {
+        "broken_layout": 0.8934,
+        "clean": 0.8854,
+        "heavy": 0.7901,
+        "long_heavy": 0.6876,
+        "lookalike": 0.9581,
+        "lost_chars": 0.9368,
+        "misread": 0.9339
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 7.652779000636656,
+      "mean_ci95": [
+        0.8299071670675299,
+        0.9064526922094754
+      ]
+    },
+    "P_final": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.93195796330287,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.9573,
+        "clean": 0.9975,
+        "heavy": 0.8947,
+        "long_heavy": 0.8559,
+        "lookalike": 0.9539,
+        "lost_chars": 0.938,
+        "misread": 0.9517
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 41.17563100044208,
+      "mean_ci95": [
+        0.9210293794373379,
+        0.9426462330677786
+      ]
+    },
+    "H_initial": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9175056285545863,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.9543,
+        "clean": 0.9975,
+        "heavy": 0.8462,
+        "long_heavy": 0.8181,
+        "lookalike": 0.9567,
+        "lost_chars": 0.9382,
+        "misread": 0.9471
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 59.848617000170634,
+      "mean_ci95": [
+        0.8991408051141171,
+        0.9329527718959248
+      ]
+    },
+    "H_final": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9287755208053825,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.961,
+        "clean": 0.9975,
+        "heavy": 0.8911,
+        "long_heavy": 0.8493,
+        "lookalike": 0.9508,
+        "lost_chars": 0.934,
+        "misread": 0.9447
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 83.46729599907121,
+      "mean_ci95": [
+        0.9173904314757785,
+        0.9400579182217763
+      ]
+    },
+    "hyp:H0": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8785225317195703,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 7
+      },
+      "per_family": {
+        "broken_layout": 0.8908,
+        "clean": 0.883,
+        "heavy": 0.7978,
+        "long_heavy": 0.7247,
+        "lookalike": 0.9561,
+        "lost_chars": 0.9412,
+        "misread": 0.9413
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 101.93171600076312,
+      "mean_ci95": [
+        0.8374351240750826,
+        0.912285102613837
+      ]
+    },
+    "hyp:H1": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.7975762572221475,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 22
+      },
+      "per_family": {
+        "broken_layout": 0.8829,
+        "clean": 0.883,
+        "heavy": 0.6184,
+        "long_heavy": 0.4748,
+        "lookalike": 0.9509,
+        "lost_chars": 0.8704,
+        "misread": 0.9187
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 4.765633999340935,
+      "mean_ci95": [
+        0.7434134141298216,
+        0.8480541094413274
+      ]
+    },
+    "hyp:H2": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9287755208053825,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {},
+      "per_family": {
+        "broken_layout": 0.961,
+        "clean": 0.9975,
+        "heavy": 0.8911,
+        "long_heavy": 0.8493,
+        "lookalike": 0.9508,
+        "lost_chars": 0.934,
+        "misread": 0.9447
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 83.46729599907121,
+      "mean_ci95": [
+        0.9173904314757785,
+        0.9400579182217763
+      ]
+    },
+    "hyp:H3": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8911564306420255,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 8
+      },
+      "per_family": {
+        "broken_layout": 0.9579,
+        "clean": 0.9975,
+        "heavy": 0.8258,
+        "long_heavy": 0.6923,
+        "lookalike": 0.9602,
+        "lost_chars": 0.8899,
+        "misread": 0.9428
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 805.859469999632,
+      "mean_ci95": [
+        0.8606342231735513,
+        0.9184799868339993
+      ]
+    },
+    "hyp:H4": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.8861968471823376,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 7
+      },
+      "per_family": {
+        "broken_layout": 0.8945,
+        "clean": 0.883,
+        "heavy": 0.8139,
+        "long_heavy": 0.7365,
+        "lookalike": 0.9596,
+        "lost_chars": 0.9449,
+        "misread": 0.9511
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 62.489072000971646,
+      "mean_ci95": [
+        0.8451730751499835,
+        0.919995122095702
+      ]
+    },
+    "hyp:H5": {
+      "split": "audit",
+      "n": 100,
+      "mean_score": 0.9024799837803363,
+      "valid_rate": 1.0,
+      "valid_ci": [
+        0.9630065017930143,
+        1.0
+      ],
+      "errors": 0,
+      "violations": {
+        "item_count_mismatch": 8
+      },
+      "per_family": {
+        "broken_layout": 0.9631,
+        "clean": 0.9975,
+        "heavy": 0.8407,
+        "long_heavy": 0.7482,
+        "lookalike": 0.9581,
+        "lost_chars": 0.8912,
+        "misread": 0.9502
+      },
+      "cost_per_item_usd": 0.0,
+      "llm_calls_per_item": 0.0,
+      "latency_ms_p95": 40.45645699989109,
+      "mean_ci95": [
+        0.8732304213988067,
+        0.9283133886060574
+      ]
+    }
+  },
+  "tests": {
+    "G1": {
+      "comparison": "H_final - P_final",
+      "mean_diff": -0.0031824424974874633,
+      "ci_bonferroni": [
+        -0.008510658872731508,
+        0.001703246095051153
+      ],
+      "holds": false
+    },
+    "G2": {
+      "comparison": "H_final - A",
+      "mean_diff": 0.09451641957631983,
+      "ci_bonferroni": [
+        0.04735336212362439,
+        0.1531325699329697
+      ],
+      "holds": true
+    },
+    "G3_paradigm_transition": {
+      "comparison": "H_final - H_initial",
+      "mean_diff": 0.011269892250796245,
+      "ci_bonferroni": [
+        -0.0023556586791272636,
+        0.03327243489790227
+      ],
+      "holds": false,
+      "score_holds": false
+    },
+    "descriptive_P_final_minus_P_initial": {
+      "comparison": "P_final - P_initial",
+      "mean_diff": 0.060378409361743504,
+      "ci_bonferroni": [
+        0.0213418117879326,
+        0.11090946382935436
+      ],
+      "holds": true
+    }
+  },
+  "transition": {
+    "initial_hypothesis": "H2",
+    "final_hypothesis": "H2",
+    "final_hypothesis_origin": "initial",
+    "different_hypothesis": false,
+    "ast_similarity": 0.5655,
+    "code_differs": true
+  },
+  "diversity": {
+    "P": {
+      "programs": 12,
+      "usable": 12,
+      "code_clusters": 4,
+      "mean_pairwise_ast_similarity": 0.6297,
+      "mean_pairwise_behavioural_distance": 0.0264,
+      "graph_signatures": [
+        "C",
+        "CC",
+        "CCB(C|C)C",
+        "CCC",
+        "CCCC"
+      ]
+    },
+    "H": {
+      "programs": 11,
+      "usable": 11,
+      "code_clusters": 5,
+      "mean_pairwise_ast_similarity": 0.5684,
+      "mean_pairwise_behavioural_distance": 0.0526,
+      "graph_signatures": [
+        "C",
+        "CC"
+      ]
+    }
+  },
+  "stagnation_escapes": {
+    "P": 1,
+    "H": 1
+  },
+  "best_selection_sequence": {
+    "P": [
+      0.9175394163258225,
+      0.9466754610409577,
+      0.9466754610409577,
+      0.9476958324090087,
+      0.9476958324090087,
+      0.9476958324090087,
+      0.9476958324090087,
+      0.9480570266647652,
+      0.9480570266647652,
+      0.9480570266647652
+    ],
+    "H": [
+      0.9369308712316046,
+      0.9369308712316046,
+      0.9369308712316046,
+      0.9369308712316046,
+      0.9418927709303463,
+      0.9442080552518768,
+      0.9442080552518768,
+      0.9455075189354164
+    ]
+  },
+  "hypotheses": {
+    "H0": {
+      "id": "H0",
+      "name": "Line-local repair + per-row candidate lattice",
+      "mechanism": "First rebuild logical rows by counting fields per physical line, joining wrapped fragments and splitting merged lines; then, for each row independently, take the cross product of channel-inverted candidate sets for CODE/QTY/UNIT/AMOUNT and keep the highest-likelihood combination that satisfies the check digit and QTY*UNIT=AMOUNT.",
+      "principle": "Most damage is local to a single field, and each row has two strong internal checksums: the code check digit and the arithmetic identity QTY*UNIT=AMOUNT. Enumerating the inverse of the known confusion channel per field gives small candidate sets. These are letters\u00e2\u2020\u201ddigits look-alikes, the listed digit misreads, one lost or doubled digit, and a lost decimal mark. Picking the cheapest combination that satisfies the identity recovers the true row in nearly all cases. Layout repair is a simple preprocessing pass. It drops lines that contain no separator and no keyword, and it uses the known separator and the 4-field arity to rejoin or split lines.",
+      "assumptions": [
+        "Each field has at most one or two damaged characters, so the inverse candidate sets stay small (tens to a few hundred).",
+        "Separator and column order can be read reliably from the undamaged COLUMNS line.",
+        "Wrapped and merged rows can be recognised by field count, because field values never contain the separator."
+      ],
+      "resources": "Per row, about |C_qty|*|C_unit| candidate pairs are checked against a hashed amount candidate set, roughly 1e3-1e4 operations. At 60 rows this is far below 0.1 s CPU, and memory is negligible.",
+      "constraints": [
+        "Breaks down if a damaged field makes the row's field count ambiguous, for example when an inserted junk line contains the separator.",
+        "Cannot resolve rows where two fields are damaged so that several candidate combinations satisfy the identity equally well."
+      ],
+      "advantages": [
+        "Simplest and fastest approach, and the easiest to debug.",
+        "Row errors stay isolated and do not cascade into neighbouring rows.",
+        "Very strong when the arithmetic identity alone disambiguates the row."
+      ],
+      "weaknesses": [
+        "Ignores SUBTOTAL, TOTAL and ITEMS, so remaining ties are broken only by channel priors.",
+        "The greedy layout pass can mis-segment heavy broken layouts, which shifts every later item and hurts the positional score badly."
+      ],
+      "strong_families": [
+        "clean",
+        "lookalike",
+        "misread"
+      ],
+      "weak_families": [
+        "broken_layout",
+        "heavy"
+      ],
+      "test": "Run on broken_layout and heavy instances and measure how often the reconstructed row count differs from ITEMS or from the truth. If the mismatch is frequent and score drops sharply compared with misread instances, the line-local layout assumption is wrong.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 0
+    },
+    "H1": {
+      "id": "H1",
+      "name": "Global token-stream Viterbi segmentation",
+      "mechanism": "Flatten everything between COLUMNS and TOTAL into one token stream with line-break markers, then run a dynamic program over token positions whose states are the column slot (and section context). Transitions consume tokens as fields or as junk, and they are scored by per-token field likelihood plus row-level checksum bonuses.",
+      "principle": "Wrapping, merging and inserted lines only change where line breaks fall in the token stream; they never change the order of the field values. Line breaks are treated as soft evidence rather than hard boundaries. The DP finds the jointly most likely way to cut the stream into consecutive 4-tuples, skipping junk tokens or lines. Each completed 4-tuple is scored by the best channel-repair cost of its row, including the check digit and the QTY*UNIT=AMOUNT check. SECTION and SUBTOTAL keywords act as hard synchronisation points.",
+      "assumptions": [
+        "Token order is preserved, and damage never introduces or removes a separator inside a value.",
+        "Junk lines are recognisable as low likelihood under every field model.",
+        "The row-repair scorer from per-field candidate sets can be cached per token 4-tuple."
+      ],
+      "resources": "The DP has O(T * 4) states with a few transitions each, where T is at most about 300 tokens. Each row-completion transition calls a memoised row scorer. The total is about 1e5 operations, well under the limit.",
+      "constraints": [
+        "Requires a reliable tokenizer for the three-spaces and tab separators when damage adds or removes spaces.",
+        "Needs careful calibration of junk and line-break costs; with badly calibrated costs it may absorb real rows as junk."
+      ],
+      "advantages": [
+        "Handles wrapped rows, merged rows and inserted lines in one principled optimisation instead of brittle heuristics.",
+        "Keeps row alignment correct, which matters a lot for positional scoring.",
+        "Can be combined with section-level constraints later."
+      ],
+      "weaknesses": [
+        "More complex and has more tunable costs.",
+        "Gives little benefit over line-local repair on documents with clean layout.",
+        "Still uses no inter-row sums."
+      ],
+      "strong_families": [
+        "broken_layout",
+        "heavy"
+      ],
+      "weak_families": [
+        "clean"
+      ],
+      "test": "Compare the item-count accuracy and positional score against hypothesis 1 on broken_layout. If the DP does not reduce segmentation errors, or adds false junk skips on clean documents, the hypothesis fails.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 1
+    },
+    "H2": {
+      "id": "H2",
+      "name": "Section-sum constrained beam search",
+      "mechanism": "For each section, run a beam or meet-in-the-middle search over the ranked candidate list of every row, keyed by the running AMOUNT sum. The search selects the joint assignment that matches one of the candidate values of the (possibly damaged) SUBTOTAL, and TOTAL and ITEMS are reconciled across sections.",
+      "principle": "Some rows stay ambiguous after per-row checks. For example, a misread digit in the UNIT can be offset by a matching damaged AMOUNT, or a lost decimal mark can give several arithmetic-consistent readings. SUBTOTAL is an independent checksum over the section, and TOTAL is a second one over the whole document. Requiring the chosen amounts to sum to a SUBTOTAL candidate (itself channel-inverted) picks the correct combination with high probability. The search adds the fewest per-row deviations from the top candidate. ITEMS checks the row count and can trigger re-segmentation.",
+      "assumptions": [
+        "At most a few rows per section are ambiguous, so their candidate lists are short.",
+        "At least one of SUBTOTAL or TOTAL is intact or can be recovered with a small number of inversions.",
+        "Section boundaries are reliable because the keywords are never damaged."
+      ],
+      "resources": "Beam width B over about 10 rows with k candidates each costs O(rows * B * k). With B=200 and k=8 this is trivial. A wall-clock guard falls back to the per-row argmax.",
+      "constraints": [
+        "Adds nothing when every row is already uniquely determined.",
+        "Cannot help if both the subtotal and many rows are damaged so that a wrong sum coincidentally matches."
+      ],
+      "advantages": [
+        "Exploits checksums the other approaches ignore.",
+        "Fixes UNIT and QTY errors that the per-row identity cannot resolve, such as a coordinated misread or a lost decimal mark that changes the scale consistently.",
+        "Can detect missing or extra rows via ITEMS."
+      ],
+      "weaknesses": [
+        "Depends on a good per-row candidate generator underneath.",
+        "Coincidental sum matches can introduce errors.",
+        "Has limited power for code-only errors, since codes do not affect sums."
+      ],
+      "strong_families": [
+        "misread",
+        "lost_chars",
+        "heavy"
+      ],
+      "weak_families": [
+        "clean",
+        "broken_layout"
+      ],
+      "test": "Ablate the subtotal constraint by taking the per-row argmax only, and compare field accuracy on misread and lost_chars. If the gain is under about 1% or turns negative because of coincidental matches, the hypothesis is not worth it.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 2
+    },
+    "H3": {
+      "id": "H3",
+      "name": "Generate-truth-and-align (analysis by synthesis)",
+      "mechanism": "For each row, enumerate plausible true (QTY, UNIT) pairs, using QTY in 1..500 together with divisibility against amount candidates to derive UNIT. Render the clean strings in the document's money and qty format, and score each against the observed damaged text with a weighted edit-distance alignment whose substitution, insertion and deletion costs encode the degradation channel.",
+      "principle": "Instead of inverting each damage type, the approach synthesises candidate originals and asks how cheaply the channel could have produced the observed text. The weighted Levenshtein alignment captures look-alike swaps, digit misreads, lost or doubled digits and a lost decimal mark in one uniform cost model. It also handles combinations of damage gracefully. The QTY range is small and AMOUNT = QTY*UNIT, so enumerating QTY and deriving UNIT from AMOUNT candidates covers the truth space. Codes are generated similarly: all 10 check digits and look-alike letter variants are aligned.",
+      "assumptions": [
+        "At least one of UNIT or AMOUNT is close enough to the truth to seed the enumeration, or QTY*UNIT can be generated from the UNIT candidates.",
+        "The channel costs are well approximated by a per-character edit model.",
+        "Money formatting (decimal mark, apostrophe grouping) is inferable from the intact majority of values."
+      ],
+      "resources": "Up to 500 qty values times a few seed values per row, each alignment taking about 10x10 cells, which is about 5e4-1e5 cell operations per row. At 60 rows this needs pruning, using length bounds and early cutoff, to stay within about 0.5 s of pure Python. It must be guarded with a time budget.",
+      "constraints": [
+        "Too slow without pruning on 60-row documents in pure Python.",
+        "Still needs a separate layout segmentation step."
+      ],
+      "advantages": [
+        "Handles multiple simultaneous damages in one field, which explicit inverse enumeration may miss.",
+        "One uniform scoring model with calibrated costs.",
+        "Robust to damage combinations in the heavy family."
+      ],
+      "weaknesses": [
+        "Highest CPU cost of the four.",
+        "Edit costs must be tuned.",
+        "Can prefer short spurious truths when a lost digit makes alignment ambiguous.",
+        "No advantage on clean documents."
+      ],
+      "strong_families": [
+        "lost_chars",
+        "heavy",
+        "lookalike"
+      ],
+      "weak_families": [
+        "broken_layout",
+        "clean"
+      ],
+      "test": "On lost_chars and heavy instances, compare per-field accuracy and CPU time against explicit inverse enumeration (hypothesis 1). If accuracy is not higher, or the 60-row documents exceed 0.5 s CPU, the hypothesis is refuted.",
+      "origin": "initial",
+      "parents": [],
+      "created_index": 3
+    },
+    "H4": {
+      "id": "H4",
+      "name": "Checksum-ranked channel lattice with subtotal-implied row repair",
+      "mechanism": "Per-row channel-inverted candidate lattices (Y's costs, widened by X's derive-the-third-field edit distance) are ranked by a section beam keyed on the running AMOUNT sum and scored against SUBTOTAL/TOTAL; when no path reproduces the subtotal, the implied missing amount is pushed back into the costliest rows as new candidates and the beam is rerun.",
+      "principle": "Y's cheap lost-mark cost and wider edit budget keep the true triple in the row list in lost_chars, where X lost it. X's sum checksums and exact edit-distance derivation choose among the candidates in heavy, where Y's argmax fails. One shared cost scale for rows, subtotals and totals keeps the trade-offs consistent. Using the subtotal as a generator (amount = subtotal \u2212 rest) closes the gap where the true row was never generated, which no plain checksum filter can do.",
+      "assumptions": [
+        "Separator and column order are read from the COLUMNS line",
+        "In each section at most a few rows are badly damaged",
+        "SUBTOTAL is usually intact or within one edit",
+        "Value tokens never contain the separator"
+      ],
+      "resources": "Row lattices cost about 4k dict lookups per row, with derivation only for rows costing 1.9 or more (at most a few hundred edit-distance DPs each). The beam keeps up to 300 states by sum, using back-pointers. Deadlines at 0.45/0.65/0.75 s skip optional work. Typical runtime is about 0.1-0.3 s.",
+      "constraints": [
+        "Gives nothing beyond Y when every row is already unique",
+        "Cannot repair codes through sums"
+      ],
+      "advantages": [
+        "Should keep Y's lost_chars strength and X's heavy strength",
+        "Recovers rows absent from the candidate list via the subtotal",
+        "Uses one consistent cost scale"
+      ],
+      "weaknesses": [
+        "Coincidental sum matches",
+        "Ties among check-digit repairs of codes",
+        "A junk line that looks like data can shift rows"
+      ],
+      "strong_families": [
+        "heavy",
+        "lost_chars",
+        "misread"
+      ],
+      "weak_families": [
+        "broken_layout"
+      ],
+      "test": "Ablate (a) the sum beam and (b) the subtotal repair on lost_chars and heavy. The hypothesis is wrong if the full system does not beat max(X, Y) on both families, or if (b) gains less than 0.5%.",
+      "origin": "recombine",
+      "parents": [
+        "H2",
+        "H0"
+      ],
+      "created_index": 4
+    },
+    "H5": {
+      "id": "H5",
+      "name": "Equation-driven derivation closure with channel-alignment scoring",
+      "mechanism": "Every equation of the document (q*u=a per row, sum of amounts = subtotal per section, sum of subtotals = total) is used as a generator: the missing variable is computed exactly from cheap (<=1-edit) neighbourhoods of the other variables, and each derived value is scored by a weighted channel-alignment DP against its observed string, with a sum-keyed beam per section and a second sum-keyed beam over sections.",
+      "principle": "Most values are intact or carry at most one edit, so for nearly every row two of its three numeric fields lie in small 1-edit neighbourhoods. The third field, however badly damaged, is then fixed by arithmetic, and the text only has to confirm it through an alignment cost. When a row has two badly damaged fields, the section subtotal, or failing that the document total, supplies the exact missing amount. UNIT and QTY are then re-derived by divisibility and scored by alignment. Because candidates come from constraints rather than from text edits, the size of the search space does not grow with the number of stacked edits in one field.",
+      "assumptions": [
+        "at most one or two fields per row carry multi-edit damage",
+        "subtotal or total is usually intact or within one edit",
+        "the separator and column order can be read from the COLUMNS line",
+        "damage never splits a field across a separator"
+      ],
+      "resources": "Exact rows cost O(1). A damaged row costs O(|Q|*|U|) dictionary lookups, about 5k, plus at most a few hundred alignment DPs of about 100 cells each. Section beams are capped at 300 states. A process-time guard disables the derivation steps after 0.7 s, so typical documents run in well under 0.3 s.",
+      "constraints": [
+        "needs the subtotal/total lines to be present to repair rows with two badly damaged numeric fields",
+        "check-digit ambiguities in CODE cannot be resolved by any equation"
+      ],
+      "advantages": [
+        "recovers multi-edit damage in a single field, which the enumeration-based hypotheses miss",
+        "scored fields (UNIT, QTY) are derived from intact fields instead of guessed",
+        "robust segmentation by slot-typed DP over a flat token stream"
+      ],
+      "weaknesses": [
+        "ties among equally cheap code repairs (lost code digit) are broken arbitrarily",
+        "a subtotal damaged beyond one edit can lure the repair into a wrong row change",
+        "two simultaneously damaged rows in one section are only partly recoverable"
+      ],
+      "strong_families": [
+        "heavy",
+        "lost_chars",
+        "misread"
+      ],
+      "weak_families": [
+        "clean"
+      ],
+      "test": "Measure on heavy and lost_chars the fraction of rows whose true (q,u) is absent from the depth-1 cross product but present after derivation. If this fraction is near zero, or the heavy score does not rise above H2's 0.839, the hypothesis is wrong.",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "created_index": 6
+    }
+  },
+  "attribution": {
+    "H0": {
+      "name": "Line-local repair + per-row candidate lattice",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 2,
+      "implementations_working": 2,
+      "independent_working_implementations": 2,
+      "best_implementation": "H-00-bb0981",
+      "best_selection": 0.9276,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0179,
+        -0.0385,
+        -0.0027
+      ],
+      "label": "mechanism inferior (supported: >= 2 independent implementations each significantly below the leader)",
+      "implementation_sensitivity": {
+        "best_minus_second_independent": [
+          0.0321,
+          -0.004,
+          0.0757
+        ],
+        "significant": false
+      },
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0374,
+        "confirmed": false
+      }
+    },
+    "H1": {
+      "name": "Global token-stream Viterbi segmentation",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-01-aada86",
+      "best_selection": 0.8276,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.1179,
+        -0.1797,
+        -0.0636
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": -0.0856,
+        "confirmed": false
+      }
+    },
+    "H2": {
+      "name": "Section-sum constrained beam search",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 5,
+      "implementations_working": 5,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-10-fea9fa",
+      "best_selection": 0.9455,
+      "runtime_error_rate_dev": 0.0,
+      "label": "leader",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0314,
+        "confirmed": true
+      }
+    },
+    "H3": {
+      "name": "Generate-truth-and-align (analysis by synthesis)",
+      "origin": "initial",
+      "parents": [],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-03-53c9ac",
+      "best_selection": 0.9065,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0391,
+        -0.0763,
+        -0.0079
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0108,
+        "confirmed": true
+      }
+    },
+    "H4": {
+      "name": "Checksum-ranked channel lattice with subtotal-implied row repair",
+      "origin": "recombine",
+      "parents": [
+        "H2",
+        "H0"
+      ],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-04-f99411",
+      "best_selection": 0.9346,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0109,
+        -0.0312,
+        0.0037
+      ],
+      "label": "not distinguishable from the leader on SELECTION",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0117,
+        "confirmed": true
+      }
+    },
+    "H5": {
+      "name": "Equation-driven derivation closure with channel-alignment scoring",
+      "origin": "pivot",
+      "parents": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "implementations_attempted": 1,
+      "implementations_working": 1,
+      "independent_working_implementations": 1,
+      "best_implementation": "H-06-9a6402",
+      "best_selection": 0.9139,
+      "runtime_error_rate_dev": 0.0,
+      "best_minus_leader": [
+        -0.0316,
+        -0.0684,
+        -0.0012
+      ],
+      "label": "below the leader, but idea and implementation not separated (one independent implementation)",
+      "own_prediction": {
+        "strong_minus_weak_relative_advantage": 0.0135,
+        "confirmed": true
+      }
+    }
+  },
+  "llm_conjectures": [
+    {
+      "child": "H-05-60912d",
+      "parent": "H-02-ba0796",
+      "hypothesis": "H2",
+      "llm_cause": "IMPLEMENTATION",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-07-f856a8",
+      "parent": "H-02-ba0796",
+      "hypothesis": "H2",
+      "llm_cause": "IMPLEMENTATION",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-08-90ea6b",
+      "parent": "H-07-f856a8",
+      "hypothesis": "H2",
+      "llm_cause": "IMPLEMENTATION",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    },
+    {
+      "child": "H-10-fea9fa",
+      "parent": "H-08-90ea6b",
+      "hypothesis": "H2",
+      "llm_cause": "IMPLEMENTATION",
+      "measured_child_significantly_better": false,
+      "status": "unverified conjecture"
+    }
+  ],
+  "h_trace": [
+    {
+      "move": "recombine",
+      "hypothesis": "H4",
+      "child": "H-04-f99411",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-02-ba0796",
+      "delta_vs_leader": -0.0023079918944877865,
+      "ci95": [
+        -0.021802432931465197,
+        0.013259612251547731
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.638,
+      "best_selection_after": 0.9369308712316046
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H2",
+      "child": "H-05-60912d",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-02-ba0796",
+      "delta_vs_leader": -0.007606800922740203,
+      "ci95": [
+        -0.017477979624564068,
+        0.003919552669552669
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.8694,
+      "best_selection_after": 0.9369308712316046
+    },
+    {
+      "move": "pivot",
+      "hypothesis": "H5",
+      "child": "H-06-9a6402",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-02-ba0796",
+      "delta_vs_leader": -0.023023486165553927,
+      "ci95": [
+        -0.05791387178710326,
+        0.004331834908834093
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.5874,
+      "best_selection_after": 0.9369308712316046
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H2",
+      "child": "H-07-f856a8",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-02-ba0796",
+      "delta_vs_leader": 0.0049618996987418045,
+      "ci95": [
+        0.0,
+        0.013042707779549885
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.8494,
+      "best_selection_after": 0.9418927709303463
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H2",
+      "child": "H-08-90ea6b",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-07-f856a8",
+      "delta_vs_leader": 0.002315284321530366,
+      "ci95": [
+        -0.001177418260751591,
+        0.006642353154845249
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.8058,
+      "best_selection_after": 0.9442080552518768
+    },
+    {
+      "move": "second_impl",
+      "hypothesis": "H0",
+      "child": "H-09-fa4d3a",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": true,
+      "calls": 1,
+      "compared_to": "H-08-90ea6b",
+      "delta_vs_leader": -0.04868256491752452,
+      "ci95": [
+        -0.08715092191441941,
+        -0.018579630460958303
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.4612,
+      "best_selection_after": 0.9442080552518768
+    },
+    {
+      "move": "refine",
+      "hypothesis": "H2",
+      "child": "H-10-fea9fa",
+      "usable": true,
+      "leader_before": "H2",
+      "explore": false,
+      "calls": 1,
+      "compared_to": "H-08-90ea6b",
+      "delta_vs_leader": 0.001299463683539672,
+      "ci95": [
+        -0.003147240582408195,
+        0.0059531591311728325
+      ],
+      "significant": false,
+      "ast_similarity_to_leader": 0.7966,
+      "best_selection_after": 0.9455075189354164
+    }
+  ],
+  "p_trace": [
+    {
+      "child": "C-03-d7ca6f",
+      "move": "recombine",
+      "parents": [
+        "C-00-ebe21c",
+        "C-01-a0e2d3"
+      ],
+      "usable": true,
+      "operation": "recombine",
+      "compared_to": "C-00-ebe21c",
+      "delta_vs_parent": 0.029136044715135295,
+      "ci95": [
+        0.013810701705791536,
+        0.04954714862106949
+      ],
+      "significant": true,
+      "ast_similarity_to_parent": 0.5861,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "code_edit_list",
+        "code_ok",
+        "comb",
+        "digits_of",
+        "has_pcs",
+        "make_dist",
+        "make_scorer",
+        "mdigits",
+        "norm_money",
+        "num_edits",
+        "recover",
+        "row_cands",
+        "solve_code",
+        "split_line",
+        "strip_pcs"
+      ],
+      "removed_functions": [
+        "build_triples",
+        "clean_num",
+        "code_valid",
+        "digit_edits",
+        "fix_code",
+        "solve"
+      ],
+      "best_selection_after": 0.9466754610409577
+    },
+    {
+      "child": "C-04-9c00c1",
+      "move": "recombine",
+      "parents": [
+        "C-00-ebe21c",
+        "C-03-d7ca6f"
+      ],
+      "usable": true,
+      "operation": "recombine",
+      "compared_to": "C-03-d7ca6f",
+      "delta_vs_parent": -0.00021455668514492321,
+      "ci95": [
+        -0.002217553688141927,
+        0.0013314898609016247
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.8895,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "align_all",
+        "code_expand",
+        "code_search"
+      ],
+      "removed_functions": [
+        "code_edit_list"
+      ],
+      "best_selection_after": 0.9466754610409577
+    },
+    {
+      "child": "C-05-370bb1",
+      "move": "intervene:add_state_or_memory",
+      "parents": [
+        "C-03-d7ca6f"
+      ],
+      "usable": true,
+      "operation": "intervene:add_state_or_memory",
+      "compared_to": "C-03-d7ca6f",
+      "delta_vs_parent": 0.0010203713680509928,
+      "ci95": [
+        -0.00293042907856151,
+        0.0053202898952591044
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.8563,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "code_fallback",
+        "code_split",
+        "decode_code",
+        "learn_profile",
+        "prob_steps",
+        "repair_codes"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9476958324090087
+    },
+    {
+      "child": "C-06-6fd4af",
+      "move": "intervene:add_state_or_memory",
+      "parents": [
+        "C-05-370bb1"
+      ],
+      "usable": true,
+      "operation": "intervene:add_state_or_memory",
+      "compared_to": "C-05-370bb1",
+      "delta_vs_parent": -0.0016448323456811132,
+      "ci95": [
+        -0.005702644504733406,
+        0.001934340268579223
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.892,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "default_K",
+        "learn_costs",
+        "noop",
+        "steps_to5"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9476958324090087
+    },
+    {
+      "child": "C-07-26f64e",
+      "move": "intervene:divisor_enumeration_reconstruction",
+      "parents": [
+        "C-06-6fd4af"
+      ],
+      "usable": true,
+      "operation": "intervene:divisor_enumeration_reconstruction",
+      "compared_to": "C-06-6fd4af",
+      "delta_vs_parent": 0.00019303635432667553,
+      "ci95": [
+        -0.0040000000000000036,
+        0.004608294930875574
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.9549,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "qcost",
+        "ucost"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9476958324090087
+    },
+    {
+      "child": "C-08-4dce7d",
+      "move": "expand",
+      "parents": [],
+      "usable": true,
+      "operation": "expand",
+      "compared_to": "C-05-370bb1",
+      "delta_vs_parent": -0.002174343726763082,
+      "ci95": [
+        -0.010555617222283887,
+        0.004859076109076114
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.6227,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "code_decode",
+        "edit_cost",
+        "fmt_money",
+        "inv_neigh",
+        "is_data_token",
+        "norm_num",
+        "reconcile_section",
+        "row_hyps",
+        "run",
+        "solve_text",
+        "tok_fit"
+      ],
+      "removed_functions": [
+        "code_edit_list",
+        "code_fallback",
+        "code_ok",
+        "code_split",
+        "comb",
+        "decode_code",
+        "digits_of",
+        "has_pcs",
+        "learn_profile",
+        "make_dist",
+        "make_scorer",
+        "mdigits",
+        "norm_money",
+        "num_edits",
+        "plausible",
+        "prob_steps",
+        "recover",
+        "repair_codes",
+        "row_cands",
+        "solve_code",
+        "solve_section",
+        "split_line",
+        "strip_pcs",
+        "tok_cost"
+      ],
+      "best_selection_after": 0.9476958324090087
+    },
+    {
+      "child": "C-09-949aae",
+      "move": "intervene:add_damage_profile_and_bayesian_code_repair",
+      "parents": [
+        "C-03-d7ca6f"
+      ],
+      "usable": true,
+      "operation": "intervene:add_damage_profile_and_bayesian_code_repair",
+      "compared_to": "C-03-d7ca6f",
+      "delta_vs_parent": 0.001381565623807505,
+      "ci95": [
+        -0.0031027695211788514,
+        0.005945545027668436
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.7715,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "code_candidates",
+        "code_parts",
+        "fwd_prob",
+        "inv_step",
+        "op_counts",
+        "profile_damage",
+        "repair_codes"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9480570266647652
+    },
+    {
+      "child": "C-10-2c75e0",
+      "move": "recombine",
+      "parents": [
+        "C-08-4dce7d",
+        "C-09-949aae"
+      ],
+      "usable": true,
+      "operation": "recombine",
+      "compared_to": "C-09-949aae",
+      "delta_vs_parent": -0.0010291858678955453,
+      "ci95": [
+        -0.008530465949820787,
+        0.004608294930875574
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.7458,
+      "graph_changed": true,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "code_decode",
+        "decode_numbers",
+        "edit_cost",
+        "fmt_money",
+        "inv_neigh",
+        "norm_num",
+        "parse_layout",
+        "reconcile_section",
+        "row_hyps",
+        "y_align",
+        "y_parse_doc"
+      ],
+      "removed_functions": [
+        "align",
+        "code_edit_list",
+        "comb",
+        "digits_of",
+        "make_dist",
+        "make_scorer",
+        "mdigits",
+        "norm_money",
+        "num_edits",
+        "parse_doc",
+        "recover",
+        "row_cands",
+        "solve_code",
+        "solve_section"
+      ],
+      "best_selection_after": 0.9480570266647652
+    },
+    {
+      "child": "C-11-9d16d6",
+      "move": "intervene:add_glyph_provenance_state",
+      "parents": [
+        "C-09-949aae"
+      ],
+      "usable": true,
+      "operation": "intervene:add_glyph_provenance_state",
+      "compared_to": "C-09-949aae",
+      "delta_vs_parent": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "significant": false,
+      "ast_similarity_to_parent": 0.945,
+      "graph_changed": false,
+      "functions_changed": true,
+      "structural": true,
+      "added_functions": [
+        "code_parts_m",
+        "digits_of_m",
+        "norm_money_m"
+      ],
+      "removed_functions": [],
+      "best_selection_after": 0.9480570266647652
+    }
+  ],
+  "h_first_leader": "H2",
+  "synthesis": {
+    "A": {
+      "calls": 1,
+      "cost_usd": 0.61504
+    },
+    "P": {
+      "calls": 12,
+      "cost_usd": 8.7942558
+    },
+    "H": {
+      "calls": 12,
+      "cost_usd": 13.700340599999997
+    }
+  },
+  "provider": "claude_code (real model)",
+  "sandbox": {
+    "backend": "subprocess",
+    "network_isolated": true,
+    "limits": {
+      "wall_timeout_s": 60,
+      "item_timeout_s": 2.0,
+      "cpu_seconds": 20,
+      "memory_mb": 512,
+      "max_output_bytes": 20000000,
+      "file_size_bytes": 1000000,
+      "open_files": 64,
+      "timer": "cpu"
+    },
+    "strength": "namespace+rlimits+audit-hook"
+  }
+}

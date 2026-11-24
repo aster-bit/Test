@@ -1,0 +1,146 @@
+22:17:15 === arm A ===
+22:22:18 [A] A-00-a8c2c5 generate usable=True sel=0.972 dev=0.958
+22:22:18 === arm P (program evolution) ===
+22:28:03 [C] C-00-f2beaa generate usable=True sel=0.917 dev=0.896
+22:28:03 [C] C-01-739209 generate usable=True sel=0.204 dev=0.201
+22:28:04 [C] C-02-3c8e02 generate usable=True sel=0.949 dev=0.948
+22:28:04 [C] recombine C-02-3c8e02 + C-00-f2beaa
+22:30:25 [C] C-03-af5aa6 recombine usable=True sel=0.961 dev=0.954
+22:30:25 [C] step 1: recombine -> usable=True delta=0.01116923241305529 structural=True best=0.9606
+22:30:25 [C] recombine C-02-3c8e02 + C-03-af5aa6
+22:31:47 [C] C-04-9f5248 recombine usable=True sel=0.964 dev=0.956
+22:31:47 [C] step 2: recombine -> usable=True delta=0.003137844611528821 structural=True best=0.9637
+22:31:47 [C] self-diagnosed intervention on C-04-9f5248
+22:34:17 [C] C-05-019d29 intervene:add_local_search_refinement_phase usable=True sel=0.964 dev=0.956
+22:34:17 [C] step 3: intervene:add_local_search_refinement_phase -> usable=True delta=0.0003105126841968934 structural=True best=0.9640
+22:34:17 [C] self-diagnosed intervention on C-05-019d29
+22:36:04 [C] C-06-f04559 intervene:add_block_exchange_phase usable=True sel=0.964 dev=0.956
+22:36:04 [C] step 4: intervene:add_block_exchange_phase -> usable=True delta=0.00026086956521739204 structural=True best=0.9643
+22:36:04 [C] self-diagnosed intervention on C-06-f04559
+22:38:17 [C] C-07-2963c7 intervene:add_improvement_phase usable=True sel=0.964 dev=0.956
+22:38:17 [C] step 5: intervene:add_improvement_phase -> usable=True delta=6.666666666666672e-05 structural=True best=0.9644
+22:38:17 [C] self-diagnosed intervention on C-04-9f5248
+22:39:43 [C] C-08-a03fae intervene:add_future_anchor_index usable=True sel=0.968 dev=0.960
+22:39:43 [C] step 6: intervene:add_future_anchor_index -> usable=True delta=0.004415422213846175 structural=True best=0.9681
+22:39:43 [C] self-diagnosed intervention on C-08-a03fae
+22:43:00 [C] C-09-7b7c76 intervene:add_improvement_phase usable=True sel=0.968 dev=0.956
+22:43:00 [C] step 7: intervene:add_improvement_phase -> usable=True delta=0.00023893405600722655 structural=True best=0.9684
+22:43:00 [C] self-diagnosed intervention on C-06-f04559
+22:45:00 [C] C-10-8a4d8d intervene:add_large_neighbourhood_search usable=True sel=0.964 dev=0.956
+22:45:00 [C] step 8: intervene:add_large_neighbourhood_search -> usable=True delta=6.666666666666672e-05 structural=True best=0.9684
+22:45:00 [C] recombine C-09-7b7c76 + C-08-a03fae
+22:46:19 [C] C-11-896d65 recombine usable=True sel=0.968 dev=0.961
+22:46:19 [C] step 9: recombine -> usable=True delta=2.7059209986037466e-05 structural=False best=0.9684
+22:46:19 arm P done: calls=12 cost=$5.61
+22:46:19 === arm H (hypothesis evolution) ===
+22:47:03 [H] hypothesis H0: Greedy online offset-chaining tracker - A single pass over events in timestamp order keeps one state record per session (node, stream offset, durable offset, status) and assigns ea
+22:47:03 [H] hypothesis H1: Beam search over joint cluster states - A beam of K weighted joint hypotheses (each holding all sessions' states plus a pending buffer of deferred events) is expanded event by even
+22:47:03 [H] hypothesis H2: Successor-link min-cost path cover - A sparse graph is built whose edges link each event to plausible same-session successors (by offset continuity, node or crash-recover transi
+22:47:03 [H] hypothesis H3: Local search over the assignment vector with a replay-consistency objective - Starting from a quick seed assignment, simulated annealing or hill climbing repeatedly reassigns single anonymous events (or swaps pairs, or
+[provider] transient error after 1200s: timeout; retry in 5s
+23:11:39 [H] H-00-91be78 implement:H0 usable=True sel=0.927 dev=0.885
+23:11:43 [H] H-01-8fecfc implement:H1 usable=True sel=0.961 dev=0.958
+23:11:44 [H] H-02-f5b0e0 implement:H2 usable=True sel=0.813 dev=0.752
+23:12:09 [H] H-03-4ec92e implement:H3 usable=True sel=0.914 dev=0.913
+23:13:59 [H] move recombine on H4
+23:14:17 [H] H-04-03936a recombine:H4 usable=True sel=0.953 dev=0.947
+23:14:17 [H] step 1: recombine/H4 usable=True delta=-0.007042254283516938 best=0.9605
+23:15:45 [H] move refine on H1
+23:15:49 [H] H-05-443106 refine:H1 usable=True sel=0.971 dev=0.955
+23:15:49 [H] step 2: refine/H1 usable=True delta=0.010639255727828869 best=0.9711
+23:20:22 [H] move second_impl on H0
+23:20:22 [H] H-06-0fa1e6 implement:H0 usable=True sel=0.914 dev=0.894
+23:20:22 [H] step 3: second_impl/H0 usable=True delta=-0.057517531261198386 best=0.9711
+23:22:36 [H] move refine on H1
+23:22:40 [H] H-07-a926de refine:H1 usable=True sel=0.970 dev=0.955
+23:22:40 [H] step 4: refine/H1 usable=True delta=-0.001439735875629522 best=0.9711
+23:25:48 [H] move pivot on H5
+23:25:49 [H] H-08-fccdab pivot:H5 usable=True sel=0.876 dev=0.876
+23:25:49 [H] step 5: pivot/H5 usable=True delta=-0.09478315314068458 best=0.9711
+23:27:21 [H] move refine on H1
+23:27:26 [H] H-09-d9c18e refine:H1 usable=True sel=0.971 dev=0.955
+23:27:26 [H] step 6: refine/H1 usable=True delta=-0.00012624494242141255 best=0.9711
+23:32:55 [H] move pivot on H6
+23:32:56 [H] H-10-04eab2 pivot:H6 usable=True sel=0.865 dev=0.821
+23:32:56 [H] step 7: pivot/H6 usable=True delta=-0.10574514851847612 best=0.9711
+23:32:56 arm H done: calls=12 cost=$6.12
+23:32:56 champions (chosen on SELECTION, before audit): {'A': 'A-00-a8c2c5', 'P_initial': 'C-02-3c8e02', 'P_final': 'C-11-896d65', 'H_initial': 'H-01-8fecfc', 'H_final': 'H-05-443106', 'hyp:H0': 'H-00-91be78', 'hyp:H1': 'H-05-443106', 'hyp:H2': 'H-02-f5b0e0', 'hyp:H3': 'H-03-4ec92e', 'hyp:H4': 'H-04-03936a', 'hyp:H5': 'H-08-fccdab', 'hyp:H6': 'H-10-04eab2'}
+23:34:21 results written to /home/user/Test/experiments/hds-stream/rep1
+{
+ "champions": {
+  "A": "A-00-a8c2c5",
+  "P_initial": "C-02-3c8e02",
+  "P_final": "C-11-896d65",
+  "H_initial": "H-01-8fecfc",
+  "H_final": "H-05-443106",
+  "hyp:H0": "H-00-91be78",
+  "hyp:H1": "H-05-443106",
+  "hyp:H2": "H-02-f5b0e0",
+  "hyp:H3": "H-03-4ec92e",
+  "hyp:H4": "H-04-03936a",
+  "hyp:H5": "H-08-fccdab",
+  "hyp:H6": "H-10-04eab2"
+ },
+ "tests": {
+  "G1": {
+   "comparison": "H_final - P_final",
+   "mean_diff": 0.0025121909541993837,
+   "ci_bonferroni": [
+    -0.005210721641707517,
+    0.00983041765611079
+   ],
+   "holds": false
+  },
+  "G2": {
+   "comparison": "H_final - A",
+   "mean_diff": 0.0037397382004617052,
+   "ci_bonferroni": [
+    -0.005484794337171601,
+    0.012886673660318844
+   ],
+   "holds": false
+  },
+  "G3_paradigm_transition": {
+   "comparison": "H_final - H_initial",
+   "mean_diff": -0.002026758859922528,
+   "ci_bonferroni": [
+    -0.009022592448398257,
+    0.004833470508672896
+   ],
+   "holds": false,
+   "score_holds": false
+  },
+  "descriptive_P_final_minus_P_initial": {
+   "comparison": "P_final - P_initial",
+   "mean_diff": 0.019844070787866357,
+   "ci_bonferroni": [
+    0.009612517318071896,
+    0.031555136251011036
+   ],
+   "holds": true
+  }
+ },
+ "transition": {
+  "initial_hypothesis": "H1",
+  "final_hypothesis": "H1",
+  "final_hypothesis_origin": "initial",
+  "different_hypothesis": false,
+  "ast_similarity": 0.9108,
+  "code_differs": false
+ },
+ "audit": {
+  "A": 0.9546,
+  "P_initial": 0.936,
+  "P_final": 0.9558,
+  "H_initial": 0.9604,
+  "H_final": 0.9583,
+  "hyp:H0": 0.9126,
+  "hyp:H1": 0.9583,
+  "hyp:H2": 0.7841,
+  "hyp:H3": 0.8864,
+  "hyp:H4": 0.9481,
+  "hyp:H5": 0.8344,
+  "hyp:H6": 0.8112
+ }
+}
+exit 0

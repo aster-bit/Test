@@ -1,0 +1,67 @@
+22:21:17 === arm A ===
+22:25:37 [A] A-00-08e06a generate usable=True sel=0.881 dev=0.845
+22:25:37 === arm P (program evolution) ===
+22:36:22 [C] C-00-ebe21c generate usable=True sel=0.918 dev=0.912
+22:36:22 [C] C-01-a0e2d3 generate usable=True sel=0.908 dev=0.884
+22:36:24 [C] C-02-ebed51 generate usable=True sel=0.899 dev=0.861
+22:36:24 [C] recombine C-00-ebe21c + C-01-a0e2d3
+22:42:41 [C] C-03-d7ca6f recombine usable=True sel=0.947 dev=0.948
+22:42:41 [C] step 1: recombine -> usable=True delta=0.029136044715135295 structural=True best=0.9467
+22:42:41 [C] recombine C-00-ebe21c + C-03-d7ca6f
+22:46:43 [C] C-04-9c00c1 recombine usable=True sel=0.946 dev=0.948
+22:46:43 [C] step 2: recombine -> usable=True delta=-0.00021455668514492321 structural=True best=0.9467
+22:46:43 [C] self-diagnosed intervention on C-03-d7ca6f
+22:49:20 [C] C-05-370bb1 intervene:add_state_or_memory usable=True sel=0.948 dev=0.944
+22:49:20 [C] step 3: intervene:add_state_or_memory -> usable=True delta=0.0010203713680509928 structural=True best=0.9477
+22:49:20 [C] self-diagnosed intervention on C-05-370bb1
+22:52:31 [C] C-06-6fd4af intervene:add_state_or_memory usable=True sel=0.946 dev=0.943
+22:52:31 [C] step 4: intervene:add_state_or_memory -> usable=True delta=-0.0016448323456811132 structural=True best=0.9477
+22:52:31 [C] self-diagnosed intervention on C-06-6fd4af
+22:55:02 [C] C-07-26f64e intervene:divisor_enumeration_reconstruction usable=True sel=0.946 dev=0.948
+22:55:02 [C] step 5: intervene:divisor_enumeration_reconstruction -> usable=True delta=0.00019303635432667553 structural=True best=0.9477
+22:55:02 [C] stagnation (2) -> space expansion
+23:03:47 [C] C-08-4dce7d expand usable=True sel=0.946 dev=0.947
+23:03:48 [C] step 6: expand -> usable=True delta=-0.002174343726763082 structural=True best=0.9477
+23:03:48 [C] self-diagnosed intervention on C-03-d7ca6f
+23:06:36 [C] C-09-949aae intervene:add_damage_profile_and_bayesian_code_repair usable=True sel=0.948 dev=0.946
+23:06:36 [C] step 7: intervene:add_damage_profile_and_bayesian_code_repair -> usable=True delta=0.001381565623807505 structural=True best=0.9481
+23:06:36 [C] recombine C-08-4dce7d + C-09-949aae
+23:10:50 [C] C-10-2c75e0 recombine usable=True sel=0.947 dev=0.953
+23:10:51 [C] step 8: recombine -> usable=True delta=-0.0010291858678955453 structural=True best=0.9481
+23:10:51 [C] self-diagnosed intervention on C-09-949aae
+23:14:20 [C] C-11-9d16d6 intervene:add_glyph_provenance_state usable=True sel=0.948 dev=0.946
+23:14:20 [C] step 9: intervene:add_glyph_provenance_state -> usable=True delta=0.0 structural=True best=0.9481
+23:14:20 arm P done: calls=12 cost=$8.79
+23:14:20 === arm H (hypothesis evolution) ===
+23:15:12 [H] hypothesis H0: Line-local repair + per-row candidate lattice - First rebuild logical rows by counting fields per physical line, joining wrapped fragments and splitting merged lines; then, for each row in
+23:15:12 [H] hypothesis H1: Global token-stream Viterbi segmentation - Flatten everything between COLUMNS and TOTAL into one token stream with line-break markers, then run a dynamic program over token positions 
+23:15:12 [H] hypothesis H2: Section-sum constrained beam search - For each section, run a beam or meet-in-the-middle search over the ranked candidate list of every row, keyed by the running AMOUNT sum. The 
+23:15:12 [H] hypothesis H3: Generate-truth-and-align (analysis by synthesis) - For each row, enumerate plausible true (QTY, UNIT) pairs, using QTY in 1..500 together with divisibility against amount candidates to derive
+23:30:54 [H] H-00-bb0981 implement:H0 usable=True sel=0.928 dev=0.921
+23:30:54 [H] H-01-aada86 implement:H1 usable=True sel=0.828 dev=0.839
+23:30:55 [H] H-02-ba0796 implement:H2 usable=True sel=0.937 dev=0.915
+23:31:07 [H] H-03-53c9ac implement:H3 usable=True sel=0.906 dev=0.883
+23:37:33 [H] move recombine on H4
+23:37:34 [H] H-04-f99411 recombine:H4 usable=True sel=0.935 dev=0.927
+23:37:34 [H] step 1: recombine/H4 usable=True delta=-0.0023079918944877865 best=0.9369
+23:39:52 [H] move refine on H2
+23:39:53 [H] H-05-60912d refine:H2 usable=True sel=0.929 dev=0.939
+23:39:53 [H] step 2: refine/H2 usable=True delta=-0.007606800922740203 best=0.9369
+23:48:46 [H] move pivot on H5
+23:48:47 [H] H-06-9a6402 pivot:H5 usable=True sel=0.914 dev=0.888
+23:48:47 [H] step 3: pivot/H5 usable=True delta=-0.023023486165553927 best=0.9369
+23:50:47 [H] move refine on H2
+23:50:48 [H] H-07-f856a8 refine:H2 usable=True sel=0.942 dev=0.940
+23:50:48 [H] step 4: refine/H2 usable=True delta=0.0049618996987418045 best=0.9419
+23:54:11 [H] move refine on H2
+23:54:13 [H] H-08-90ea6b refine:H2 usable=True sel=0.944 dev=0.949
+23:54:13 [H] step 5: refine/H2 usable=True delta=0.002315284321530366 best=0.9442
+23:59:24 [H] move second_impl on H0
+23:59:25 [H] H-09-fa4d3a implement:H0 usable=True sel=0.896 dev=0.888
+23:59:25 [H] step 6: second_impl/H0 usable=True delta=-0.04868256491752452 best=0.9442
+00:02:51 [H] move refine on H2
+00:02:53 [H] H-10-fea9fa refine:H2 usable=True sel=0.946 dev=0.947
+00:02:53 [H] step 7: refine/H2 usable=True delta=0.001299463683539672 best=0.9455
+00:02:53 arm H done: calls=12 cost=$13.70
+00:02:53 champions (chosen on SELECTION, before audit): {'A': 'A-00-08e06a', 'P_initial': 'C-00-ebe21c', 'P_final': 'C-09-949aae', 'H_initial': 'H-02-ba0796', 'H_final': 'H-10-fea9fa', 'hyp:H0': 'H-00-bb0981', 'hyp:H1': 'H-01-aada86', 'hyp:H2': 'H-10-fea9fa', 'hyp:H3': 'H-03-53c9ac', 'hyp:H4': 'H-04-f99411', 'hyp:H5': 'H-06-9a6402'}
+00:03:26 results written to /home/user/Test/experiments/hds-doc/rep1
